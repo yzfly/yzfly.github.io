@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content>
+    <meta name="keyword" content>
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <!-- edit yzfly -->
+    <a href="https://github.com/yzfly" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#70B7FD; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+    
+
+    <title>
+        
+        vim 手册 - undefined
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/aircloud.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+
+<body>
+
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i> Life is an adventure ~ </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar">
+            <img src="/img/avatar.jpg">
+        </div>
+        <div class="name">
+            <i>流觞君</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li>
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>主页</span>
+                </a>
+            </li>
+            <li>
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>存档</span>
+                </a>
+            </li>
+            <li>
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>关于</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>搜索</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input">
+            <span id="begin-search">搜索</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+        <div class="index-about-mobile">
+            <i> Life is an adventure ~ </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        vim 手册
+    </div>
+
+    <div class="post-meta">
+
+        <span class="attr">发布于：<span>2018-07-26 23:09:57</span></span>
+        
+        
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+
+    </div>
+    <div class="post-content ">
+        <p>在Linux下高效的使用 vim</p>
+<a id="more"></a>
+<p><strong>打开关闭</strong></p>
+<ul>
+<li>vim xxx，vim +num xxx 命令行打开文件<br>vim + filename 启动跳到文件结尾<br>vim +143 filename 打开跳到143行 调试代码有用<br>vim +/search-term filename 跳到第一个匹配<br>vim +/search-term filename 跳到最后一个匹配<br>vim -t tag<br>vim —cmd command filename 加载文件前执行命令<br>vim -c “:50” filename 加载文件后执行命令<br>:e xxx vim中打开文件<br>:w[rite],:up[date],:w!,up!，:wall保存文件<br>: x,:q,:qa,:q!,退出文件<br>gf 普通模式下打开文件名为光标处文字的文件<br>Ctrl+W f 新窗口打开匹配的文件<br>Ctrl+W fg 新tab页打开匹配的文件</li>
+</ul>
+<p><strong>代码相关</strong></p>
+<ul>
+<li>&lt;,&gt;对代码进行缩进<br>&lt;&lt;,&gt;&gt;用于调整源代码缩进格式<br>= 用户自动格式化代码缩进，gg=G 即为全文格式化<br>zf,zo,zc,za,zR,zM对代码进行折叠打开折叠<br>Ctrl+],Ctrl+T查找函数的定义和返回<br>大写K，看光标所指标识符的man帮助</li>
+</ul>
+<p><strong>移动光标</strong></p>
+<ul>
+<li>h,j,k,l ←↓↑→ 移动光标，相当于四个方向键<br>w,b,e,ge 以单词的方式移动，可以nw，nb，ne，nge的方式移动n个单词的距离<br>W，B，E，gE会以连续字符串的方式移动<br>0,^,g_,移动到行首，行尾以及后面第n行的行尾<br>gg,G,nG，ngg 移动到文件头和文件尾，以及移动到文件的第n行，‘可以回到上一次的地方<br>H,M,L n%定位光标到当前屏幕的某个地方<br>{,},[[,]],(,) 段落，区块，语句导航<br>z回车，z-,zz.当前行置顶，置底，置中<br>Ctrl+G显示当前位置信息<br>Ctrl+F，Ctrl+B，Ctrl+U,Ctrl+D,Ctrl+E,Ctrl+Y,向前后滚动一屏，半屏，一行<br>Ctrl+I,Ctrl+O 光标移到下一次和上一次的地方，Ctrl+I 和Tab功能一样<br>‘,”,[,]为跳转前的位置，最后编辑的光标位置，最后修改的开始位置，最后修改的结束位置<br>Ctrl+^ 在两个文件之间轮换<br>‘“,’.，`.上一次光标的地方，上一次修改的地方</li>
+</ul>
+<p><strong>编辑</strong></p>
+<ul>
+<li>i,a,o,I,A,O分别进入插入模式<br>o 在当前光标所在行下方插入一行，O在当前光标所在行上方插入一行<br>J 删除换行符，合并两行<br>Ctrl-R 重做<br>u，nu撤销上一次更改，撤销n次更改<br>U 撤销整行的更改<br>Ctrl+R 重做更改<br>Ctrl+L 重新加载屏幕内容<br>y,d,p 表示拷贝，删除，粘贴，配置位置描述使用 yw，dw，y0,d0,y,yfa,dfa,yy,dd,D,dG,dgg等，前面可以加数字，表示重复如，3dd,3yy等，也可以加范围，如4,8yy<br>%y+.y+,N,My+ 拷贝指定的数据<br>:[range] g[lobal[!]] /{pattern}/ [cmd]<br>:[range] v[global[!]] /{pattern}/ [cmd]<br>n,p,next,previous,Ctrl+^在编辑的文件中切换<br>:ls 查看打开的文件<br>:e #n 打开标号为ls结果中的文件<br>:changes 查看文件变化<br>ga查看ASCII,十进制，十六进制</li>
+</ul>
+<p><strong>查找</strong></p>
+<ul>
+<li>/pattern-回车 在文件内向后查找pattern的匹配，n重复，N回退，n前面可以带数字<br>?pattern-回车 在文件内向前查找pattern的匹配，n重复，N回退，n前面可以带数字<br>f{char}/t{char} 在行内查找下一指定字符， ;重复， ,回退<br>F{char}/T{char} 在行内查找上一指定字符， ;重复， ,回退<br><em>，#高亮所有匹配光标所在单词，相当于输入了/word,如果想单独匹配单词/\<word\>,则需要g</word\></em>,g# ，gd提留在非注释段的第一个匹配<br>\&lt;,>表示匹配单词的开头和结尾<br>.,^,$在查找的过程中作为正则策略，如果需要完全匹配需要转义<br>% 查找匹配的括号() [] {}</li>
+</ul>
+<p><strong>替换</strong></p>
+<ul>
+<li>. 重复上次的修改（一定要是修改） 比如说上次删除一个字符，点就是删除一个字符的意思；如果上次是删除一行，点就是删除一行的意思了。<br>>G 当前行缩进一个单位（Tab）<br>:[range]s[ubstitute]/{pattern}/{string}/[flags] 将范围内的from 改为to，替换当前行<br>:[range]%s[ubstitute]/{pattern}/{string}/[flags] 将范围内的from 改为to,替换所有行<br>范围可以指定为m,n的数字形式，当个的数字表示特定的行，.表示当前行，如果字符串中本身包含/,则可用+，=替换原来的/<br>:[range]s[ubstitute]/{pattern}/{string}/[flags] [count]</li>
+</ul>
+<p><strong>外部&amp;&amp;内部命令替换</strong></p>
+<ul>
+<li>:shell 交互式shell<br>:!cmd 执行cmd并输出结果<br>:! 执行上一次的命令<br>:r[ead] !cmd当前光标写入命令结果<br>:上下方向键 查找命令<br>:[range]co[py] {address} 复制指定范围的行到指定地址，简写为t 理解为copyto<br>:[range]m[ove] {address} 移动命令<br>:@:重复VIM命令，.重复普通命令<br>Ctrl+D补全命令<br>:[range] delete [x]<br>:[range] yank [x]<br>:[range] put [x]<br>:[range] copy {address}<br>:[range] move {address}<br>:[range] normal {commands}<br>:[range] join<br>:[range] substitute/{pattern}/{string}/[flags]<br>:[range] global/{pattern}/[cmd]</li>
+</ul>
+<p><strong>选项设置</strong></p>
+<ul>
+<li>set xxx 设置某项<br>set noxxx 取消某项设置<br>set xxx! 反置某项值<br>set xxx&amp; 恢复默认值<br>set xxx? 查询当前状态+<br>setlocal 局部有效，set全局有效+<br>:set expandtab 将tab转换为space<br>:set tabstop=4 制表符宽度 tabstop=4或ts=4<br>:retab 按照设定值重新缩进<br>:set shiftwidth=4 行缩进时宽度<br>:set ai 自动缩进</li>
+</ul>
+<p><strong>代码格式化</strong></p>
+<ul>
+<li><strong>=</strong>全文格式化 gg=G，比如粘贴的内容<br>当前行格式化缩进 ==<br>当前光标所在行的后N行格式化 N==<br>选中行格式化，=</li>
+</ul>
+
+        
+        <br>
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+        <li>
+            <a target="_blank" href="https://github.com/yzfly">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-github"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+
+    </ul>
+
+    
+
+    <p> 
+    	<!-- 
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+         Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p> 
+    	-->
+
+    	<span id="busuanzi_container_site_pv">
+            总访问量<span id="busuanzi_value_site_pv"></span>次
+        </span>
+        <span id="busuanzi_container_site_uv">
+            访客数<span id="busuanzi_value_site_uv"></span>人  
+        </span>
+
+        Contact Author <a href="https://github.com/yzfly">Github</a>
+
+        <!-- 
+        <div class="theme-info">
+		  <div class="powered-by"></div>
+		  <span class="post-count">全站共{{ totalcount(site) }}字</span>
+		</div>
+		-->
+
+</p></footer>
+
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+</html>

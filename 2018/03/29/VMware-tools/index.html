@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content>
+    <meta name="keyword" content>
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <!-- edit yzfly -->
+    <a href="https://github.com/yzfly" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#70B7FD; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+    
+
+    <title>
+        
+        VMware tools - undefined
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/aircloud.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+
+<body>
+
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i> Life is an adventure ~ </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar">
+            <img src="/img/avatar.jpg">
+        </div>
+        <div class="name">
+            <i>流觞君</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li>
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>主页</span>
+                </a>
+            </li>
+            <li>
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>存档</span>
+                </a>
+            </li>
+            <li>
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>关于</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>搜索</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#开始安装"><span class="toc-text">开始安装</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#下面给出Ubuntu-server官方安装教程"><span class="toc-text">下面给出Ubuntu server官方安装教程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#仅有命令行界面的-Ubuntu-Server"><span class="toc-text">仅有命令行界面的 Ubuntu Server</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#在-Ubuntu-客户机中，运行以下命令："><span class="toc-text">在 Ubuntu 客户机中，运行以下命令：</span></a></li></ol></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input">
+            <span id="begin-search">搜索</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+        <div class="index-about-mobile">
+            <i> Life is an adventure ~ </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        VMware tools
+    </div>
+
+    <div class="post-meta">
+
+        <span class="attr">发布于：<span>2018-03-29 12:01:06</span></span>
+        
+        
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+
+    </div>
+    <div class="post-content ">
+        <p>在VMware 12上安装linux系统后，显示框太小，为了使显示正常，需要为虚拟机系统安装vm-tools<br><a id="more"></a></p>
+<h1 id="开始安装"><a href="#开始安装" class="headerlink" title="开始安装"></a>开始安装</h1><p>1、打开虚拟机<br>2、在菜单栏虚拟机栏下找到安装VM tools栏并点击<br>3、按照虚拟机框内的提示操作<br>4、装载光盘</p>
+<blockquote>
+<p>mount /dev/cdrom   /mnt/cdrom   #cdrom若不存在则创建该目录<br>cd /mnt/cdrom   #切换到该目录工作<br>cd /media/      # 可选项，可进入此查看DVD是否被自动挂载到此</p>
+</blockquote>
+<p>5、进入挂载光盘目录后</p>
+<blockquote>
+<p> cp /mnt/cdrom/*   /usr/local/VM   # 将光盘内的内容拷贝出来操作，避免只读权限导致解压失败<br> cd VM<br>tar -zxvf   vmtools.tar.gz     # 解压出里面的压缩包<br>cd vmware-tools-distrib/    # 进入解压目录<br>bash ./vmware-install.pl</p>
+</blockquote>
+<h1 id="下面给出Ubuntu-server官方安装教程"><a href="#下面给出Ubuntu-server官方安装教程" class="headerlink" title="下面给出Ubuntu server官方安装教程"></a>下面给出Ubuntu server官方安装教程</h1><h2 id="仅有命令行界面的-Ubuntu-Server"><a href="#仅有命令行界面的-Ubuntu-Server" class="headerlink" title="仅有命令行界面的 Ubuntu Server"></a>仅有命令行界面的 Ubuntu Server</h2><p>转到虚拟机 &gt; 安装 VMware Tools（或 VM &gt; 安装 VMware Tools）。</p>
+<p>注意：如果您运行的是轻量版的 Fusion、不带 VMware Tools 的 Workstation 版本或 VMware Player，则系统会提示您先下载 Tools，然后才能安装它们。此时请单击立即下载开始进行下载。</p>
+<h2 id="在-Ubuntu-客户机中，运行以下命令："><a href="#在-Ubuntu-客户机中，运行以下命令：" class="headerlink" title="在 Ubuntu 客户机中，运行以下命令："></a>在 Ubuntu 客户机中，运行以下命令：</h2><p>运行如下命令以创建一个挂载 CD-ROM 的目录：</p>
+<p>sudo mkdir /mnt/cdrom</p>
+<p>当系统提示输入密码时，请输入 Ubuntu 管理员用户密码。</p>
+<p>注意：出于安全考虑，所键入的密码不会显示出来。在接下来的五分钟内您无需重新输入您的密码。</p>
+<p>运行如下命令以挂载 CD-ROM：</p>
+<blockquote>
+<p>sudo mount /dev/cdrom /mnt/cdrom 或 sudo mount /dev/sr0 /mnt/cdrom</p>
+</blockquote>
+<p>VMware Tools 捆绑包的文件名因您的 VMware 产品版本而异。运行如下命令可查找确切的名称：</p>
+<blockquote>
+<p>ls /mnt/cdrom</p>
+</blockquote>
+<p>运行如下命令以解压 VMwwre Tools 捆绑包文件：</p>
+<blockquote>
+<p>tar xzvf /mnt/cdrom/VMwareTools-x.x.x-xxxx.tar.gz -C /tmp/</p>
+</blockquote>
+<p>注意：x.x.x-xxxx 是在上一步中查明的版本。</p>
+<p>运行如下命令以将目录更改到 VMware Tools 分发包：</p>
+<blockquote>
+<p>cd /tmp/vmware-tools-distrib/</p>
+</blockquote>
+<p>运行如下命令以安装 VMware Tools:</p>
+<blockquote>
+<p>sudo ./vmware-install.pl -d</p>
+</blockquote>
+<p>注意：-d 假定您希望接受默认设置。如果不使用 -d，请按 Return 接受各个默认值或提供您自己的答案。</p>
+<p>安装完成后运行下面的命令重新启动虚拟机：</p>
+<p>sudo reboot</p>
+
+        
+        <br>
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+        <li>
+            <a target="_blank" href="https://github.com/yzfly">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-github"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+
+    </ul>
+
+    
+
+    <p> 
+    	<!-- 
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+         Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p> 
+    	-->
+
+    	<span id="busuanzi_container_site_pv">
+            总访问量<span id="busuanzi_value_site_pv"></span>次
+        </span>
+        <span id="busuanzi_container_site_uv">
+            访客数<span id="busuanzi_value_site_uv"></span>人  
+        </span>
+
+        Contact Author <a href="https://github.com/yzfly">Github</a>
+
+        <!-- 
+        <div class="theme-info">
+		  <div class="powered-by"></div>
+		  <span class="post-count">全站共{{ totalcount(site) }}字</span>
+		</div>
+		-->
+
+</p></footer>
+
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+</html>

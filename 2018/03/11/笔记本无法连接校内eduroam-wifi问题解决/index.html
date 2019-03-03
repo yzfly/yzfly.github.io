@@ -128,14 +128,6 @@
 
     <div class="post-meta">
 
-        <!-- edit top function -->
-        {% if post.top %}
-            <i class="fa fa-thumb-tack"></i>
-            <font color="ff6800">置顶</font>
-            <span class="post-meta-divider">|</span>
-        {% endif %}
-
-
         <span class="attr">发布于：<span>2018-03-11 19:51:17</span></span>
         
         
@@ -245,10 +237,26 @@ img{
 		</div>
 		-->
 
-</p></footer><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</p></footer>
 
 
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 
 <script>
