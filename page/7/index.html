@@ -124,9 +124,9 @@
     <div class="post-preview">
         <div class="post-time">2018-03-11</div>
         <div class="post-info">
-            <a href="/2018/03/11/搭建LaTex环境及中文支持问题解决方法/">
+            <a href="/2018/03/11/cmd脚本/">
                 <h3>
-                    搭建LaTex环境及中文支持问题解决方法
+                    cmd命令
                 </h3>
             </a>
             <p>
@@ -234,20 +234,6 @@
     <div class="post-preview">
         <div class="post-time">2018-01-29</div>
         <div class="post-info">
-            <a href="/2018/01/29/linux上网/">
-                <h3>
-                    linux上网
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
-    </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-01-29</div>
-        <div class="post-info">
             <a href="/2018/01/29/kali_pdfcrack/">
                 <h3>
                     pdfcrack and fcrackzip
@@ -260,11 +246,25 @@
     </div>
     
     <div class="post-preview">
+        <div class="post-time">2018-01-29</div>
+        <div class="post-info">
+            <a href="/2018/01/29/linux上网/">
+                <h3>
+                    linux上网
+                </h3>
+            </a>
+            <p>
+                
+            </p>
+        </div>
+    </div>
+    
+    <div class="post-preview">
         <div class="post-time">2018-01-19</div>
         <div class="post-info">
-            <a href="/2018/01/19/python3爬取猫眼电影评分/">
+            <a href="/2018/01/19/linux日常使用1/">
                 <h3>
-                    猫眼电影评分获取
+                    linux 命令
                 </h3>
             </a>
             <p>
@@ -289,6 +289,8 @@
 
     </div>
     <div class="index-rigit">
+        <!--
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=110 src="//music.163.com/outchain/player?type=0&id=2694444539&auto=1&height=90"></iframe> -->
         <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=450 src="//music.163.com/outchain/player?type=0&id=2694444539&auto=1&height=430"></iframe>
     </div>
 </div>
@@ -346,10 +348,26 @@
 		</div>
 		-->
 	</p>
-</footer><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</footer>
 
 
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 
 <script>
