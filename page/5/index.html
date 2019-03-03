@@ -35,7 +35,7 @@
 </div>
 
 <div class="index-about">
-    <i>  </i>
+    <i> null </i>
 </div>
 
 <div class="index-container">
@@ -104,7 +104,7 @@
     </div>
 </div>
         <div class="index-about-mobile">
-            <i>  </i>
+            <i> null </i>
         </div>
     </div>
     
@@ -228,9 +228,9 @@
     <div class="post-preview">
         <div class="post-time">2018-03-23</div>
         <div class="post-info">
-            <a href="/2018/03/23/Install-Git-On-CentOS7/">
+            <a href="/2018/03/23/host屏蔽/">
                 <h3>
-                    Install Git On CentOS7
+                    hosts屏蔽
                 </h3>
             </a>
             <p>
@@ -242,9 +242,9 @@
     <div class="post-preview">
         <div class="post-time">2018-03-23</div>
         <div class="post-info">
-            <a href="/2018/03/23/host屏蔽/">
+            <a href="/2018/03/23/Install-Git-On-CentOS7/">
                 <h3>
-                    hosts屏蔽
+                    Install Git On CentOS7
                 </h3>
             </a>
             <p>
@@ -294,11 +294,27 @@
             <span id="busuanzi_value_site_uv"></span>UV
         </span>
         Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
-</footer><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</footer>
 
 
 
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 
 <script>
