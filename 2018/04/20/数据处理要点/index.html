@@ -11,7 +11,7 @@
 
     <title>
         
-        
+        数据处理要点 - undefined
         
     </title>
 
@@ -53,7 +53,7 @@
     </div>
     <div class="contents" id="nav-content">
         <ul>
-            <li class="active">
+            <li>
                 <a href="/">
                     <i class="iconfont icon-shouye1"></i>
                     <span>主页</span>
@@ -88,6 +88,10 @@
         </ul>
     </div>
     
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#数据清洗"><span class="toc-text">数据清洗</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#数据变换"><span class="toc-text">数据变换</span></a></li></ol>
+</div>
+    
 </div>
 
 
@@ -111,157 +115,45 @@
     <div class="index-middle">
         <!-- Main Content -->
         
-<div class="post-preview-container" style="min-height: 720px">
-    
-    <div class="post-preview">
-        <div class="post-time">2018-10-15</div>
-        <div class="post-info">
-            <a href="/2018/10/15/Next-cloud/">
-                <h3>
-                    安装next-cloud
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
+
+
+<div class="post-container">
+    <div class="post-title">
+        数据处理要点
     </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-07-26</div>
-        <div class="post-info">
-            <a href="/2018/07/26/lingo/">
-                <h3>
-                    lingo
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2018-04-20 12:09:32</span></span>
+        
+        
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+
     </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-07-26</div>
-        <div class="post-info">
-            <a href="/2018/07/26/ENVI-file-format/">
-                <h3>
-                    ENVI 图像文件的标准格式
-                </h3>
-            </a>
-            <p>
-                
-            </p>
+    <div class="post-content ">
+        <p>系统： win10 专业版<br>数据处理要点记录<br><a id="more"></a></p>
+<h1 id="数据清洗"><a href="#数据清洗" class="headerlink" title="数据清洗"></a>数据清洗</h1><blockquote>
+<p>5、噪声与异常值，一个变量的测量总会存在偏差，偏差就是噪声，偏差较大就会成为异常值，若发现异常值之间存在某种规律，则不可轻易去除<br>处理噪声： 均值获中位数移动平滑<br>异常值： 聚类分析看是否有价值</p>
+</blockquote>
+<h1 id="数据变换"><a href="#数据变换" class="headerlink" title="数据变换"></a>数据变换</h1><blockquote>
+<p>数值变量与分类变量进行转换： 满意度不同的等级使用百分制代表，或者使用数字1、2、3代表<br>构造新变量： 原始数据变量设置较为简单，在原变量基础上构造新变量以便进行分析</p>
+</blockquote>
+<p> 数据平滑：</p>
+<p> 1、移动平均，3次、4次、8次移动平均，次数越多数据平滑效果越好</p>
+<p> 2、指数平滑法：</p>
+<p> 数据压缩：<br> 1、维数压缩： 删除不必要的或者高度相关的指标  直观判断、R型聚类、主成分分析法、小波变换、逐步线性回归<br> 2、提取特征值：  最大值最小值、中位数、平均值、积分微分、变化幅度、<br> 3、随机抽样： 数据量太多时，抽样减少数据量； 数据量少时，通过多次简单随机抽样来验证模型</p>
+
+        
+        <br>
+        <div id="comment-container">
         </div>
-    </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-07-26</div>
-        <div class="post-info">
-            <a href="/2018/07/26/DOSBox的安装使用/">
-                <h3>
-                    DOSBox的安装和使用
-                </h3>
-            </a>
-            <p>
-                
-            </p>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
         </div>
+
     </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-07-26</div>
-        <div class="post-info">
-            <a href="/2018/07/26/apt升级命令失败问题/">
-                <h3>
-                    sudo apt upgrade命令失败
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
-    </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-07-26</div>
-        <div class="post-info">
-            <a href="/2018/07/26/BlogTemplate/">
-                <h3>
-                    Ubuntu18.04下设置终端启动大小和位置
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
-    </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-07-26</div>
-        <div class="post-info">
-            <a href="/2018/07/26/ubuntu服务器设置定时重启/">
-                <h3>
-                    Ubuntu18.04 server设置定时重启
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
-    </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-07-26</div>
-        <div class="post-info">
-            <a href="/2018/07/26/ubuntu下字体大小问题/">
-                <h3>
-                    Ubuntu18.04下字体大小问题
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
-    </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-07-26</div>
-        <div class="post-info">
-            <a href="/2018/07/26/python3进阶之selenium/">
-                <h3>
-                    python3进阶之selenium
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
-    </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-07-26</div>
-        <div class="post-info">
-            <a href="/2018/07/26/python3进阶之print/">
-                <h3>
-                    python3进阶之print打印和输出
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
-    </div>
-    
 </div>
-<ul class="pager">
-    
-    
-    <li class="next">
-        <a href="/page/2/">Older Posts &rarr;</a>
-    </li>
-    
-</ul>
 
     </div>
 </div>
@@ -301,12 +193,31 @@
     // We expose some of the variables needed by the front end
     window.hexo_search_path = "search.json"
     window.hexo_root = "/"
-    window.isPost = false
+    window.isPost = true
 </script>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
+
+    <script>
+        /**
+         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+        */
+        if( '' || '')
+        var disqus_config = function () {
+            this.page.url = '';  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = ''; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://airclouds-blog.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
 
 
 

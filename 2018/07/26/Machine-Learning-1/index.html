@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content>
+    <meta name="keyword" content>
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        Machine Learning-1 - undefined
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/aircloud.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+
+<body>
+
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i>  </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar">
+            <img src="/img/avatar.jpg">
+        </div>
+        <div class="name">
+            <i>流觞君</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li>
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>主页</span>
+                </a>
+            </li>
+            <li>
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>存档</span>
+                </a>
+            </li>
+            <li>
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>关于</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>搜索</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Machine-Learning-1"><span class="toc-text">Machine Learning-1</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1、术语："><span class="toc-text">1、术语：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2、深入了解机器学习"><span class="toc-text">2、深入了解机器学习</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#线性回归"><span class="toc-text">线性回归</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#训练与损失"><span class="toc-text">训练与损失</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#降低损失-Reducing-Loss"><span class="toc-text">降低损失(Reducing Loss)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#梯度下降法"><span class="toc-text">梯度下降法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#SGD和小批量梯度下降法"><span class="toc-text">SGD和小批量梯度下降法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#学习速率"><span class="toc-text">学习速率</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#随机梯度下降法-SGD"><span class="toc-text">随机梯度下降法(SGD)</span></a></li></ol></li></ol></li></ol></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input">
+            <span id="begin-search">搜索</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+        <div class="index-about-mobile">
+            <i>  </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        Machine Learning-1
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2018-07-26 23:09:57</span></span>
+        
+        
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+
+    </div>
+    <div class="post-content ">
+        <h1 id="Machine-Learning-1"><a href="#Machine-Learning-1" class="headerlink" title="Machine Learning-1"></a>Machine Learning-1</h1><p>google 机器学习速成教程笔记</p>
+<a id="more"></a>
+<h2 id="1、术语："><a href="#1、术语：" class="headerlink" title="1、术语："></a>1、术语：</h2><p>下面以对电子邮件数据处理为例子</p>
+<ul>
+<li><p><strong>标签</strong>： 我们要预测的真实事物-y，邮件为垃圾邮件还是正常邮件</p>
+</li>
+<li><p><strong>特征</strong>：用于描述数据的输入变量 $x_i$，eg：邮件的各个维度特征</p>
+<ul>
+<li>多维度特征按如下方式指定： ${x_1,x_2,…x_N}$ </li>
+<li>实用特征： 可观察、可量化的指标。 不可量化的比如美观程度等不适合作为特征</li>
+</ul>
+</li>
+<li><p><strong>样本</strong>：数据的特定实例。 eg:  一封邮件</p>
+<ul>
+<li>有标签样本：具有｛特征，标签｝，即｛x,y｝的数据，既包含特征又包含标签<ul>
+<li>用于训练模型</li>
+</ul>
+</li>
+<li>无标签样本： 只具有｛特征，？｝，即｛x，？}的数据，只包含特征不包含标签<ul>
+<li>用于验证模型或者对新数据做出预测</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>模型</strong>： 定义了特征与标签之间的关系。可将样本映射到预测标签： $y^{’}$ 。下面是模型生命周期的两个阶段：</p>
+<blockquote>
+<p>由模型的内部参数来定义，该模型的内部参数是由学习获得</p>
+</blockquote>
+<ul>
+<li>训练：创建或者学习模型。向模型展示有标签样本，让模型学习特征与样本之间的关系。</li>
+<li>推断：将训练后的样本应用与无标签样本。</li>
+</ul>
+</li>
+<li><p><strong>回归与分类：</strong> </p>
+<ul>
+<li>回归模型可预测连续值——比如预测概率</li>
+<li>分类模型可预测离散值</li>
+</ul>
+</li>
+</ul>
+<h2 id="2、深入了解机器学习"><a href="#2、深入了解机器学习" class="headerlink" title="2、深入了解机器学习"></a>2、深入了解机器学习</h2><h3 id="线性回归"><a href="#线性回归" class="headerlink" title="线性回归"></a>线性回归</h3><p>对蟋蟀叫声频率和温度之间的关系建立模型：</p>
+<script type="math/tex; mode=display">
+y = mx+b</script><p>在机器学习中，习惯使用下面的表示方法：</p>
+<script type="math/tex; mode=display">
+y^{'} =b+w_1x_1+w_2x_2+w_3x_3</script><p>其中：</p>
+<ul>
+<li>$y^{‘}$ 是指预测标签(理想输出值)</li>
+<li>$b$ 指的是偏差，y轴截距，有的地方也使用$w_0$ 表示</li>
+<li>$w_i$ 表示的是特征1的权重。权重与“斜率”这一概念表示的意思相近</li>
+<li>$x_i$ 指的是特征，即已知输入项</li>
+</ul>
+<h3 id="训练与损失"><a href="#训练与损失" class="headerlink" title="训练与损失"></a>训练与损失</h3><p><strong>损失</strong> 是一个数值表示对于单个样本而言模型预测的准确程度。模型的预测100%准确，则模型的损失为0，否则损失会比较大。训练模型的目标是从所有样本中找到一组使得损失函数平均损失“较小”的权重和偏差。</p>
+<p><strong>eg:</strong> 在蟋蟀的例子中，损失为单个样本点到拟合直线的距离，总损失表征了模型的优劣。</p>
+<p><strong>常用损失函数-平方损失</strong> ：</p>
+<ul>
+<li><p>平方损失在线性回归模型中使用频繁，又称为$L_2$ 损失，单个样本的平方损失为 $(y-y_i)^2$</p>
+</li>
+<li><p>均方误差（MSE）指的是每个样本的平均平方损失。MSE的计算方法为，求出各个样本的所有平方损失之和，除以样本量：</p>
+<script type="math/tex; mode=display">
+MSE = \frac{1}{N}\sum_{(x,y)\in{D}}(y-y^{’}(x))</script><ul>
+<li>其中 (x,y) 指的是样本<ul>
+<li>x 指的是模型进行预测时使用的特征集</li>
+<li>y指的是样本的标签</li>
+</ul>
+</li>
+<li>$y^{’}(x) $ 指的是权重和偏差与特征集 x结合的函数</li>
+<li>D 指的是多个包含有标签样本( 即 (x,y) )的数据集</li>
+<li>N指的是D中样本的数量</li>
+</ul>
+</li>
+</ul>
+<h3 id="降低损失-Reducing-Loss"><a href="#降低损失-Reducing-Loss" class="headerlink" title="降低损失(Reducing Loss)"></a>降低损失(Reducing Loss)</h3><p>最佳模型是使得损失函数值最小的模型。</p>
+<p>通过计算整个数据集中 w1 每个可能值的损失函数来找到收敛点这种方法效率太低。我们来研究一种更好的机制，这种机制在机器学习领域非常热门，称为<strong>梯度下降法</strong>。 </p>
+<p>回归问题产生的损失与权重图为凸型，凸型问题只有一个最小值点，这个最小值就是损失函数收敛之处。下面使用线性回归问题来举例说明</p>
+<h4 id="梯度下降法"><a href="#梯度下降法" class="headerlink" title="梯度下降法"></a><strong>梯度下降法</strong></h4><p>为了寻找使得损失函数最小的模型参数，对建立的损失函数(自变量为模型参数)寻找极小值点，寻找方法为计算迭代点的梯度，改变模型参数使损失函数沿负梯度方向前进。通常，可以不断进行迭代，直到总体损失不再变化或者变化极其缓慢为止，此时我们说该模型已收敛。</p>
+<blockquote>
+<p>梯度为一个矢量： 具有方向和大小两个特征。梯度始终朝着损失函数增长最迅猛的方向，同理，负梯度方向即为损失函数减少最迅猛的方向。梯度下降算法会沿着负梯度的方向走一步，以便尽快降低损失。</p>
+</blockquote>
+<p><strong>起点：</strong> 梯度下降法的第一个阶段是为 w1选择一个起始值，称为起点。起点并不重要，因此很多算法直接将起点设置为0或随机选择一个值。</p>
+<p><strong>下一个点：</strong> 梯度下降算法依赖与负梯度。为了确定损失函数曲线上的下一个点，梯度下降算法将梯度大小的一部分与起点相加，一个梯度步长将迭代点移动到损失曲线上的下一个点，如下图所示：</p>
+<p><img src="F:\Docs\git\study\md\ML\media\TD.png" alt="1532479162926"></p>
+<p>机器学习算法用于训练模型的迭代试错过程如下图所示：</p>
+<p><img src="F:\Docs\git\study\md\ML\media\ML-try.png" alt></p>
+<p>在模型训练过程中，可以在每一步骤上计算整个数据集的梯度。但如此计算量太大，实际运用中计算小型数据样本的梯度效果就已经很好。所以实际可使用下面的方法降低损失。</p>
+<h4 id="SGD和小批量梯度下降法"><a href="#SGD和小批量梯度下降法" class="headerlink" title="SGD和小批量梯度下降法"></a>SGD和小批量梯度下降法</h4><ul>
+<li>随机梯度下降法： 依次抽取一个样本</li>
+<li>小批量梯度下降法： 每批包含 10~1000个样本<ul>
+<li>损失和梯度在整体范围内达到平衡</li>
+</ul>
+</li>
+</ul>
+<h4 id="学习速率"><a href="#学习速率" class="headerlink" title="学习速率"></a>学习速率</h4><p>学习速率也称为步长。在梯度下降算法中，使用  梯度*学习速率 来确定下一个点的位置。即</p>
+<script type="math/tex; mode=display">
+x_{i+1} = x_i+k*grad(x_i)</script><p>其中 $x<em>i$ 为当前点位置，$x</em>{i+1}$ 为下一个点位置，$k$ 为学习速率，$grad(x_i)$ 为当前点的梯度。</p>
+<ul>
+<li>学习速率不宜过大也不宜过小，过小会导致学习时间过长，过大容易导致学习过程不收敛。如果已知损失函数的梯度较小，则采用较大的学习速率，如梯度较大，则采用较小的学习速率。</li>
+</ul>
+<h4 id="随机梯度下降法-SGD"><a href="#随机梯度下降法-SGD" class="headerlink" title="随机梯度下降法(SGD)"></a>随机梯度下降法(SGD)</h4><p>大数据集或者超大数据集中，常常使用批量梯度下降法。<strong>批量</strong> 指的是在单次迭代中用于计算梯度的样本总数。</p>
+<p>包含随机抽样样本的大型数据集可能包含冗余数据。批量越大，出现冗余的可能性越高。为了估算出损失函数的平均梯度(对整个数据集而言)，同时减小计算量，可以通过从我们的数据集中随机选择样本，通过随机选择的小样本集来估算出总体的平均值。<strong>SGD</strong>将这种方法运用到极致，每次迭代只使用一个样本。</p>
+<p><strong>小批量SGD</strong>是介于全批量SGD和SGD之间的折衷方案，小批量一般包含10~1000个随机选择的样本。既减小了SGD中的杂乱样本的数量，又提高了效率。</p>
+
+        
+        <br>
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+    <script>
+        /**
+         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+        */
+        if( '' || '')
+        var disqus_config = function () {
+            this.page.url = '';  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = ''; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://airclouds-blog.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+
+
+
+</html>

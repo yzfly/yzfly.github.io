@@ -11,7 +11,7 @@
 
     <title>
         
-        
+        linux下的login shell - undefined
         
     </title>
 
@@ -53,7 +53,7 @@
     </div>
     <div class="contents" id="nav-content">
         <ul>
-            <li class="active">
+            <li>
                 <a href="/">
                     <i class="iconfont icon-shouye1"></i>
                     <span>主页</span>
@@ -88,6 +88,10 @@
         </ul>
     </div>
     
+        <div id="toc" class="toc-article">
+    
+</div>
+    
 </div>
 
 
@@ -111,157 +115,54 @@
     <div class="index-middle">
         <!-- Main Content -->
         
-<div class="post-preview-container" style="min-height: 720px">
-    
-    <div class="post-preview">
-        <div class="post-time">2018-10-15</div>
-        <div class="post-info">
-            <a href="/2018/10/15/Next-cloud/">
-                <h3>
-                    安装next-cloud
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
+
+
+<div class="post-container">
+    <div class="post-title">
+        linux下的login shell
     </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-07-26</div>
-        <div class="post-info">
-            <a href="/2018/07/26/lingo/">
-                <h3>
-                    lingo
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2018-07-26 23:09:57</span></span>
+        
+        
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+
     </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-07-26</div>
-        <div class="post-info">
-            <a href="/2018/07/26/ENVI-file-format/">
-                <h3>
-                    ENVI 图像文件的标准格式
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
-    </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-07-26</div>
-        <div class="post-info">
-            <a href="/2018/07/26/DOSBox的安装使用/">
-                <h3>
-                    DOSBox的安装和使用
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
-    </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-07-26</div>
-        <div class="post-info">
-            <a href="/2018/07/26/apt升级命令失败问题/">
-                <h3>
-                    sudo apt upgrade命令失败
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
-    </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-07-26</div>
-        <div class="post-info">
-            <a href="/2018/07/26/BlogTemplate/">
-                <h3>
-                    Ubuntu18.04下设置终端启动大小和位置
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
-    </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-07-26</div>
-        <div class="post-info">
-            <a href="/2018/07/26/ubuntu服务器设置定时重启/">
-                <h3>
-                    Ubuntu18.04 server设置定时重启
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
-    </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-07-26</div>
-        <div class="post-info">
-            <a href="/2018/07/26/ubuntu下字体大小问题/">
-                <h3>
-                    Ubuntu18.04下字体大小问题
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
-    </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-07-26</div>
-        <div class="post-info">
-            <a href="/2018/07/26/python3进阶之selenium/">
-                <h3>
-                    python3进阶之selenium
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
-    </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-07-26</div>
-        <div class="post-info">
-            <a href="/2018/07/26/python3进阶之print/">
-                <h3>
-                    python3进阶之print打印和输出
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
-    </div>
-    
-</div>
-<ul class="pager">
-    
-    
-    <li class="next">
-        <a href="/page/2/">Older Posts &rarr;</a>
-    </li>
-    
+    <div class="post-content ">
+        <p>在Linux下使用 terminal,可能常常会遇到这样的选项：</p>
+<p>run command as a login shell</p>
+<p>这是什么意思呢，login 之后的区别又是什么？</p>
+<a id="more"></a>
+<p>对此问题原先一直不解，使用搜索引擎搜索后得知了答案。</p>
+<p>原来在我们打开 linux终端后，terminal需要读取配置文件，login和 no login的区别是读取的配置文件不同。</p>
+<ul>
+<li>login shell 在启动时读取~/.bash_profile文件，如果该文件不存在，则读取 ~/.profile 文件</li>
+<li>non-login shell 一般读取的是 ～/.bashrc文件</li>
 </ul>
+<p>不同文件内容不同，也拥有不同的配置。</p>
+<p>以下是摘自 askubuntu.com的原文</p>
+<blockquote>
+<p>Assuming that your shell is Bash (the default in Ubuntu), these are the differences:</p>
+<ul>
+<li>When running as a <strong>login</strong> shell, Bash will read <code>~/.bash_profile</code> (or, if that doesn’t exist, <code>~/.profile</code>) on startup. In some cases, this file reads <code>~/.bashrc</code> as well.</li>
+<li>When running as a <strong>non-login</strong> shell, Bash will read <code>~/.bashrc</code>.</li>
+</ul>
+<p>So, why do you see different behaviors when running as a login/non-login shell? Because your <code>.bash_profile</code>/<code>.profile</code> is doing different things than your <code>.bashrc</code>.</p>
+</blockquote>
+
+        
+        <br>
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
 
     </div>
 </div>
@@ -301,12 +202,31 @@
     // We expose some of the variables needed by the front end
     window.hexo_search_path = "search.json"
     window.hexo_root = "/"
-    window.isPost = false
+    window.isPost = true
 </script>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
+
+    <script>
+        /**
+         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+        */
+        if( '' || '')
+        var disqus_config = function () {
+            this.page.url = '';  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = ''; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://airclouds-blog.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
 
 
 

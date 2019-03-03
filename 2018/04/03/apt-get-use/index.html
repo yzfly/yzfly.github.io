@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content>
+    <meta name="keyword" content>
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        apt-get use - undefined
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/aircloud.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+
+<body>
+
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i>  </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar">
+            <img src="/img/avatar.jpg">
+        </div>
+        <div class="name">
+            <i>流觞君</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li>
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>主页</span>
+                </a>
+            </li>
+            <li>
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>存档</span>
+                </a>
+            </li>
+            <li>
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>关于</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>搜索</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#APT管理工具"><span class="toc-text">APT管理工具</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装软件"><span class="toc-text">安装软件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#更新"><span class="toc-text">更新</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#升级"><span class="toc-text">升级</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#版本升级"><span class="toc-text">版本升级</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#移除软件包"><span class="toc-text">移除软件包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#自动移除"><span class="toc-text">自动移除</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#完全移除"><span class="toc-text">完全移除</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#清理"><span class="toc-text">清理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#自动清理"><span class="toc-text">自动清理</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Debian软件包管理器（dpkg）"><span class="toc-text">Debian软件包管理器（dpkg）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装"><span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#卸载"><span class="toc-text">卸载</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#完全卸载"><span class="toc-text">完全卸载</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#检查已安装软件包"><span class="toc-text">检查已安装软件包</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Tar命令"><span class="toc-text">Tar命令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#创建压缩文件"><span class="toc-text">创建压缩文件</span></a></li></ol></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input">
+            <span id="begin-search">搜索</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+        <div class="index-about-mobile">
+            <i>  </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        apt-get use
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2018-04-03 23:09:57</span></span>
+        
+        
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+
+    </div>
+    <div class="post-content ">
+        <p>APT软件包管理器是Debian平台上的用于安装和删除软件包的命令行工具，通常简写为apt-get.<br>Debian软件包管理器dpkg可用来维护、升级和安装自定义及第三方程序<br><a id="more"></a></p>
+<h1 id="APT管理工具"><a href="#APT管理工具" class="headerlink" title="APT管理工具"></a>APT管理工具</h1><h2 id="安装软件"><a href="#安装软件" class="headerlink" title="安装软件"></a>安装软件</h2><blockquote>
+<p>apt-get install package_name -y</p>
+<h2 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h2><p>apt-get update</p>
+<h2 id="升级"><a href="#升级" class="headerlink" title="升级"></a>升级</h2><p>apt-get upgrade</p>
+<h2 id="版本升级"><a href="#版本升级" class="headerlink" title="版本升级"></a>版本升级</h2><p>apt-get dist-upgrade</p>
+<h2 id="移除软件包"><a href="#移除软件包" class="headerlink" title="移除软件包"></a>移除软件包</h2><p>apt-get remove package_name</p>
+<h2 id="自动移除"><a href="#自动移除" class="headerlink" title="自动移除"></a>自动移除</h2><p>apt-get autoremove</p>
+<h2 id="完全移除"><a href="#完全移除" class="headerlink" title="完全移除"></a>完全移除</h2><p>apt-get purge package_name</p>
+<h2 id="清理"><a href="#清理" class="headerlink" title="清理"></a>清理</h2><p>apt-get clean</p>
+<h2 id="自动清理"><a href="#自动清理" class="headerlink" title="自动清理"></a>自动清理</h2><p>apt-get autoclean</p>
+</blockquote>
+<h1 id="Debian软件包管理器（dpkg）"><a href="#Debian软件包管理器（dpkg）" class="headerlink" title="Debian软件包管理器（dpkg）"></a>Debian软件包管理器（dpkg）</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><blockquote>
+<p>dpkg -i package_deb.deb</p>
+<h2 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h2><p>dpkg -r package_name.deb</p>
+<h2 id="完全卸载"><a href="#完全卸载" class="headerlink" title="完全卸载"></a>完全卸载</h2><p>dpkg -P package_name.deb</p>
+<h2 id="检查已安装软件包"><a href="#检查已安装软件包" class="headerlink" title="检查已安装软件包"></a>检查已安装软件包</h2><p>dpkg -l package_name   #查看已安装或移除包的状态<br>dpkg -p package_name   #查看已安装软件包的详细信息</p>
+</blockquote>
+<h1 id="Tar命令"><a href="#Tar命令" class="headerlink" title="Tar命令"></a>Tar命令</h1><p>顾名思义，tar命令起源于unix系统，它开始是把多个文件写入磁盘文档（Tap ARchive）</p>
+<h2 id="创建压缩文件"><a href="#创建压缩文件" class="headerlink" title="创建压缩文件"></a>创建压缩文件</h2><blockquote>
+<p>cd dir_name &amp;&amp; tar -cf dir_name*</p>
+</blockquote>
+
+        
+        <br>
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+    <script>
+        /**
+         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+        */
+        if( '' || '')
+        var disqus_config = function () {
+            this.page.url = '';  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = ''; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://airclouds-blog.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+
+
+
+</html>

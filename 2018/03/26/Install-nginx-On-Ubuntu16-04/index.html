@@ -11,7 +11,7 @@
 
     <title>
         
-        
+        Install nginx On Ubuntu16.04 - undefined
         
     </title>
 
@@ -53,7 +53,7 @@
     </div>
     <div class="contents" id="nav-content">
         <ul>
-            <li class="active">
+            <li>
                 <a href="/">
                     <i class="iconfont icon-shouye1"></i>
                     <span>主页</span>
@@ -88,6 +88,10 @@
         </ul>
     </div>
     
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#配置编译环境安装依赖包"><span class="toc-text">配置编译环境安装依赖包</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#下载nginx源码"><span class="toc-text">下载nginx源码</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#编译nginx源码"><span class="toc-text">编译nginx源码</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#nginx启动"><span class="toc-text">nginx启动</span></a></li></ol>
+</div>
+    
 </div>
 
 
@@ -111,157 +115,48 @@
     <div class="index-middle">
         <!-- Main Content -->
         
-<div class="post-preview-container" style="min-height: 720px">
-    
-    <div class="post-preview">
-        <div class="post-time">2018-10-15</div>
-        <div class="post-info">
-            <a href="/2018/10/15/Next-cloud/">
-                <h3>
-                    安装next-cloud
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
+
+
+<div class="post-container">
+    <div class="post-title">
+        Install nginx On Ubuntu16.04
     </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-07-26</div>
-        <div class="post-info">
-            <a href="/2018/07/26/lingo/">
-                <h3>
-                    lingo
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2018-03-26 13:09:12</span></span>
+        
+        
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+
     </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-07-26</div>
-        <div class="post-info">
-            <a href="/2018/07/26/ENVI-file-format/">
-                <h3>
-                    ENVI 图像文件的标准格式
-                </h3>
-            </a>
-            <p>
-                
-            </p>
+    <div class="post-content ">
+        <p>Ubuntu16.04自带nginx，一般可直接通过apt-get 命令安装，为了获取最新版nginx，也为了获得最佳nginx性能，采用nginx源码安装的方式对nginx进行编译安装，将过程记录如下：<br>系统环境为Ubuntu16.04 64bit<br><a id="more"></a></p>
+<h1 id="配置编译环境安装依赖包"><a href="#配置编译环境安装依赖包" class="headerlink" title="配置编译环境安装依赖包"></a>配置编译环境安装依赖包</h1><blockquote>
+<p>apt-get install -y build-essential # 安装编译环境<br>apt-get install -y libtool libpcre3 libpcre3-dev zlib1g-dev openssl libxml2-dev libpng12-dev libfreetype6-dev libjpeg-dev libssl-dev openssl libcurl4-openssl-dev   #安装依赖包</p>
+</blockquote>
+<h1 id="下载nginx源码"><a href="#下载nginx源码" class="headerlink" title="下载nginx源码"></a>下载nginx源码</h1><p>搜索nginx源码下载，进入nginx官网下载最新稳定版nginx源码</p>
+<blockquote>
+<p> wget <a href="http://nginx.org/download/nginx-1.12.2.tar.gz" target="_blank" rel="noopener">http://nginx.org/download/nginx-1.12.2.tar.gz</a>  #下载源码<br>tar -zxvf nginx-1.12.2.tar.gz   #解压源码包</p>
+</blockquote>
+<h1 id="编译nginx源码"><a href="#编译nginx源码" class="headerlink" title="编译nginx源码"></a>编译nginx源码</h1><blockquote>
+<p>cd nginx-1.12.2.tar.gz     #切换到解压文件夹中<br>./configure —prefix=/usr/local/nginx —with-http_ssl_module  #配置安装路径并开启https支持<br>make &amp;&amp; make install     # 开始安装</p>
+</blockquote>
+<h1 id="nginx启动"><a href="#nginx启动" class="headerlink" title="nginx启动"></a>nginx启动</h1><blockquote>
+<p>/usr/local/nginx/sbin/nginx<br>/usr/local/nginx/sbin/nginx -v #查看版本</p>
+</blockquote>
+
+        
+        <br>
+        <div id="comment-container">
         </div>
-    </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-07-26</div>
-        <div class="post-info">
-            <a href="/2018/07/26/DOSBox的安装使用/">
-                <h3>
-                    DOSBox的安装和使用
-                </h3>
-            </a>
-            <p>
-                
-            </p>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
         </div>
+
     </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-07-26</div>
-        <div class="post-info">
-            <a href="/2018/07/26/apt升级命令失败问题/">
-                <h3>
-                    sudo apt upgrade命令失败
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
-    </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-07-26</div>
-        <div class="post-info">
-            <a href="/2018/07/26/BlogTemplate/">
-                <h3>
-                    Ubuntu18.04下设置终端启动大小和位置
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
-    </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-07-26</div>
-        <div class="post-info">
-            <a href="/2018/07/26/ubuntu服务器设置定时重启/">
-                <h3>
-                    Ubuntu18.04 server设置定时重启
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
-    </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-07-26</div>
-        <div class="post-info">
-            <a href="/2018/07/26/ubuntu下字体大小问题/">
-                <h3>
-                    Ubuntu18.04下字体大小问题
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
-    </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-07-26</div>
-        <div class="post-info">
-            <a href="/2018/07/26/python3进阶之selenium/">
-                <h3>
-                    python3进阶之selenium
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
-    </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-07-26</div>
-        <div class="post-info">
-            <a href="/2018/07/26/python3进阶之print/">
-                <h3>
-                    python3进阶之print打印和输出
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
-    </div>
-    
 </div>
-<ul class="pager">
-    
-    
-    <li class="next">
-        <a href="/page/2/">Older Posts &rarr;</a>
-    </li>
-    
-</ul>
 
     </div>
 </div>
@@ -301,12 +196,31 @@
     // We expose some of the variables needed by the front end
     window.hexo_search_path = "search.json"
     window.hexo_root = "/"
-    window.isPost = false
+    window.isPost = true
 </script>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
+
+    <script>
+        /**
+         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+        */
+        if( '' || '')
+        var disqus_config = function () {
+            this.page.url = '';  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = ''; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://airclouds-blog.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
 
 
 

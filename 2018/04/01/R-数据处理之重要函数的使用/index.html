@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content>
+    <meta name="keyword" content>
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        R-数据处理之重要函数的使用 - undefined
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/aircloud.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+
+<body>
+
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i>  </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar">
+            <img src="/img/avatar.jpg">
+        </div>
+        <div class="name">
+            <i>流觞君</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li>
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>主页</span>
+                </a>
+            </li>
+            <li>
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>存档</span>
+                </a>
+            </li>
+            <li>
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>关于</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>搜索</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#lapply"><span class="toc-text">lapply</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#sapply"><span class="toc-text">sapply</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#apply"><span class="toc-text">apply</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#mapply"><span class="toc-text">mapply</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#tapply"><span class="toc-text">tapply</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#split"><span class="toc-text">split</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#排序"><span class="toc-text">排序</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#总结数据信息"><span class="toc-text">总结数据信息</span></a></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input">
+            <span id="begin-search">搜索</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+        <div class="index-about-mobile">
+            <i>  </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        R-数据处理之重要函数的使用
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2018-04-01 09:55:27</span></span>
+        
+        
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+
+    </div>
+    <div class="post-content ">
+        <p>R学习笔记4</p>
+<a id="more"></a>
+<p>R中处理循环： for/while语句，还有更为强大的一句话循环函数</p>
+<blockquote>
+<p>一句话循环 lapply apply mapply tapply<br>R中排序<br>sort order<br>R中总结数据信息<br>head tail summary str table xtabs ftable …</p>
+<h1 id="lapply"><a href="#lapply" class="headerlink" title="lapply"></a>lapply</h1><p>可以循环处理列表中的每一个元素<br>lapply(参数)： lapply(列表，函数/函数名,其他参数)<br>lapply总是返回一个列表<br>    str(apply)  #str()把任意的R对象以一种整洁紧凑的方式展现出来</p>
+</blockquote>
+<pre><code>x &lt;- list(a=1:10,b=c(11,21,34,53,54)) #创建一个列表
+lapply(x,mean)                #将列表中的两个元素分布求平均
+
+x &lt;- 1:4
+lapply(x,runif)   #利用lapply将runif函数依次作用于x中的每一个元素
+lapply(x,runif,min=0,max=100) #min 和max对runif函数产生的值的范围进行了限制
+lapply(x,function(m) m[1,]) #编写自己的函数进行循环
+#此处函数为 function(m) m[1,] ,传入矩阵m，取出m中的第一行
+</code></pre><h2 id="sapply"><a href="#sapply" class="headerlink" title="sapply"></a>sapply</h2><blockquote>
+<p>sapply:简化结果<br>当结果列表元素的长度均为一的时候，返回向量<br>当结果列表元素长度相同且大于1的时候，返回矩阵<br>》结果列表元素长度不同时，与lapply的结果相同</p>
+</blockquote>
+<h1 id="apply"><a href="#apply" class="headerlink" title="apply"></a>apply</h1><blockquote>
+<p>沿着数组的某一维度处理数据<br>apply(数组,维度,函数/函数名)</p>
+</blockquote>
+<pre><code>x &lt;- matrix(1:16,4,4)
+apply(x,2,mean)        #对矩阵的第二个维度（列）求平均
+apply(x,2,sum)  #对每一列进行求和
+apply(x,2,mean)  #对每一列求平均
+
+rowSums(x)    #求行和
+rowMeans(x)    #求行平均
+colMeans(x)
+colSums(x)    #求列和
+</code></pre><h1 id="mapply"><a href="#mapply" class="headerlink" title="mapply"></a>mapply</h1><blockquote>
+<p>lapply的多元版本<br>mapply(函数/函数名,数据，函数相关的参数)</p>
+</blockquote>
+<pre><code>x &lt;- list(rep(1,4),rep(2,3),rep(3,2),rep(4,1))
+y &lt;- mapply(rep,1:4,4:1)   #x列表 和y列表相同
+
+s &lt;- function(n,mean,std)｛    #()内为传入函数中的变量，花括号内为函数体
+    rnorm(n,mean,std)
+｝
+s(4,0,1)                #运行函数
+
+mapply(s,1:5,5:1,2)  # mapply依次将参数传入s函数中进行处理
+list(s(1,5,2),s(2,4,2),s(3,3,2),s(4,2,2),s(5,1,2))
+</code></pre><h1 id="tapply"><a href="#tapply" class="headerlink" title="tapply"></a>tapply</h1><pre><code>x &lt;- c(rnorm(5),runif(5),rnorm(5,1)) #得到一个向量
+na.rm=TRUE    #去除缺失值
+</code></pre><h1 id="split"><a href="#split" class="headerlink" title="split"></a>split</h1><blockquote>
+<p>根据因子或因子列表将向量或其他对象分组<br>通常与lapply一起使用<br>split(向量/列表/数据框,因子/因子列表)</p>
+</blockquote>
+<h1 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h1><blockquote>
+<p>sort 对向量进行排序，返回拍好序的内容<br>order 返回拍好序的内容的下标，可以按照多个标准进行排序<br>    x &lt;- data.frame(v1=1:5,v2=c(10,7,9,6,8),v3=11:15,v4=c(1,1,2,2,1))<br>    sort(x$v2)            #对数据框中的v2升序排列<br>    sort(x$v2,decreasing=TRUE)  #对数据框中的v2降序排列</p>
+</blockquote>
+<pre><code>order(x$v2)   #order函数返回的是排序数据的行号
+x[order(x$v2),]         #对x按照v2排序
+x[order(x$v4,x$v2),]        #按照v4主排序，v4值相同时按照v2排序
+x[order(x$v2,x$v4,decreasing=TRUE),]   #降序排序
+</code></pre><h1 id="总结数据信息"><a href="#总结数据信息" class="headerlink" title="总结数据信息"></a>总结数据信息</h1><pre><code>head(airquality)  #查看前6行
+tail(airquality)  #查看后6行
+
+head(airquality,10) #指定查看前10行
+tail(airquality,10)    #指定查看后10行
+
+summary(airquality)        #总结airquality数据集信息
+str(airquality)
+table(airquality$Month)  #总结airquality数据集中的月份
+
+any(is.na(airquality))   #判断airquality数据集中是否包含空值
+sum(is.na(airquality))     #求出airquality数据集中的缺失值个数
+all(airquality$Month&lt;12)   #判断是否所有数据都满足括号内的条件
+
+xtabs()   #交叉表
+ftable(x) #使数据框扁平化展示出来
+
+object.size(airquality)  #查看数据集大小，防止内存不足
+print(object.size(airquality),units=&quot;Kb&quot;) #将数据以Kb为单位显示
+</code></pre>
+        
+        <br>
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+    <script>
+        /**
+         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+        */
+        if( '' || '')
+        var disqus_config = function () {
+            this.page.url = '';  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = ''; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://airclouds-blog.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+
+
+
+</html>

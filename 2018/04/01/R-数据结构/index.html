@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content>
+    <meta name="keyword" content>
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        R 数据结构 - undefined
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/aircloud.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+
+<body>
+
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i>  </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar">
+            <img src="/img/avatar.jpg">
+        </div>
+        <div class="name">
+            <i>流觞君</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li>
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>主页</span>
+                </a>
+            </li>
+            <li>
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>存档</span>
+                </a>
+            </li>
+            <li>
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>关于</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>搜索</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#R的学习笔记2"><span class="toc-text">R的学习笔记2</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#R的对象和属性"><span class="toc-text">R的对象和属性</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#R的对象"><span class="toc-text">R的对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#属性"><span class="toc-text">属性</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#R中的向量（vector）"><span class="toc-text">R中的向量（vector）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#创建向量的三种方法"><span class="toc-text">创建向量的三种方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#强制转换"><span class="toc-text">强制转换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#属性操作"><span class="toc-text">属性操作</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#R中的矩阵和数组"><span class="toc-text">R中的矩阵和数组</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#矩阵"><span class="toc-text">矩阵</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数组"><span class="toc-text">数组</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#R中的列表"><span class="toc-text">R中的列表</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#R中的因子（factor）"><span class="toc-text">R中的因子（factor）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#R中的缺失值"><span class="toc-text">R中的缺失值</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#R中的数据框（data-frame）"><span class="toc-text">R中的数据框（data frame）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#R中的时间与日期"><span class="toc-text">R中的时间与日期</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#日期：Date"><span class="toc-text">日期：Date</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#时间"><span class="toc-text">时间</span></a></li></ol></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input">
+            <span id="begin-search">搜索</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+        <div class="index-about-mobile">
+            <i>  </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        R 数据结构
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2018-04-01 08:04:45</span></span>
+        
+        
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+
+    </div>
+    <div class="post-content ">
+        <h1 id="R的学习笔记2"><a href="#R的学习笔记2" class="headerlink" title="R的学习笔记2"></a>R的学习笔记2</h1><a id="more"></a>
+<h1 id="R的对象和属性"><a href="#R的对象和属性" class="headerlink" title="R的对象和属性"></a>R的对象和属性</h1><h2 id="R的对象"><a href="#R的对象" class="headerlink" title="R的对象"></a>R的对象</h2><blockquote>
+<p>数值型、整型、字符型、复数型、逻辑型</p>
+</blockquote>
+<p>变量名区分大小写<br>    x &lt;- 3    #原生的赋值方法<br>    x = 3   #此法也可，极端情况下会报错<br>    x &lt;- TRUE    #R中逻辑型一定要大写<br>    class(x) #查看x的数值类型</p>
+<h2 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h2><blockquote>
+<p>名称、维度、长度（length）、类型（class）</p>
+</blockquote>
+<h1 id="R中的向量（vector）"><a href="#R中的向量（vector）" class="headerlink" title="R中的向量（vector）"></a>R中的向量（vector）</h1><blockquote>
+<p>向量只能包含同一类型的对象</p>
+<h2 id="创建向量的三种方法"><a href="#创建向量的三种方法" class="headerlink" title="创建向量的三种方法"></a>创建向量的三种方法</h2><pre><code>x &lt;- vector(&quot;character&quot;,length(10))  #创建字符型，长度为10的空向量
+x1 &lt;- 1:4    #创建了1到4的整数型向量
+x2 &lt;- c(1,2,3,4)
+x3 &lt;- c(&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;)    #利用c函数创建向量
+x4 &lt;- c(TRUE,10,&#39;A&#39;)    #R会将不同类型的转换为同一类型，此处为字符型
+</code></pre><h2 id="强制转换"><a href="#强制转换" class="headerlink" title="强制转换"></a>强制转换</h2><pre><code>as.numeric()    #强制转换为数值型
+as.logical()    #强制转换为逻辑型
+as.character()
+</code></pre><h2 id="属性操作"><a href="#属性操作" class="headerlink" title="属性操作"></a>属性操作</h2><pre><code>class(x)     #查看变量x的类型
+names(x) &lt;- c(&#39;name1&#39;,&#39;name2&#39;,&#39;name3&#39;,)    #为向量x中的每个元素命名
+</code></pre></blockquote>
+<h1 id="R中的矩阵和数组"><a href="#R中的矩阵和数组" class="headerlink" title="R中的矩阵和数组"></a>R中的矩阵和数组</h1><p>矩阵（Matrix）：只能有两个维度 行row和列column </p>
+<p>数组（array）：可以有多个维度，矩阵为数组的一种情况</p>
+<h2 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h2><pre><code>x &lt;- matrix(nrow = 3, ncol = 2) # 创建一个三行两列的空矩阵
+x &lt;- matrix(1:6,nrow=3,ncol=2)  #创建一个两行三列的空矩阵并赋值
+dim(x)    #查看矩阵的维度属性
+rbind(x1,y1)  #将x1 y1 两个矩阵进行行拼接
+cbind(x2,y2)  #将x2 y2 两个矩阵进行列拼接
+attributes(x) #查看矩阵的所有属性
+</code></pre><h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><pre><code>y &lt;- array(1:24,dim=c(4,6))    #创建一个二维数组，也就是矩阵
+y2 &lt;- array(1:24,dim=c(2,3,4))    #创建一个维度为三维的数组
+</code></pre><h1 id="R中的列表"><a href="#R中的列表" class="headerlink" title="R中的列表"></a>R中的列表</h1><p>列表可以包含不同类型的元素，创建列表的方法为使用list()<br>    l &lt;- list(‘a’,2,10L,3+4i,TRUE)    #创建列表<br>    l2 &lt;- list(a=1,b=2,c=3)    #为列表中每个元素命名<br>    x &lt;- matrix(1:6,nrow=2,ncol=3) #创建一个矩阵<br>    dimnames &lt;- list(c(‘a’,’b’),c(‘A’,’B’,’C’))   #为矩阵中的行和列命名</p>
+<h1 id="R中的因子（factor）"><a href="#R中的因子（factor）" class="headerlink" title="R中的因子（factor）"></a>R中的因子（factor）</h1><p>R中的因子用来处理分类数据，区分有序和无序，可以理解为整数向量+标签（优于整数向量）<br>    f &lt;- factor(c(‘female’,’male’,’male’,’female’,’male’)) #创建因子<br>    f2 &lt;- factor(c(‘female’,’male’,’male’,’female’,’male’),levels(‘male’,’female’))</p>
+<pre><code># 使用levels自定义极限水平
+table(f)    #查看对f因子的整体描述
+unclass(f)    #去掉f的属性
+class(unclass(f2))    # 查看去除属性后因子的属性
+</code></pre><h1 id="R中的缺失值"><a href="#R中的缺失值" class="headerlink" title="R中的缺失值"></a>R中的缺失值</h1><p>R中的缺失值有两种NA和NaN</p>
+<p>NaN属于NA，而NA不属于NaN,NaN常用于判断整数缺失值，而NA使用的范围更广，可以表示多种缺失值，有不同的类型属性</p>
+<p>可以使用is.na() is.nan()来判断是否为该类型的缺失值<br>    x &lt;- c(1,2,3,na,na,4)<br>    is.na(x)<br>    is.nan(x)</p>
+<pre><code>y &lt;- c(1,2,3,nan,nan,5)
+is.na(y)
+is.nan(y)
+</code></pre><h1 id="R中的数据框（data-frame）"><a href="#R中的数据框（data-frame）" class="headerlink" title="R中的数据框（data frame）"></a>R中的数据框（data frame）</h1><p>R中的数据框和数据库中的一张表很像，就是数据表，每个元素代表一列数据，元素类型可以不同<br>    d &lt;- data.frame(id=(1,2,3,4),name=c(“a”,”b”,”c”,”d”),gender=c(‘male’,”female”,”male”,”female”)</p>
+<pre><code>nrow(d) #查看d的行数
+ncol(d) #查看d的列数
+data.matrix(dd) #特殊情况下可强制转换为矩阵，前提为数据框中dd中所有元素类型相同    
+</code></pre><h1 id="R中的时间与日期"><a href="#R中的时间与日期" class="headerlink" title="R中的时间与日期"></a>R中的时间与日期</h1><h2 id="日期：Date"><a href="#日期：Date" class="headerlink" title="日期：Date"></a>日期：Date</h2><pre><code>x &lt;- date()                # 读入时间
+x2 &lt;- Sys.Date()        #读入系统时间
+x3 &lt;- as.Date(&quot;2017-3-18&quot;)     #存入某一时间，格式为  年-月-日
+weekdays(x3)    # 查看x3对应的星期是什么
+months(x2)        #查看该时间所属月份
+quarters(x3)    #查看该时间所属的季度，一年共有四个季度
+julian(x3)        #查看该时间距离1979-01-01过去多少天，转换为一个整数
+
+x4 &lt;- as.Date(&#39;2016-01-01&#39;)
+x5 &lt;- as.Date(&#39;2017-01-01&#39;)
+x5-x4    #日期运算，查看两者相距的天数
+as.numeric(x5-x4)  #转换为整数
+</code></pre><h2 id="时间"><a href="#时间" class="headerlink" title="时间"></a>时间</h2><p>R中的时间有两种类型（POSIXct、POSIXlt）<br>    t &lt;- Sys.time()   #读入系统时间<br>    class(t)    #查看时间类型</p>
+<pre><code>as.POSIXlt(t) #强制类型转换
+as.POSIXct(t) 
+unclass(t)    #留下内容去除属性
+
+names(unclass(t))    #查看属性名
+t$name1        #取出上一命令中某个名字的具体值
+
+strptime(x1,&quot;%B% %d, %Y %H:%M&quot;)  # 读取时间，x1为时间日期字符串，后面%B月份 %d天数 %Y年份 %H小时 %M分钟
+</code></pre>
+        
+        <br>
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+    <script>
+        /**
+         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+        */
+        if( '' || '')
+        var disqus_config = function () {
+            this.page.url = '';  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = ''; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://airclouds-blog.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+
+
+
+</html>

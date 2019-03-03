@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content>
+    <meta name="keyword" content>
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        pdfcrack and fcrackzip - undefined
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/aircloud.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+
+<body>
+
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i>  </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar">
+            <img src="/img/avatar.jpg">
+        </div>
+        <div class="name">
+            <i>流觞君</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li>
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>主页</span>
+                </a>
+            </li>
+            <li>
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>存档</span>
+                </a>
+            </li>
+            <li>
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>关于</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>搜索</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#pdfcrack"><span class="toc-text">pdfcrack</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装pdfcrack"><span class="toc-text">安装pdfcrack</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#开始pdfcrack"><span class="toc-text">开始pdfcrack</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用密码字典"><span class="toc-text">使用密码字典</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#fcrackzip"><span class="toc-text">fcrackzip</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装fcrackzip-kali自带"><span class="toc-text">安装fcrackzip(kali自带)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#创建测试用zip文件"><span class="toc-text">创建测试用zip文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#开始破解"><span class="toc-text">开始破解</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#SSLscan"><span class="toc-text">SSLscan</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#扫描百度"><span class="toc-text">扫描百度</span></a></li></ol></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input">
+            <span id="begin-search">搜索</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+        <div class="index-about-mobile">
+            <i>  </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        pdfcrack and fcrackzip
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2018-01-29 23:09:32</span></span>
+        
+        
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+
+    </div>
+    <div class="post-content ">
+        <p>系统环境： kali linux 64bit<br>在kali linux上利用 pdfcrack工具破解pdf文件密码<br>利用fcrackzip破解zip文件的弱密码<br>利用sslscan获取ssl证书信息<br><a id="more"></a></p>
+<h1 id="pdfcrack"><a href="#pdfcrack" class="headerlink" title="pdfcrack"></a>pdfcrack</h1><h2 id="安装pdfcrack"><a href="#安装pdfcrack" class="headerlink" title="安装pdfcrack"></a>安装pdfcrack</h2><blockquote>
+<p>apt-get update -y<br>apt install pdfcrack -y</p>
+</blockquote>
+<h2 id="开始pdfcrack"><a href="#开始pdfcrack" class="headerlink" title="开始pdfcrack"></a>开始pdfcrack</h2><p>此处使用word2016生成的pdf，命名为pdf_name.pdf，设置的密码为123456789</p>
+<blockquote>
+<p>pdfcrack -f pdf_name.pdf -n 6 -m 9 -c 0123456789<br>对pdf_name.pdf文件进行破解，密码最短为6位，最长为9位，密码字符集为0123456789<br>开始漫长的等待~</p>
+</blockquote>
+<h2 id="使用密码字典"><a href="#使用密码字典" class="headerlink" title="使用密码字典"></a>使用密码字典</h2><blockquote>
+<p>pdfcrack -f pdf_name.pdf -w passwordlist.txt</p>
+</blockquote>
+<h1 id="fcrackzip"><a href="#fcrackzip" class="headerlink" title="fcrackzip"></a>fcrackzip</h1><h2 id="安装fcrackzip-kali自带"><a href="#安装fcrackzip-kali自带" class="headerlink" title="安装fcrackzip(kali自带)"></a>安装fcrackzip(kali自带)</h2><blockquote>
+<p>apt-get install fcrackzip -y<br>man fcrackzip   #查看fcrackzip的信息，可忽略</p>
+</blockquote>
+<h2 id="创建测试用zip文件"><a href="#创建测试用zip文件" class="headerlink" title="创建测试用zip文件"></a>创建测试用zip文件</h2><blockquote>
+<p>cd ~<br>mkdir test<br>cd test   #创建测试用文件夹后进入该文件夹<br>echo “Hello world” &gt;&gt; hello.txt  # 创建测试txt文件<br>zip —password 123456 hello.zip hello.txt  #zip命令先写压缩后文件名，再写要压缩的文件名<br>设置密码为123456</p>
+</blockquote>
+<h2 id="开始破解"><a href="#开始破解" class="headerlink" title="开始破解"></a>开始破解</h2><blockquote>
+<p>fcrackzip -b -c ‘aA1!’ -l 1-10 -u zip_name.zip  #指定使用-b(brute-force)穷举法，指定字符集为大小写字母数字和字符 指定破解文件为zip_name.zip<br>fcarckzip -D -p /root/password_list.txt -u zip_name.zip<br>使用密码字典破解</p>
+</blockquote>
+<h1 id="SSLscan"><a href="#SSLscan" class="headerlink" title="SSLscan"></a>SSLscan</h1><h2 id="扫描百度"><a href="#扫描百度" class="headerlink" title="扫描百度"></a>扫描百度</h2><blockquote>
+<p>sslscan baidu.com  #会返回一系列信息<br>参考博客：<br><a href="http://topspeedsnail.com/use-sslscan-get-ssl-info/" target="_blank" rel="noopener">http://topspeedsnail.com/use-sslscan-get-ssl-info/</a></p>
+</blockquote>
+
+        
+        <br>
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+    <script>
+        /**
+         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+        */
+        if( '' || '')
+        var disqus_config = function () {
+            this.page.url = '';  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = ''; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://airclouds-blog.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+
+
+
+</html>

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content>
+    <meta name="keyword" content>
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        lingo - undefined
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/aircloud.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+
+<body>
+
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i>  </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar">
+            <img src="/img/avatar.jpg">
+        </div>
+        <div class="name">
+            <i>流觞君</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li>
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>主页</span>
+                </a>
+            </li>
+            <li>
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>存档</span>
+                </a>
+            </li>
+            <li>
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>关于</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>搜索</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#lingo求解优化模型"><span class="toc-text">lingo求解优化模型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#优化模型"><span class="toc-text">优化模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#lingo的语法："><span class="toc-text">lingo的语法：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#lingo结果解读"><span class="toc-text">lingo结果解读</span></a></li></ol></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input">
+            <span id="begin-search">搜索</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+        <div class="index-about-mobile">
+            <i>  </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        lingo
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2018-07-26 23:09:57</span></span>
+        
+        
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+
+    </div>
+    <div class="post-content ">
+        <h1 id="lingo求解优化模型"><a href="#lingo求解优化模型" class="headerlink" title="lingo求解优化模型"></a>lingo求解优化模型</h1><p>优化模型中一些通用术语</p>
+<ul>
+<li>programming: 规划</li>
+<li>optimization: 优化</li>
+<li>combinatorial optimization: 组合规划</li>
+<li>integer programming: 整数规划</li>
+</ul>
+<a id="more"></a>
+<h2 id="优化模型"><a href="#优化模型" class="headerlink" title="优化模型"></a>优化模型</h2><p>各种优化模型：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>简称</th>
+<th>介绍</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LP</td>
+<td>linear programming,线性规划</td>
+</tr>
+<tr>
+<td>NLP</td>
+<td>nonlinear programming,非线性规划</td>
+</tr>
+<tr>
+<td>QP</td>
+<td>quadratic programming,二次规划</td>
+</tr>
+<tr>
+<td>IP</td>
+<td>integer programming, 整数规划，x的一个或者多个分量只取整数值</td>
+</tr>
+<tr>
+<td>PIP</td>
+<td>pure integer programming,纯整数规划，x的所有分量只取整数值</td>
+</tr>
+<tr>
+<td>MIP</td>
+<td>mixed integer programming, x的部分分量只取帧数数值</td>
+</tr>
+<tr>
+<td>ZOP</td>
+<td>zero-one programming, 0-1规划，x的分量中取整数数值的范围限定为只取0或者1</td>
+</tr>
+<tr>
+<td>ILP和INLP</td>
+<td>整数规划也分为整数线性规划(ILP)和整数非线性规划(INLP)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="lingo的语法："><a href="#lingo的语法：" class="headerlink" title="lingo的语法："></a>lingo的语法：</h2><blockquote>
+<p>lindo和lingo的区别，lindo主要为较早版本的叫法，lingo为较新版本的命名，两者语法基本相同但有差异，lingo兼容lindo语法。</p>
+</blockquote>
+<ol>
+<li>注释： ！开头</li>
+<li>lingo中假设所有变量非负，所以无需添加非负约束（如 x&gt;0, y&gt;0）</li>
+</ol>
+<h2 id="lingo结果解读"><a href="#lingo结果解读" class="headerlink" title="lingo结果解读"></a>lingo结果解读</h2><p>lingo状态窗口</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">名称</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Variables:变量</td>
+</tr>
+<tr>
+<td style="text-align:left">Constraints: 约束变量</td>
+</tr>
+<tr>
+<td style="text-align:left">Nonzeros: 非零系数约束量</td>
+</tr>
+<tr>
+<td style="text-align:left">Generator Memory Uesd(K): 内存使用量，单位为千字节</td>
+</tr>
+<tr>
+<td style="text-align:left">Elapsed Runtime(hh: mm: ss): 求解花费时间，显示格式为“时：分：秒”</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>lingo Solver Status窗口参数解释</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">名称</th>
+<th style="text-align:center">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Model Class(模型类型)</td>
+<td style="text-align:center">LP,QP,ILP,IQP,PILP,PIQP,NLP,INLP,PINLP等等（I开头表示IP，PI开头表示)</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">Status(状态)</td>
+<td style="text-align:center">显示当前求解状态，“Global optimal”表示找到全局最优解</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">class(当前模型类型)</td>
+<td style="text-align:center">LP，QP，ILP等</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+        
+        <br>
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+    <script>
+        /**
+         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+        */
+        if( '' || '')
+        var disqus_config = function () {
+            this.page.url = '';  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = ''; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://airclouds-blog.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+
+
+
+</html>

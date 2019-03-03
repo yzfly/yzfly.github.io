@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content>
+    <meta name="keyword" content>
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        Machine Learning-3 - undefined
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/aircloud.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+
+<body>
+
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i>  </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar">
+            <img src="/img/avatar.jpg">
+        </div>
+        <div class="name">
+            <i>流觞君</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li>
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>主页</span>
+                </a>
+            </li>
+            <li>
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>存档</span>
+                </a>
+            </li>
+            <li>
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>关于</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>搜索</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#机器学习之泛化"><span class="toc-text">机器学习之泛化</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#机器学习三条基本假设"><span class="toc-text">机器学习三条基本假设</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#过拟合"><span class="toc-text">过拟合</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#验证"><span class="toc-text">验证</span></a></li></ol></li></ol></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input">
+            <span id="begin-search">搜索</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+        <div class="index-about-mobile">
+            <i>  </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        Machine Learning-3
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2018-07-26 23:09:57</span></span>
+        
+        
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+
+    </div>
+    <div class="post-content ">
+        <h1 id="机器学习之泛化"><a href="#机器学习之泛化" class="headerlink" title="机器学习之泛化"></a>机器学习之泛化</h1><p><strong>泛化能力：</strong> 是指机器学习模型对新数据的适应能力。</p>
+<p>监督式机器学习基于几条重要假设，若违背了这几条重要假设，模型将不具备普适性-也就是不具备泛化能力，不能很好的运用到训练数据集之外的数据。</p>
+<a id="more"></a>
+<h2 id="机器学习三条基本假设"><a href="#机器学习三条基本假设" class="headerlink" title="机器学习三条基本假设"></a>机器学习三条基本假设</h2><ul>
+<li>从分布中随机抽取独立同分布（i,i,d)的样本。换言之，样本之间不会相互影响。</li>
+<li>分布是平稳的；即分布在数据集中不会发生变化。</li>
+<li>从同一分布的数据划分中抽取样本。</li>
+</ul>
+<blockquote>
+<p>如果不符合监督式机器学习的关键假设，那么模型将失去具备泛化能力的理论保证。</p>
+<p>如果某个模型尝试紧密拟合训练数据，却不能够很好的泛化到新数据，就会发生过拟合现象。</p>
+</blockquote>
+<h3 id="过拟合"><a href="#过拟合" class="headerlink" title="过拟合"></a>过拟合</h3><p>机器学习的目标是对从真实概率分布（已隐藏）中抽取的新数据做出良好预测。模型需要适当拟合当前数据，但也要尽可能简单的拟合数据。</p>
+<p>模型的如果过于复杂，即使在训练过程中产生的损失很低，但在预测新数据方面可能表现糟糕。</p>
+<p>为了评估模型的拟合情况，是否发生过拟合现象，采用奥卡姆剃刀定律：</p>
+<blockquote>
+<p>机器学习模型越简单，良好的实证结果就越有可能不仅仅基于样本的特性。</p>
+</blockquote>
+<p>考虑以下两点因素：</p>
+<ul>
+<li>模型的复杂程度</li>
+<li>模型在处理训练数据方面的表现</li>
+</ul>
+<p>机器学习模型旨在根据以前未见过的新数据做出良好预测。上面的讨论给处理理论评估方法，而机器学习侧重于实证评估来评判模型泛化到新数据的能力。采用分割数据集为两个子集的方法来评估：</p>
+<ul>
+<li><strong>训练集</strong>-用于训练模型的子集，越大模型越准确<br>* </li>
+<li><strong>测试集</strong>-用于测试模型的子集，越大置信区间越好<ul>
+<li>规模足够大，可产生具有统计意义的结果</li>
+<li>能代表整个数据集。换言之，测试集特征和训练集的特征相同。</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><strong>绝对不要对测试集进行训练：</strong> 如果在测试集上表现过于良好，因检查是否存在此问题，尤其是数据集中存在大量冗余数据的情况下，很容易犯错。因此预处理数据时应该先去除冗余数据。</p>
+</blockquote>
+<p>采用模型在测试集上的表现来衡量模型的泛化能力。</p>
+<h3 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h3><p>一般的方法将数据划分为两个子集，一个子集用于训练，一个子集用于测试。根据模型在测试集中的表现来调整模型的各个参数，最终得到在测试集上表现较好的一个结果。但是重复调整的次数越多，模型的泛化能力就越低，因为测试集暴露给模型的信息也越多。</p>
+<p>可引入验证集，使测试集暴露给模型的信息更少，来减少过拟合的风险，提高模型的泛化能力。</p>
+<p>算法流程：</p>
+<ul>
+<li>划分数据集为三个子集：训练集、验证集、测试集</li>
+<li>在训练集上训练，使用验证集进行验证，直到模型在验证集上表现良好</li>
+<li>将上一步训练好的模型用于测试集，评估模型的泛化能力。</li>
+</ul>
+
+        
+        <br>
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+    <script>
+        /**
+         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+        */
+        if( '' || '')
+        var disqus_config = function () {
+            this.page.url = '';  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = ''; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://airclouds-blog.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+
+
+
+</html>

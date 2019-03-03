@@ -11,7 +11,7 @@
 
     <title>
         
-        
+        Shell之批量下载历年数学建模题 - undefined
         
     </title>
 
@@ -53,7 +53,7 @@
     </div>
     <div class="contents" id="nav-content">
         <ul>
-            <li class="active">
+            <li>
                 <a href="/">
                     <i class="iconfont icon-shouye1"></i>
                     <span>主页</span>
@@ -88,6 +88,10 @@
         </ul>
     </div>
     
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#下载代码如下"><span class="toc-text">下载代码如下</span></a></li></ol>
+</div>
+    
 </div>
 
 
@@ -111,157 +115,58 @@
     <div class="index-middle">
         <!-- Main Content -->
         
-<div class="post-preview-container" style="min-height: 720px">
-    
-    <div class="post-preview">
-        <div class="post-time">2018-10-15</div>
-        <div class="post-info">
-            <a href="/2018/10/15/Next-cloud/">
-                <h3>
-                    安装next-cloud
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
+
+
+<div class="post-container">
+    <div class="post-title">
+        Shell之批量下载历年数学建模题
     </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-07-26</div>
-        <div class="post-info">
-            <a href="/2018/07/26/lingo/">
-                <h3>
-                    lingo
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2018-03-25 23:28:14</span></span>
+        
+        
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+
     </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-07-26</div>
-        <div class="post-info">
-            <a href="/2018/07/26/ENVI-file-format/">
-                <h3>
-                    ENVI 图像文件的标准格式
-                </h3>
-            </a>
-            <p>
-                
-            </p>
+    <div class="post-content ">
+        <p>自动下载历年数学建模试题~系统Ubuntu16.04 64bit</p>
+<a id="more"></a>
+<h1 id="下载代码如下"><a href="#下载代码如下" class="headerlink" title="下载代码如下"></a>下载代码如下</h1><p>​    #!/bin/bash</p>
+<pre><code>#This is a shell script for downloading the doc of Math Competition
+#Author:liushang
+
+cd /root/m &amp;&amp;
+apt-get install -y zip unzip p7zip &amp;&amp;
+type=&quot;a b c d&quot;
+for((year=2000;year&lt;=2016;year++));
+do
+        for t in $type
+        do
+        # download zip files
+                doc=$year$t &amp;&amp;
+        wget -c &quot;http://www.shumo.com/wiki/lib/exe/fetch.php?media=cumcm:cumcm`echo $doc`.zip&quot; -O &quot;Problem$doc.zip&quot;
+                 unzip &quot;Problem$doc.zip&quot;   #如需解压zip文件，请取消注释
+        # download 7z files
+        wget -c &quot;http://www.shumo.com/wiki/lib/exe/fetch.php?media=cumcm:cumcm`echo $doc`.7z&quot; -O &quot;Problem$doc.7z&quot;
+        # year=$[$year+1]   It should be like this if in this way
+                 7z x &quot;Problem$doc.7z&quot;     #如需解压7z文件，请取消本行注释
+        done
+done
+echo &quot;All files have been downloaded~ enjoy~&quot;
+</code></pre>
+        
+        <br>
+        <div id="comment-container">
         </div>
-    </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-07-26</div>
-        <div class="post-info">
-            <a href="/2018/07/26/DOSBox的安装使用/">
-                <h3>
-                    DOSBox的安装和使用
-                </h3>
-            </a>
-            <p>
-                
-            </p>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
         </div>
+
     </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-07-26</div>
-        <div class="post-info">
-            <a href="/2018/07/26/apt升级命令失败问题/">
-                <h3>
-                    sudo apt upgrade命令失败
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
-    </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-07-26</div>
-        <div class="post-info">
-            <a href="/2018/07/26/BlogTemplate/">
-                <h3>
-                    Ubuntu18.04下设置终端启动大小和位置
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
-    </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-07-26</div>
-        <div class="post-info">
-            <a href="/2018/07/26/ubuntu服务器设置定时重启/">
-                <h3>
-                    Ubuntu18.04 server设置定时重启
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
-    </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-07-26</div>
-        <div class="post-info">
-            <a href="/2018/07/26/ubuntu下字体大小问题/">
-                <h3>
-                    Ubuntu18.04下字体大小问题
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
-    </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-07-26</div>
-        <div class="post-info">
-            <a href="/2018/07/26/python3进阶之selenium/">
-                <h3>
-                    python3进阶之selenium
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
-    </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-07-26</div>
-        <div class="post-info">
-            <a href="/2018/07/26/python3进阶之print/">
-                <h3>
-                    python3进阶之print打印和输出
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
-    </div>
-    
 </div>
-<ul class="pager">
-    
-    
-    <li class="next">
-        <a href="/page/2/">Older Posts &rarr;</a>
-    </li>
-    
-</ul>
 
     </div>
 </div>
@@ -290,7 +195,24 @@
             <span id="busuanzi_value_site_uv"></span>UV
         </span>
         Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
-</footer><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</footer><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
 
 
 
@@ -301,12 +223,31 @@
     // We expose some of the variables needed by the front end
     window.hexo_search_path = "search.json"
     window.hexo_root = "/"
-    window.isPost = false
+    window.isPost = true
 </script>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
+
+    <script>
+        /**
+         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+        */
+        if( '' || '')
+        var disqus_config = function () {
+            this.page.url = '';  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = ''; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://airclouds-blog.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
 
 
 

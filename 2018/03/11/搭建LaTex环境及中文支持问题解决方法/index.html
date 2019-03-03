@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content>
+    <meta name="keyword" content>
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        搭建LaTex环境及中文支持问题解决方法 - undefined
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/aircloud.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+
+<body>
+
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i>  </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar">
+            <img src="/img/avatar.jpg">
+        </div>
+        <div class="name">
+            <i>流觞君</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li>
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>主页</span>
+                </a>
+            </li>
+            <li>
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>存档</span>
+                </a>
+            </li>
+            <li>
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>关于</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>搜索</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一、在win10上搭建LaTex环境"><span class="toc-text">一、在win10上搭建LaTex环境</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#简介："><span class="toc-text">简介：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1、百度搜索latex，第一个结果就是啦，我们点进去看看。"><span class="toc-text">1.1、百度搜索latex，第一个结果就是啦，我们点进去看看。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2、嗯-什么鬼，一堆英文"><span class="toc-text">1.2、嗯~什么鬼，一堆英文?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-打开get页面。"><span class="toc-text">1.3 打开get页面。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4-我们来到了MikTex项目的主页。"><span class="toc-text">1.4 我们来到了MikTex项目的主页。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-5-好的我们终于找到啦。"><span class="toc-text">1.5 好的我们终于找到啦。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-6-好的我们下载好了安装包，直接双击打开安装包。"><span class="toc-text">1.6 好的我们下载好了安装包，直接双击打开安装包。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-7-然后到了为系统用户设置权限一项，我们选择为当前电脑所有用户安装该软件，然后下一步即可"><span class="toc-text">1.7 然后到了为系统用户设置权限一项，我们选择为当前电脑所有用户安装该软件，然后下一步即可</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-8接下来小伙伴们可看仔细啦，冰淇淋小姐也注意啦"><span class="toc-text">1.8接下来小伙伴们可看仔细啦，冰淇淋小姐也注意啦!</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-9到了设置页面，其余的默认就好"><span class="toc-text">1.9到了设置页面，其余的默认就好.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-10-后面就开始软件安装啦，静静等待MikTex安装好即可。"><span class="toc-text">1.10 后面就开始软件安装啦，静静等待MikTex安装好即可。</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二、选择一款称心顺手的编辑器——-TeXstudio"><span class="toc-text">二、选择一款称心顺手的编辑器——-TeXstudio</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-百度搜索TeXstudio，我们选择第一个结果就好"><span class="toc-text">2.1 百度搜索TeXstudio，我们选择第一个结果就好</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-打开第一个搜索结果。"><span class="toc-text">2.2 打开第一个搜索结果。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3点击下载按钮后，请等待5秒钟，下载就开始啦。"><span class="toc-text">2.3点击下载按钮后，请等待5秒钟，下载就开始啦。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4-至此，我们的编辑器就安装好啦"><span class="toc-text">2.4 至此，我们的编辑器就安装好啦</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#三、解决LaTex恼人的中文乱码问题"><span class="toc-text">三、解决LaTex恼人的中文乱码问题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-LaTex中文支持。"><span class="toc-text">3.1 LaTex中文支持。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-打开我们的TeXstudio，如下图"><span class="toc-text">3.2 打开我们的TeXstudio，如下图:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-3-配置好之后，我们来使用TeXstudio来编写我们的第一个LaTex文档。如图，请新建文档并写入下面内容。"><span class="toc-text">3.3 配置好之后，我们来使用TeXstudio来编写我们的第一个LaTex文档。如图，请新建文档并写入下面内容。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-4-写好后，如图编译运行："><span class="toc-text">3.4 写好后，如图编译运行：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-5-简单使用又强大的CTEX法。"><span class="toc-text">3.5 简单使用又强大的CTEX法。</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5-2-CTEX法二之导入ctexart类"><span class="toc-text">3.5.2 CTEX法二之导入ctexart类</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CJK包法："><span class="toc-text">CJK包法：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-6-1-CJK包法一之UTF8编码法"><span class="toc-text">3.6.1 CJK包法一之UTF8编码法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-6-2-CJK包法之GBK编码法"><span class="toc-text">3.6.2 CJK包法之GBK编码法</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#四、写在最后："><span class="toc-text">四、写在最后：</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#结尾推荐一个很好的LaTex的平台—华师大的laTex教程："><span class="toc-text">结尾推荐一个很好的LaTex的平台—华师大的laTex教程：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#若有兴趣，也可关注我的github相关的LaTex库，里面包含了一些LaTex学习资料和自己练习的一些LaTex代码"><span class="toc-text">若有兴趣，也可关注我的github相关的LaTex库，里面包含了一些LaTex学习资料和自己练习的一些LaTex代码</span></a></li></ol></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input">
+            <span id="begin-search">搜索</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+        <div class="index-about-mobile">
+            <i>  </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        搭建LaTex环境及中文支持问题解决方法
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2018-03-11 22:11:46</span></span>
+        
+        
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+
+    </div>
+    <div class="post-content ">
+        <p><strong> 前言: </strong> 近日流觞君学习号称最优秀的公式排版系统LaTex，冰淇淋小姐知悉后大加赞赏。在流觞君的鼓动下，冰淇淋小姐决心与流觞君一道入此大坑。然在环境的搭建及中文编码问题上遇坑颇多，念及冰淇淋小姐向来对环境搭建大为头疼，且网上教程对环境搭建大多不屑一提，对中文支持问题的解决之法又未有细说，故作此教程一篇，希望聪明的冰淇淋小姐能够按图索骥，在学习LaTex的道路上迈出坚实的一步。</p>
+<a id="more"></a>
+<p>写的很细致，是因为万事开头难，希望初学LaTex，安装LaTex环境的小伙伴们能够减少学习路上的磕磕绊绊，迈出坚实的第一步，对于教程中涉及的诸多概念，第一次不必懂，你的疑惑在学习LaTex的过程中自会一一解答。</p>
+<p><strong> 本文内容: </strong><br>1、在win10上搭建并不复杂的LaTex环境<br>2、安装一款顺手顺心的LaTex编辑器<br>3、解决LaTex令人头疼的中文乱码问题</p>
+<h1 id="一、在win10上搭建LaTex环境"><a href="#一、在win10上搭建LaTex环境" class="headerlink" title="一、在win10上搭建LaTex环境"></a>一、在win10上搭建LaTex环境</h1><h2 id="简介："><a href="#简介：" class="headerlink" title="简介："></a><strong>简介：</strong></h2><p>LaTex是当今公认的最优秀的排版系统，其对数学公式的优美排版、对论文、书籍、报纸排版的良好支持，使其得到广大用户的青睐与认可。相传上个世纪七十年代末，米国某计算机大佬因不满其得意之作的糟糕排版，遂作此系统。几十年的发展，LaTex功能愈发强大，性能愈发稳定，十分适合对科技类论文书籍的排版。流觞君和冰淇淋小姐作为两枚纯正的工科生，遂学之。</p>
+<p>如果你有接触过linux系统，一定知道linux下有许多发行版，类似ubuntu、redhat、centOS等。LeTex和linux系统一样，也有许多发行版，如MikTex、Ctex、Texlive等，令人眼花缭乱，不知作何选择。流觞君当然不会让超高智商的冰淇淋小姐陷入此烦心问题之中啦，接下来，按照流觞君的步骤一步步安装MikTex就好。什么？聪明的冰淇淋小姐想知道原因？好吧。Ctex项目早已于16年停止更新，况且其只不过是将MikTex和诸多编辑器打包，而Texlive则动辄好几G臃肿不堪，对于我等工科生，MikTex实为上上之选。</p>
+<p><strong>废话少说，下面开始LaTex环境的安装。</strong></p>
+<p>不行不行，我这里还有一句话非在安装前说不可，由于LaTex的创造者为米国人，因此原生不支持中文，所以在下面的安装步骤中，安装路径中一定不要出现中文，不然以后出现的各种问题够你喝几壶。嗯……冰淇淋小姐看到这估计是一脸懵逼的，什么是安装路径？啊哈，一两句话也解释不清，还是按照流觞君下面的教程一步步来吧。</p>
+<style>
+img{
+    width: 70%;
+    height: 70%;
+    padding-left: 10%;
+}
+</style>
+
+<h2 id="1-1、百度搜索latex，第一个结果就是啦，我们点进去看看。"><a href="#1-1、百度搜索latex，第一个结果就是啦，我们点进去看看。" class="headerlink" title="1.1、百度搜索latex，第一个结果就是啦，我们点进去看看。"></a>1.1、百度搜索latex，第一个结果就是啦，我们点进去看看。</h2><p><img src="/imgs/latex/l1.png" alt></p>
+<h2 id="1-2、嗯-什么鬼，一堆英文"><a href="#1-2、嗯-什么鬼，一堆英文" class="headerlink" title="1.2、嗯~什么鬼，一堆英文?"></a>1.2、嗯~什么鬼，一堆英文?</h2><p>呵呵，我们的冰淇淋小姐看到这里一定要傻眼了，说好的下载嘞？在哪儿？莫急，请看红框框圈起来的get，我们点进去<br><img src="/imgs/latex/l2.png" alt></p>
+<h2 id="1-3-打开get页面。"><a href="#1-3-打开get页面。" class="headerlink" title="1.3 打开get页面。"></a>1.3 打开get页面。</h2><p>嗯？在哪儿，还是没看到呀。呵呵，请看流觞君图片中箭头所指，我们在Tex Distributions栏找到Windows模块，点击MikTex，如下图所示。<br><img src="/imgs/latex/l3.png" alt></p>
+<h2 id="1-4-我们来到了MikTex项目的主页。"><a href="#1-4-我们来到了MikTex项目的主页。" class="headerlink" title="1.4 我们来到了MikTex项目的主页。"></a>1.4 我们来到了MikTex项目的主页。</h2><p>嗯？不是应该有一个类似软件下载的按钮嘛？在哪儿？莫急莫急，我们马上就找到MikTex这个家伙啦。这个家伙藏得再深，为了冰淇淋小姐，流觞君也会把他揪出来滴。接下来我们点击Download栏，如图：<br><img src="/imgs/latex/l4.png" alt></p>
+<h2 id="1-5-好的我们终于找到啦。"><a href="#1-5-好的我们终于找到啦。" class="headerlink" title="1.5 好的我们终于找到啦。"></a>1.5 好的我们终于找到啦。</h2><p>各位小伙伴请认准自己的系统，按照对应版本下载。冰淇淋小姐的是win10 64位，直接点击下载就好啦。<br><img src="/imgs/latex/l5.png" alt></p>
+<h2 id="1-6-好的我们下载好了安装包，直接双击打开安装包。"><a href="#1-6-好的我们下载好了安装包，直接双击打开安装包。" class="headerlink" title="1.6 好的我们下载好了安装包，直接双击打开安装包。"></a>1.6 好的我们下载好了安装包，直接双击打开安装包。</h2><p>选择同意版权说明<br><img src="/imgs/latex/l6.png" alt></p>
+<h2 id="1-7-然后到了为系统用户设置权限一项，我们选择为当前电脑所有用户安装该软件，然后下一步即可"><a href="#1-7-然后到了为系统用户设置权限一项，我们选择为当前电脑所有用户安装该软件，然后下一步即可" class="headerlink" title="1.7 然后到了为系统用户设置权限一项，我们选择为当前电脑所有用户安装该软件，然后下一步即可"></a>1.7 然后到了为系统用户设置权限一项，我们选择为当前电脑所有用户安装该软件，然后下一步即可</h2><p><img src="/imgs/latex/l7.png" alt></p>
+<h2 id="1-8接下来小伙伴们可看仔细啦，冰淇淋小姐也注意啦"><a href="#1-8接下来小伙伴们可看仔细啦，冰淇淋小姐也注意啦" class="headerlink" title="1.8接下来小伙伴们可看仔细啦，冰淇淋小姐也注意啦!"></a>1.8接下来小伙伴们可看仔细啦，冰淇淋小姐也注意啦!</h2><p>接下来我们前面讲过的安装路径就出现了，就是下面红色框框内的那一串啦，请检查是否有汉字，如果有，请点击右边的Browse键选择不包含中文的文件夹，下面是错误示范和正确示范，确定没有中文只有英文后就可以点击下一步了<br><img src="/imgs/latex/l8.png" alt><br><img src="/imgs/latex/l9.png" alt></p>
+<h2 id="1-9到了设置页面，其余的默认就好"><a href="#1-9到了设置页面，其余的默认就好" class="headerlink" title="1.9到了设置页面，其余的默认就好."></a>1.9到了设置页面，其余的默认就好.</h2><p>将Install missing package这项选择为yes，我们后面要用它来解决latex中的中文乱码问题，当然这一步选择ask me first 也是没问题的。为了给冰淇淋小姐以后使用LaTex减少trouble，流觞君推荐冰淇淋小姐现在最好选择yes。然后选择下一步<br><img src="/imgs/latex/l10.png" alt></p>
+<h2 id="1-10-后面就开始软件安装啦，静静等待MikTex安装好即可。"><a href="#1-10-后面就开始软件安装啦，静静等待MikTex安装好即可。" class="headerlink" title="1.10 后面就开始软件安装啦，静静等待MikTex安装好即可。"></a>1.10 后面就开始软件安装啦，静静等待MikTex安装好即可。</h2><p>后面的几步，流觞君就不赘述啦，聪明的冰淇淋小姐到时候嫌弃本君太罗嗦那就不好啦。</p>
+<h1 id="二、选择一款称心顺手的编辑器——-TeXstudio"><a href="#二、选择一款称心顺手的编辑器——-TeXstudio" class="headerlink" title="二、选择一款称心顺手的编辑器——-TeXstudio"></a>二、选择一款称心顺手的编辑器——-TeXstudio</h1><p>Latex下的编辑器有很多，安装好MikTex后就自带了TeXworks编辑器。然而按流觞君的亲身体验来说，TeXworks使用还是不太方便的，经常会出现一些问题，一些高级功能如自动补全，语法提示也没有。Windows平台下很多人用WinEdt，但是这个软件是收费的。本着给冰淇淋小姐写代码尽量减少麻烦的原则，经流觞君的亲身体会，在此推荐一款开源免费，轻量小巧而功能强大的LaTex编辑器TeXstudio。</p>
+<h2 id="2-1-百度搜索TeXstudio，我们选择第一个结果就好"><a href="#2-1-百度搜索TeXstudio，我们选择第一个结果就好" class="headerlink" title="2.1 百度搜索TeXstudio，我们选择第一个结果就好"></a>2.1 百度搜索TeXstudio，我们选择第一个结果就好</h2><p><img src="/imgs/latex/l11.png" alt></p>
+<h2 id="2-2-打开第一个搜索结果。"><a href="#2-2-打开第一个搜索结果。" class="headerlink" title="2.2 打开第一个搜索结果。"></a>2.2 打开第一个搜索结果。</h2><p>哈哈~我们遇到一个耿直boy呢。TeXstudio没有为难我们，打开页面就出现了下载按钮，细看下面有一行小字 windows installer，说明我们找到TeXstudio的windows系统安装包啦，冰淇淋小姐可以愉快的点击下载按钮下载啦。<br><img src="/imgs/latex/l12.png" alt></p>
+<h2 id="2-3点击下载按钮后，请等待5秒钟，下载就开始啦。"><a href="#2-3点击下载按钮后，请等待5秒钟，下载就开始啦。" class="headerlink" title="2.3点击下载按钮后，请等待5秒钟，下载就开始啦。"></a>2.3点击下载按钮后，请等待5秒钟，下载就开始啦。</h2><p>下载完成后双击安装包即可开始TeXstduio的安装，TeXstduio的安装很简单，到了选择安装路径那一步，像上面安装MikTex一样检查是否有中文即可，其他的直接一路确定进行安装就好啦~</p>
+<h2 id="2-4-至此，我们的编辑器就安装好啦"><a href="#2-4-至此，我们的编辑器就安装好啦" class="headerlink" title="2.4 至此，我们的编辑器就安装好啦"></a>2.4 至此，我们的编辑器就安装好啦</h2><h1 id="三、解决LaTex恼人的中文乱码问题"><a href="#三、解决LaTex恼人的中文乱码问题" class="headerlink" title="三、解决LaTex恼人的中文乱码问题"></a>三、解决LaTex恼人的中文乱码问题</h1><h2 id="3-1-LaTex中文支持。"><a href="#3-1-LaTex中文支持。" class="headerlink" title="3.1 LaTex中文支持。"></a>3.1 LaTex中文支持。</h2><p>LaTex系统的创造者为美国人，在创造LaTex时没有考虑到亚洲语言的支持问题，所以LaTex原生不支持中文，所幸诸位大神们各显神通，通过导入宏包的方式可以解决中文问题。冰淇淋小姐作为地地道道的炎黄子孙，所学所用皆为中文，解决LaTex的中文乱码问题当然是大事一件。且网上的教程虽多，但不够细致，流觞君当初在解决该问题时耗时颇多，流觞君在此当然要为冰淇淋小姐填补此坑啦。</p>
+<p>总的来说有两种方法：CJK包法和CTEX包法。<br>CJK包法又分编码为UTF8和编码为GBK两种，CTEX包法又有两种使用方法。<br>冰淇淋小姐若想了解更多，请参考下面的博客：</p>
+<blockquote>
+<p><a href="https://www.cnblogs.com/dezheng/p/3874434.html" target="_blank" rel="noopener">https://www.cnblogs.com/dezheng/p/3874434.html</a></p>
+</blockquote>
+<p>下面通过跟着流觞君做几个小实验，编写几个LaTex文件，来了解如何解决中文问题，在跟着流觞君完成下面的几个实验的同时，我们编写的文件中会需要中文支持包，MikTex会自动帮我们下载安装，如遇到是否安装的询问，请同意。冰淇淋小姐做完小实验后，LaTex的中文环境就算真的安装配置好啦。</p>
+<h2 id="3-2-打开我们的TeXstudio，如下图"><a href="#3-2-打开我们的TeXstudio，如下图" class="headerlink" title="3.2 打开我们的TeXstudio，如下图:"></a>3.2 打开我们的TeXstudio，如下图:</h2><p>选择 options-&gt;选择configure TeXstudio，然后按图片检查Default Compiler，将此项设置为XeLaTex。LaTex排版系统提供了许多编译器，而XeLaTex对中文支持较好，我们此处选择XeLaTex，然后确定。<br><img src="/imgs/latex/l13.png" alt></p>
+<h2 id="3-3-配置好之后，我们来使用TeXstudio来编写我们的第一个LaTex文档。如图，请新建文档并写入下面内容。"><a href="#3-3-配置好之后，我们来使用TeXstudio来编写我们的第一个LaTex文档。如图，请新建文档并写入下面内容。" class="headerlink" title="3.3 配置好之后，我们来使用TeXstudio来编写我们的第一个LaTex文档。如图，请新建文档并写入下面内容。"></a>3.3 配置好之后，我们来使用TeXstudio来编写我们的第一个LaTex文档。如图，请新建文档并写入下面内容。</h2><p><img src="/imgs/latex/l14.png" alt></p>
+<h2 id="3-4-写好后，如图编译运行："><a href="#3-4-写好后，如图编译运行：" class="headerlink" title="3.4 写好后，如图编译运行："></a>3.4 写好后，如图编译运行：</h2><p>看看我们的结果，咦，我们的冰淇淋小姐哪去了？这，就是LaTex的中文编码问题啦，接下来让我们看看如何解决它。<br><img src="/imgs/latex/l15.png" alt></p>
+<h2 id="3-5-简单使用又强大的CTEX法。"><a href="#3-5-简单使用又强大的CTEX法。" class="headerlink" title="3.5 简单使用又强大的CTEX法。"></a>3.5 简单使用又强大的CTEX法。</h2><p>Ctex是国内开发的latex中文支持包，使用十分方便，而且支持的字体种类多，技术先进成熟，学会此法即可用LaTex愉快的开始中文排版啦<br><img src="/imgs/latex/l16.png" alt></p>
+<h3 id="3-5-2-CTEX法二之导入ctexart类"><a href="#3-5-2-CTEX法二之导入ctexart类" class="headerlink" title="3.5.2 CTEX法二之导入ctexart类"></a>3.5.2 CTEX法二之导入ctexart类</h3><p>如图所示，修改第一行如图，然后点击编译运行即可。编译过程如较长请稍等，系统正在下载安装相关文件<br><img src="/imgs/latex/l17.png" alt></p>
+<h2 id="CJK包法："><a href="#CJK包法：" class="headerlink" title="CJK包法："></a>CJK包法：</h2><p>CJK包名为中日韩三国英文首字母组合，专为LaTex提供亚洲文字支持，此法历史悠久所以名气很大，实际使用较为繁琐，而且CJK包为德国大佬为亚洲同胞编写，ctex为国人编写，更符合中文习惯。</p>
+<p>本着能为冰淇淋减少一点麻烦就减少一点的原则，流觞君墙裂推荐冰淇淋小姐掌握ctex包法即可，当然聪明的冰淇淋小姐也应该了解一下CJK法，方便后面的学习。</p>
+<h3 id="3-6-1-CJK包法一之UTF8编码法"><a href="#3-6-1-CJK包法一之UTF8编码法" class="headerlink" title="3.6.1 CJK包法一之UTF8编码法"></a>3.6.1 CJK包法一之UTF8编码法</h3><p>首先按照前面配置XeLaTex编译器一样，打开option-&gt;configure TeXstudio，将编译器设置为PdfLaTex. 请冰淇淋小姐，一定要设置为PdfLaTex哦，当初流觞君看网上教程由于没有这点说明，使用的是XeLaTex导致中文输出失败。接下来将文本编码格式设置为UTF8，设置好这两项后点确定。如下面两幅图所示：<br><img src="/imgs/latex/l18.png" alt><br><img src="/imgs/latex/l19.png" alt></p>
+<p>接下来请编写如下内容，然后编译运行，此处MiKTex会自动为我们安装CJK包支持，请稍等，安装完成后如无输出请重新点击编译运行，如下，中文输出成功<br><img src="/imgs/latex/l20.png" alt></p>
+<h3 id="3-6-2-CJK包法之GBK编码法"><a href="#3-6-2-CJK包法之GBK编码法" class="headerlink" title="3.6.2 CJK包法之GBK编码法"></a>3.6.2 CJK包法之GBK编码法</h3><p>请按上面配置编译器为PdfLaTex, 编码为GBK，如下图<br><img src="/imgs/latex/l21.png" alt></p>
+<p>或者使用界面右下角的设置编码框设置编码为GBK<br><img src="/imgs/latex/l22.png" alt></p>
+<p>编写下面的内容，并编译运行<br><img src="/imgs/latex/l23.png" alt></p>
+<h1 id="四、写在最后："><a href="#四、写在最后：" class="headerlink" title="四、写在最后："></a>四、写在最后：</h1><p>完成上述实验，也就完整的搭建了MiKtex+TeXstudio+中文支持的适合国人使用的LaTex环境了。教程写的较细，相信冰淇淋小姐以及广大和冰淇淋小姐一样对安装环境头疼的小伙伴们只要按照教程一步步配置一定可以搭建好LeTex。流觞君没有选择直接为冰淇淋小姐代劳安装环境这件事，是希望冰淇淋小姐能够克服这种恐惧呀，学会安装软件这一小小的技能，以后必定受益无穷~</p>
+<h2 id="结尾推荐一个很好的LaTex的平台—华师大的laTex教程："><a href="#结尾推荐一个很好的LaTex的平台—华师大的laTex教程：" class="headerlink" title="结尾推荐一个很好的LaTex的平台—华师大的laTex教程："></a>结尾推荐一个很好的LaTex的平台—华师大的laTex教程：</h2><blockquote>
+<p><a href="http://math.ecnu.edu.cn/~latex/" target="_blank" rel="noopener">http://math.ecnu.edu.cn/~latex/</a></p>
+</blockquote>
+<h2 id="若有兴趣，也可关注我的github相关的LaTex库，里面包含了一些LaTex学习资料和自己练习的一些LaTex代码"><a href="#若有兴趣，也可关注我的github相关的LaTex库，里面包含了一些LaTex学习资料和自己练习的一些LaTex代码" class="headerlink" title="若有兴趣，也可关注我的github相关的LaTex库，里面包含了一些LaTex学习资料和自己练习的一些LaTex代码"></a>若有兴趣，也可关注我的github相关的LaTex库，里面包含了一些LaTex学习资料和自己练习的一些LaTex代码</h2><blockquote>
+<p><a href="https://github.com/fadelover/LatexNotes" target="_blank" rel="noopener">https://github.com/fadelover/LatexNotes</a></p>
+</blockquote>
+
+        
+        <br>
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+    <script>
+        /**
+         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+        */
+        if( '' || '')
+        var disqus_config = function () {
+            this.page.url = '';  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = ''; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://airclouds-blog.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+
+
+
+</html>

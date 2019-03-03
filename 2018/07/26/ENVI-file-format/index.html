@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content>
+    <meta name="keyword" content>
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        ENVI 图像文件的标准格式 - undefined
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/aircloud.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+
+<body>
+
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i>  </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar">
+            <img src="/img/avatar.jpg">
+        </div>
+        <div class="name">
+            <i>流觞君</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li>
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>主页</span>
+                </a>
+            </li>
+            <li>
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>存档</span>
+                </a>
+            </li>
+            <li>
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>关于</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>搜索</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#ENVI-图像文件的标准格式"><span class="toc-text">ENVI 图像文件的标准格式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#ENVI-图像"><span class="toc-text">ENVI 图像</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ENVI-头文件"><span class="toc-text">ENVI 头文件</span></a></li></ol></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input">
+            <span id="begin-search">搜索</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+        <div class="index-about-mobile">
+            <i>  </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        ENVI 图像文件的标准格式
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2018-07-26 23:09:57</span></span>
+        
+        
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+
+    </div>
+    <div class="post-content ">
+        <h1 id="ENVI-图像文件的标准格式"><a href="#ENVI-图像文件的标准格式" class="headerlink" title="ENVI 图像文件的标准格式"></a>ENVI 图像文件的标准格式</h1><p>GIS专业人员，遥感科学家和图像分析师使用ENVI图像分析软件从图像中提取有意义的信息，以做出更好的决策。</p>
+<a id="more"></a>
+<h2 id="ENVI-图像"><a href="#ENVI-图像" class="headerlink" title="ENVI 图像"></a>ENVI 图像</h2><p>官方文档地址：</p>
+<p><img src="/home/liu/Pictures/Screenshots/envi-images-files.png" alt="官网截图"></p>
+<p>ENVI图像格式是一个平面二进制光栅文件，带有一个ASCII <a href="https://www.harrisgeospatial.com/docs/enviheaderfiles.html" target="_blank" rel="noopener">头文件</a>。数据以下列格式之一存储为二进制字节流，通常称为<em>交错类型</em>（<em>interleave type</em>）：</p>
+<ul>
+<li><strong>频带顺序（</strong>Band Sequential:<strong>）：</strong> BSQ格式是最简单的格式，其中每行数据紧跟在相同频谱带中的下一行。该格式对于单个光谱带的任何部分的空间（x，y）访问是最佳的。</li>
+<li><strong>逐个像素交错（</strong>Band-interleaved-by-pixel<strong>）：</strong> BIP格式按顺序存储所有波段的第一个像素，然后是所有波段的第二个像素，接着是所有波段的第三个像素，依此类推，交错到像素数。该格式为图像数据的频谱（z）访问提供了最佳性能。</li>
+<li><strong>频带交错（</strong>Band-interleaved-by-line<strong>）：</strong> BIL格式存储第一频带的第一行，然后是第二频带的第一行，接着是第三频带的第一行，交织到频带的数量。每个频带的后续行以类似的方式交错。这种格式在空间和频谱处理之间提供了性能折衷，是大多数ENVI处理任务的推荐文件格式。</li>
+</ul>
+<p>ENVI栅格格式不支持64位整数（有符号或无符号）数据类型。</p>
+<h2 id="ENVI-头文件"><a href="#ENVI-头文件" class="headerlink" title="ENVI 头文件"></a>ENVI 头文件</h2><p>官方文档地址：</p>
+<p>ENVI头文件包含<a href="https://www.harrisgeospatial.com/docs/enviimagefiles.html" target="_blank" rel="noopener">ENVI格式图像的</a>元数据。每当您将图像保存为ENVI栅格格式时，ENVI都会创建一个新的头文件。头文件使用与图像文件相同的名称，文件扩展名为.hdr。</p>
+<p>使用<a href="https://www.harrisgeospatial.com/docs/viewfilemetadata.html" target="_blank" rel="noopener">元数据查看器</a>查看ENVI格式图像和其他支持的数据类型的元数据。使用“ <a href="https://www.harrisgeospatial.com/docs/editrastermetadata.html" target="_blank" rel="noopener">编辑栅格元数据”</a>对话框编辑ENVI格式图像的元数据字段。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>字段</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>时间</td>
+<td>符合<a href="http://www.iso.org/iso/home/store/catalogue_tc/catalogue_detail.htm?csnumber=40874" target="_blank" rel="noopener">ISO-8601</a>标准的数据采集时间字符串。该字符串可以采用以下任何格式：<code>YYYY-MM-DD``YYYY-MM-DDTHH：MM：SS.DZ``YYYY-MM-DDTHH：MM：SS：DOOO：毫米</code>哪里：YYYY是四位数的年份MM是两位数的月份DD是两位数的日子T分隔日期和时间HH是两位数的小时MM是两位数的分钟SS是两位数秒D是秒的小数部分，最高为双精度Z表示时间是坐标世界时（UTC）ooo是UTC时间的两位数偏移量。如果偏移为负，则在值前面加一个减号（ - ）。mm是UTC时间的可选部分小时偏移量（以分钟为单位）。</td>
+</tr>
+<tr>
+<td>波段名称</td>
+<td>图像带的名称。</td>
+</tr>
+<tr>
+<td>波段数(必要)</td>
+<td>每个图像文件的波段数。</td>
+</tr>
+<tr>
+<td>桶</td>
+<td>列出图像中每个波段的<a href="https://www.harrisgeospatial.com/docs/enteroptionalheaderinformation.html#Select" target="_blank" rel="noopener">坏带</a>乘数值，对于坏带通常为0，对于好带通常为1。</td>
+</tr>
+<tr>
+<td>字节顺序(必要)</td>
+<td>整数，长整数，64位整数，无符号64位整数，浮点，双精度和复杂数据类型的字节顺序。使用以下之一：字节顺序= 0（标题信息对话框中的<strong>主机（英特尔）</strong>）是最低有效字节优先（LSF）数据（DEC和MS-DOS系统）。字节顺序= 1（标题信息对话框中的<strong>网络（IEEE）</strong>）是最重要的字节优先（MSF）数据（所有其他平台）。</td>
+</tr>
+<tr>
+<td>类查找</td>
+<td>使用<a href="https://www.harrisgeospatial.com/docs/enviclassificationfiles.html" target="_blank" rel="noopener">分类文件的</a> RGB颜色定义列出类颜色。例如，黑色是0,0,0。</td>
+</tr>
+<tr>
+<td>班级名称</td>
+<td>列出<a href="https://www.harrisgeospatial.com/docs/enviclassificationfiles.html" target="_blank" rel="noopener">分类文件的</a>类名。</td>
+</tr>
+<tr>
+<td>类</td>
+<td>定义<a href="https://www.harrisgeospatial.com/docs/enviclassificationfiles.html" target="_blank" rel="noopener">分类文件</a>的类数，包括未分类的区域。</td>
+</tr>
+<tr>
+<td>云盖</td>
+<td>栅格中云量的百分比。</td>
+</tr>
+<tr>
+<td>复杂的功能</td>
+<td>指定要从复杂图像计算的值，以及在显示图像，计算图像的统计信息或将图像写入新文件时使用的值。值包括Real，Imaginary，Power，Magnitude和Phase。默认值为Power。</td>
+</tr>
+<tr>
+<td>坐标系字符串</td>
+<td>将地理参考文件保存为<a href="https://www.harrisgeospatial.com/docs/enviimagefiles.html" target="_blank" rel="noopener">ENVI栅格格式时</a>，ENVI会将一个坐标系字符串字段添加到头文件中。它列出了用于<a href="https://www.harrisgeospatial.com/docs/backgroundcoordinatesystems.html#Geograph" target="_blank" rel="noopener">地理坐标系</a>或<a href="https://www.harrisgeospatial.com/docs/backgroundcoordinatesystems.html#Projecte" target="_blank" rel="noopener">投影坐标系的参数</a>。以下是一些例子：一个<strong>地理坐标系统</strong>（例如，地理纬度/经度）字符串包含单词GEOGCS并列出坐标系名称，基准面，椭球体，本初子午线和单位：<code>坐标系字符串= ``GEOGCS [ “GCS_WGS_1984”，``DATUM [ “D_WGS_1984”，``SPHEROID [ “WGS_1984” ，6378137.0，298.257223563 ]]``PRIMEM [ “格林威治”，0.0 ]，``单位[ “学位”，0.0174532925199433 ]]</code>一个<strong>投影坐标系</strong>字符串包含单词PROJCS并列出了所有的地理坐标系统参数，以及详细参数描述的投影坐标系：<code>坐标系字符串= ``PROJCS [ “WGS_1984_South_Georgia_Lambert”，``GEOGCS [ “GCS_WGS_1984”，``DATUM [ “D_WGS_1984”，``SPHEROID [ “WGS_1984” ，6378137.0，298.257223563 ]]``PRIMEM [ “格林威治”，0.0 ]，``UNIT [ “Degree”，0.0174532925199433 ]]，``PROJECTION [ “Lambert_Conformal_Conic” ]，``PARAMETER [ “False_Easting”，0.0 ]，``PARAMETER [ “False_Northing”，0.0 ]，``PARAMETER [ “Central_Meridian”， - 37.0 ]，``PARAMETER [ “Standard_Parallel_1”， - 54.0 ]，``PARAMETER [ “Standard_Parallel_2”， - 54.75 ]，``PARAMETER [ “Latitude_Of_Origin”， - 55.0 ]，``UNIT [ “Meter”，1.0 ]]</code>有关更多信息，请参阅<a href="https://www.harrisgeospatial.com/docs/backgroundcoordinatesystems.html#Coordina" target="_blank" rel="noopener">坐标系统字符串</a>。</td>
+</tr>
+<tr>
+<td>数据增益值</td>
+<td>获得每个波段的值。单位为W /（m 2 <em>μm</em> sr）。</td>
+</tr>
+<tr>
+<td>数据忽略值</td>
+<td>在图像处理中应忽略的像素值。</td>
+</tr>
+<tr>
+<td>数据偏移值</td>
+<td>每个波段的偏移值。</td>
+</tr>
+<tr>
+<td>数据反射增益值</td>
+<td>一系列反射增益值。使用Landsat-8文件时，反射增益已按太阳高程的正弦缩放，如下所示：<code>数据反射增益值= REFLECTANCE_MULT_BAND_1 / sin（太阳高程）</code></td>
+</tr>
+<tr>
+<td>数据反射偏移值</td>
+<td>反射偏移值的数组。使用Landsat-8文件时，反射偏移量已通过太阳高程的正弦缩放，如下所示：<code>数据反射偏移值= REFLECTANCE_ADD_BAND_1 / sin（太阳高程）</code></td>
+</tr>
+<tr>
+<td>数据类型(必要)</td>
+<td>数据表示的类型：1 =字节：8位无符号整数2 =整数：16位有符号整数3 =长：32位有符号整数4 =浮点：32位单精度5 =双精度：64位双精度浮点数6 =复杂：实数虚构的单精度浮点对9 =双精度复数：实对偶双精度浮点数12 =无符号整数：16位13 =无符号长整数：32位14 = 64位长整数（带符号）15 = 64位无符号长整数（无符号）</td>
+</tr>
+<tr>
+<td>默认波段</td>
+<td>指示每次打开文件时自动加载到Data Manager <strong>Greyscale</strong>或<strong>R</strong>，<strong>G</strong>和<strong>B</strong>字段的波段号。默认情况下，当打开在其标题中定义了默认波段的文件时，将自动加载新图像。如果仅使用一个波段号，则ENVI加载灰度图像。</td>
+</tr>
+<tr>
+<td>默认拉伸</td>
+<td>ENVI显示图像时使用的<a href="https://www.harrisgeospatial.com/docs/displaytools.html#StretchTypes" target="_blank" rel="noopener">拉伸</a>类型。选择如下：双极均衡：您可以选择输入要在拉伸中使用的最小和最大像素值。对于多波段图像，这些值将适用于所有波段。您无法为每个波段设置单独的最小/最大值。这是一个例子：均衡0 200。高斯：可选择输入要使用的标准差; 例如：0.3高斯。您可以选择输入要在拉伸中使用的最小和最大像素值。对于多波段图像，这些值将适用于所有波段。您无法为每个波段设置单独的最小/最大值。这是一个例子：0.3高斯0 1000。linear：可选择指定要剪辑的数据的百分比; 例如：5.0线性。或者，输入要在拉伸中使用的最小和最大像素值; 例如：0 200线性。logarithmic：您可以选择输入要在拉伸中使用的最小和最大像素值。对于多波段图像，这些值将适用于所有波段。您无法为每个波段设置单独的最小/最大值。这是一个例子：logarithmic 0 1000。优化线性平方根：可选择输入要使用的平方根因子; 例如：0.5平方根。您可以选择输入要在拉伸中使用的最小和最大像素值。对于多波段图像，这些值将适用于所有波段。您无法为每个波段设置单独的最小/最大值。这是一个例子：0.5平方根0 200。</td>
+</tr>
+<tr>
+<td>dem波段</td>
+<td><a href="https://www.harrisgeospatial.com/docs/enteroptionalheaderinformation.html#Associat" target="_blank" rel="noopener">与图像相关联</a>的所选<a href="https://www.harrisgeospatial.com/docs/enteroptionalheaderinformation.html#Associat" target="_blank" rel="noopener">DEM频带的</a>索引（从1开始）。在DEM频带如果DEM文件包含一个单一条带，或者如果被选择的图像的第一频带不被写入。在这些情况下，dem band值默认为0。</td>
+</tr>
+<tr>
+<td>dem文件</td>
+<td><a href="https://www.harrisgeospatial.com/docs/enteroptionalheaderinformation.html#Associat" target="_blank" rel="noopener">与图像关联</a>的<a href="https://www.harrisgeospatial.com/docs/enteroptionalheaderinformation.html#Associat" target="_blank" rel="noopener">DEM的</a>路径和文件名。</td>
+</tr>
+<tr>
+<td>描述</td>
+<td>描述图像或执行处理的字符串。</td>
+</tr>
+<tr>
+<td>文件类型(必要)</td>
+<td>ENVI定义的文件类型，例如某种数据格式和处理结果。filetype.txt文件中列出了可用的文件类型（请参阅<a href="https://www.harrisgeospatial.com/docs/envifiletypefile.html" target="_blank" rel="noopener">文件类型文件</a>）。文件类型ASCII字符串必须与filetype.txt文件中的条目完全匹配，包括正确的大小写。</td>
+</tr>
+<tr>
+<td>FWHM</td>
+<td>列出图像中每个波段的全宽半最大值（FWHM）。单位应与用于波长的单位相同，并在波长单位参数中设置。</td>
+</tr>
+<tr>
+<td>地理点</td>
+<td><a href="https://www.harrisgeospatial.com/docs/enteroptionalheaderinformation.html#Geograph" target="_blank" rel="noopener">非地理参考文件的地理角</a>。输入一到四个位置。每个位置必须按以下顺序包含以下项目：<em>pixel_x_coordinate</em>，<em>pixel_y_coordinate</em>，<em>纬度</em>，<em>经度</em>例如：<code>geo points = {``1.0000，1.0000，32.89380137 - 117.07201460，``1002.0000，1.0000，32.87364744 - 116.95855862，``1.0000，1002.0000，32.80628336 - 117.09960891，``1002.0000，1002.0000，32.78615422 - 116.98625969 }</code>像素坐标[1,1]对应于图像的左上角。</td>
+</tr>
+<tr>
+<td>标头偏移量(必要)</td>
+<td>文件中存在的嵌入标题信息的字节数。ENVI在读取文件时跳过这些字节。有关详细信息，请参阅<a href="https://www.harrisgeospatial.com/docs/enteroptionalheaderinformation.html#Set3" target="_blank" rel="noopener">行偏移</a>。默认值为0字节。</td>
+</tr>
+<tr>
+<td>交错(必要)</td>
+<td>指<a href="https://www.harrisgeospatial.com/docs/enviimagefiles.html" target="_blank" rel="noopener">数据交错</a>是BSQ，BIL还是BIP。</td>
+</tr>
+<tr>
+<td>线(必要)</td>
+<td>每个波段的每个图像的行数。</td>
+</tr>
+<tr>
+<td>地图信息</td>
+<td>按以下顺序列出地理信息：投影名称参考（连接点）像素<strong>x</strong>位置（在文件坐标中）参考（连接点）像素<strong>y</strong>位置（在文件坐标中）像素东移像素北上x像素大小y像素大小投影区（仅限UTM）北或南（仅限UTM）基准单位有关详细<a href="https://www.harrisgeospatial.com/docs/enteroptionalheaderinformation.html#Enter2" target="_blank" rel="noopener">信息，</a>请参阅<a href="https://www.harrisgeospatial.com/docs/enteroptionalheaderinformation.html#Enter2" target="_blank" rel="noopener">输入地理配准文件的地图信息</a>。</td>
+</tr>
+<tr>
+<td>像素大小</td>
+<td>表示非地理参考文件的x和y像素大小（以米为单位）。</td>
+</tr>
+<tr>
+<td>投影信息</td>
+<td>如果您在ENVI Classic中定义了自定义投影，则此字段包含该地图信息。甲投影信息线在图像使用一个用户定义的投影，而不是在文件中定义的标准投影被添加到ENVI头文件map_proj.txt的ENVI分布的文件。如果头文件包含坐标系字符串字段，则忽略任何现有投影信息行信息。</td>
+</tr>
+<tr>
+<td>阅读程序</td>
+<td>定义<a href="https://www.harrisgeospatial.com/docs/customfilereaders.html" target="_blank" rel="noopener">自定义文件读取器的</a>空间和光谱读取例程。</td>
+</tr>
+<tr>
+<td>反射比例因子</td>
+<td>当划分为数据时，该值将从0-1反射率缩放。例如，如果数据中的值10,000表示反射率值为1.0，则输入反射率比例因子10,000。</td>
+</tr>
+<tr>
+<td>rpc信息</td>
+<td>列出具有RPC参考信息而不是标准地图投影的文件的<a href="https://www.harrisgeospatial.com/docs/backgroundnonstandardprojections.html#Sensor" target="_blank" rel="noopener">有理多项式系数（RPC）</a>地理定位信息。</td>
+</tr>
+<tr>
+<td>样本(必要)</td>
+<td>每个带的每个图像行的样本数（像素）。</td>
+</tr>
+<tr>
+<td>安全标签</td>
+<td>具有安全信息的字符串，该信息继承自通常包含安全分类级别（例如NITF）的格式。</td>
+</tr>
+<tr>
+<td>传感器类型</td>
+<td>仪器类型，例如Landsat TM，SPOT，RADARSAT等。可用的传感器类型列在<a href="https://www.harrisgeospatial.com/docs/envisensorfile.html" target="_blank" rel="noopener">ENVI传感器</a>文件中描述的sensor.txt文件中。该字符串必须与sensor.txt文件中的条目完全匹配，包括正确的大小写。</td>
+</tr>
+<tr>
+<td>太阳辐照度</td>
+<td>每个频段的大气顶部太阳辐照度。单位为W /（m 2 *μm）。</td>
+</tr>
+<tr>
+<td>光谱名称</td>
+<td>以逗号分隔的光谱名称列表，用{花括号}括起来; 仅用于光谱库文件。</td>
+</tr>
+<tr>
+<td>太阳方位角</td>
+<td>从正北方向顺时针方向的太阳角度（以度为单位）。</td>
+</tr>
+<tr>
+<td>太阳升起</td>
+<td>地平线上方的太阳角度（以度为单位）。</td>
+</tr>
+<tr>
+<td>波长</td>
+<td>列出图像中每个波段的中心波长值。单位应与用于fwhm字段的单位相同，并在波长单位参数中设置。</td>
+</tr>
+<tr>
+<td>波长单位</td>
+<td>表示波长单位的文本字符串。ENVI接受以下字符串：<code>千分尺``UM``纳米``纳米``毫米``毫米``公分``厘米``米``米``波数``埃``千兆赫``兆赫``指数``未知</code></td>
+</tr>
+<tr>
+<td>x开始 开始吧</td>
+<td>定义图像中左上角像素的图像坐标。作为较大图像的空间子集的图像通常使用引用父（或更大）图像的图像坐标系，以便您可以链接并动态地覆盖两个图像。左上角像素的默认值为（0,0）。地图信息标题字段中的参考（连接点）像素是从一开始的。更改这些值不会影响ENVI从文件中读取图像数据的方式。</td>
+</tr>
+<tr>
+<td>z平均值</td>
+<td>Z曲线的x和y方向的像素数平均值。</td>
+</tr>
+<tr>
+<td>z绘图范围</td>
+<td>Z图的默认最小值和最大值。</td>
+</tr>
+<tr>
+<td>z情节标题</td>
+<td>Z图的x和y轴标题。</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+        
+        <br>
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+    <script>
+        /**
+         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+        */
+        if( '' || '')
+        var disqus_config = function () {
+            this.page.url = '';  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = ''; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://airclouds-blog.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+
+
+
+</html>

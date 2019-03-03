@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content>
+    <meta name="keyword" content>
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        猫眼电影评分获取 - undefined
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/aircloud.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+
+<body>
+
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i>  </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar">
+            <img src="/img/avatar.jpg">
+        </div>
+        <div class="name">
+            <i>流觞君</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li>
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>主页</span>
+                </a>
+            </li>
+            <li>
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>存档</span>
+                </a>
+            </li>
+            <li>
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>关于</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>搜索</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input">
+            <span id="begin-search">搜索</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+        <div class="index-about-mobile">
+            <i>  </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        猫眼电影评分获取
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2018-01-19 23:09:32</span></span>
+        
+        
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+
+    </div>
+    <div class="post-content ">
+        <p>python版本： python3.6.4 64bit</p>
+<p>爬取猫眼电影上的文章评分，个人学习记录，非学习教程~<br><a id="more"></a></p>
+<p>python爬取流程： 网页抓取器-&gt; 网页解析器 -&gt; 文件保存器<br>关键在于正则表达式的构建</p>
+<p>在windows下会出现麻烦的编码问题，最好在linux上运行</p>
+<p>代码如下： </p>
+<pre><code># python3
+# _*_ coding:utf-8 _*_
+
+import re  # 导入正则表达式库
+import json  # 导入json库
+from multiprocessing import Pool  # 导入python内置的多线程
+import requests  # 导入request库获取网页信息
+from requests.exceptions import RequestException
+
+
+headers = {&quot;User-agent&quot;: &quot;Mozilla/5.0&quot;}  # 浏览器头部信息
+
+
+def get_one_page(url):    # 获取一个页面
+    try:
+        res = requests.get(url, headers=headers)
+        if res.status_code == 200:
+            return res.text
+        return None
+    except RequestException:
+        return None
+
+
+def parse_one_page(html):  # 解析一个页面
+
+    pattern = re.compile(&#39;&lt;dd&gt;.*?board-index.*?&gt;(\d+)&lt;/i&gt;.*?data-src=&quot;(.*?)&quot;.*?name&quot;&gt;&lt;a&#39; +
+                         &#39;.*?&gt;(.*?)&lt;/a&gt;.*?star&quot;&gt;(.*?)&lt;/p&gt;.*?releasetime&quot;&gt;(.*?)&lt;/p&gt;&#39; + &#39;.*?integer&quot;&gt;(.*?)&lt;/i&gt;.*?fraction&quot;&gt;(.*?)&lt;/i&gt;.*?&lt;/dd&gt;&#39;, re.S)
+    # 正则表达式匹配
+    items = re.findall(pattern, html)   # 正则表达式处理字符串，找到所有上一步中匹配的记录
+    for item in items:
+        yield{
+            &#39;index&#39;: item[0],            # 提取出列表中的信息
+            &#39;image&#39;: item[1],
+            &#39;title&#39;: item[2],
+            &#39;actor&#39;: item[3].strip()[3:],
+            &#39;time&#39;: item[4].strip()[5:],
+            &#39;score&#39;: item[5]+item[6]
+        }
+
+
+def write_to_file(content):             # 将解析器获取到的信息写入文件之中
+    with open(&#39;result.txt&#39;, &#39;a&#39;, encoding=&#39;utf-8&#39;) as f:
+        # 有中文字符，关闭ascii编码，加上换行符
+        f.write(json.dumps(content, ensure_ascii=False)+&#39;\n&#39;)
+        f.close()    # 关闭
+
+
+def main(offset):
+    url = &#39;http://maoyan.com/board/4?offset=&#39;+str(offset)   # 构造榜单页面url
+
+    html = get_one_page(url)    # 获取html页面
+    for item in parse_one_page(html):  # 解析html页面的信息
+        print(item)                    # 输出解析信息
+        write_to_file(item)               # 信息写入文件
+
+    # if __name__ == &#39;__main__&#39;:         # 这段原理没搞清楚所以注释掉
+    #     p = Pool(10)                     # 创建具有10个进程的进程池
+    #     p.map(main, [ i*10 for i in range(10) ])   # 使用多线程爬取
+    #     p.close()  # 关闭进程池，不再接受新的进程
+
+for i in range(10):
+    main(i*10)
+</code></pre>
+        
+        <br>
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+    <script>
+        /**
+         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+        */
+        if( '' || '')
+        var disqus_config = function () {
+            this.page.url = '';  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = ''; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://airclouds-blog.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+
+
+
+</html>
