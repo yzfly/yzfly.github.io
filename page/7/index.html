@@ -39,7 +39,7 @@
 </div>
 
 <div class="index-about">
-    <i>  </i>
+    <i> null </i>
 </div>
 
 <div class="index-container">
@@ -108,7 +108,7 @@
     </div>
 </div>
         <div class="index-about-mobile">
-            <i>  </i>
+            <i> null </i>
         </div>
     </div>
     
@@ -116,6 +116,20 @@
         <!-- Main Content -->
         
 <div class="post-preview-container" style="min-height: 720px">
+    
+    <div class="post-preview">
+        <div class="post-time">2018-03-11</div>
+        <div class="post-info">
+            <a href="/2018/03/11/cmd脚本/">
+                <h3>
+                    cmd命令
+                </h3>
+            </a>
+            <p>
+                
+            </p>
+        </div>
+    </div>
     
     <div class="post-preview">
         <div class="post-time">2018-03-11</div>
@@ -216,9 +230,9 @@
     <div class="post-preview">
         <div class="post-time">2018-01-29</div>
         <div class="post-info">
-            <a href="/2018/01/29/kali_pdfcrack/">
+            <a href="/2018/01/29/linux上网/">
                 <h3>
-                    pdfcrack and fcrackzip
+                    linux上网
                 </h3>
             </a>
             <p>
@@ -230,9 +244,9 @@
     <div class="post-preview">
         <div class="post-time">2018-01-29</div>
         <div class="post-info">
-            <a href="/2018/01/29/linux上网/">
+            <a href="/2018/01/29/kali_pdfcrack/">
                 <h3>
-                    linux上网
+                    pdfcrack and fcrackzip
                 </h3>
             </a>
             <p>
@@ -247,20 +261,6 @@
             <a href="/2018/01/19/python3爬取猫眼电影评分/">
                 <h3>
                     猫眼电影评分获取
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
-    </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-01-19</div>
-        <div class="post-info">
-            <a href="/2018/01/19/linux日常使用1/">
-                <h3>
-                    linux 命令
                 </h3>
             </a>
             <p>
@@ -290,25 +290,26 @@
 <footer class="footer">
     <ul class="list-inline text-center">
         
+        
+
+        
+
+        
+
+        
         <li>
-            <a target="_blank" href="https://twitter.com/yzfly">
+            <a target="_blank" href="https://github.com/yzfly">
                             <span class="fa-stack fa-lg">
-                                <i class="iconfont icon-twitter"></i>
+                                <i class="iconfont icon-github"></i>
                             </span>
             </a>
         </li>
-        
-        
-
-        
-
-        
-
         
 
         
 
     </ul>
+    
     
 
     <p> 
@@ -330,15 +331,32 @@
         </span>
 
         Contact Author <a href="https://github.com/yzfly">Github</a>
-        
+
         <div class="theme-info">
 		  <div class="powered-by"></div>
 		  <span class="post-count">全站共{{ totalcount(site) }}字</span>
 		</div>
-</p></footer><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</p></footer>
 
 
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 
 <script>

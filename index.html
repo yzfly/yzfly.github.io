@@ -39,7 +39,7 @@
 </div>
 
 <div class="index-about">
-    <i>  </i>
+    <i> null </i>
 </div>
 
 <div class="index-container">
@@ -108,7 +108,7 @@
     </div>
 </div>
         <div class="index-about-mobile">
-            <i>  </i>
+            <i> null </i>
         </div>
     </div>
     
@@ -116,6 +116,20 @@
         <!-- Main Content -->
         
 <div class="post-preview-container" style="min-height: 720px">
+    
+    <div class="post-preview">
+        <div class="post-time">2017-06-05</div>
+        <div class="post-info">
+            <a href="/2017/06/05/anaconda3/">
+                <h3>
+                    anaconda3
+                </h3>
+            </a>
+            <p>
+                
+            </p>
+        </div>
+    </div>
     
     <div class="post-preview">
         <div class="post-time">2019-03-03</div>
@@ -148,9 +162,23 @@
     <div class="post-preview">
         <div class="post-time">2018-07-26</div>
         <div class="post-info">
-            <a href="/2018/07/26/Machine-Learning-template/">
+            <a href="/2018/07/26/Machine-Learning-3/">
                 <h3>
                     Machine Learning-3
+                </h3>
+            </a>
+            <p>
+                
+            </p>
+        </div>
+    </div>
+    
+    <div class="post-preview">
+        <div class="post-time">2018-07-26</div>
+        <div class="post-info">
+            <a href="/2018/07/26/ENVI-file-format/">
+                <h3>
+                    ENVI 图像文件的标准格式
                 </h3>
             </a>
             <p>
@@ -176,23 +204,9 @@
     <div class="post-preview">
         <div class="post-time">2018-07-26</div>
         <div class="post-info">
-            <a href="/2018/07/26/python3进阶之selenium/">
+            <a href="/2018/07/26/numpy_and_pandas/">
                 <h3>
-                    python3进阶之selenium
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
-    </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-07-26</div>
-        <div class="post-info">
-            <a href="/2018/07/26/linux下的 login_shell/">
-                <h3>
-                    linux下的login shell
+                    numpy and pandas
                 </h3>
             </a>
             <p>
@@ -232,23 +246,9 @@
     <div class="post-preview">
         <div class="post-time">2018-07-26</div>
         <div class="post-info">
-            <a href="/2018/07/26/git/">
+            <a href="/2018/07/26/python3进阶之selenium/">
                 <h3>
-                    git 的简单使用
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
-    </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-07-26</div>
-        <div class="post-info">
-            <a href="/2018/07/26/linux-power-management/">
-                <h3>
-                    linux下的电源管理
+                    python3进阶之selenium
                 </h3>
             </a>
             <p>
@@ -274,25 +274,26 @@
 <footer class="footer">
     <ul class="list-inline text-center">
         
+        
+
+        
+
+        
+
+        
         <li>
-            <a target="_blank" href="https://twitter.com/yzfly">
+            <a target="_blank" href="https://github.com/yzfly">
                             <span class="fa-stack fa-lg">
-                                <i class="iconfont icon-twitter"></i>
+                                <i class="iconfont icon-github"></i>
                             </span>
             </a>
         </li>
-        
-        
-
-        
-
-        
-
         
 
         
 
     </ul>
+    
     
 
     <p> 
@@ -314,15 +315,32 @@
         </span>
 
         Contact Author <a href="https://github.com/yzfly">Github</a>
-        
+
         <div class="theme-info">
 		  <div class="powered-by"></div>
 		  <span class="post-count">全站共{{ totalcount(site) }}字</span>
 		</div>
-</p></footer><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</p></footer>
 
 
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 
 <script>

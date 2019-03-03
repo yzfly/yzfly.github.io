@@ -39,7 +39,7 @@
 </div>
 
 <div class="index-about">
-    <i>  </i>
+    <i> null </i>
 </div>
 
 <div class="index-container">
@@ -112,7 +112,7 @@
     </div>
 </div>
         <div class="index-about-mobile">
-            <i>  </i>
+            <i> null </i>
         </div>
     </div>
     
@@ -127,6 +127,15 @@
     </div>
 
     <div class="post-meta">
+
+        <!-- edit top function -->
+        {% if post.top %}
+            <i class="fa fa-thumb-tack"></i>
+            <font color="ff6800">置顶</font>
+            <span class="post-meta-divider">|</span>
+        {% endif %}
+
+
         <span class="attr">发布于：<span>2017-04-05 23:45:46</span></span>
         
         
@@ -304,25 +313,26 @@
 <footer class="footer">
     <ul class="list-inline text-center">
         
+        
+
+        
+
+        
+
+        
         <li>
-            <a target="_blank" href="https://twitter.com/yzfly">
+            <a target="_blank" href="https://github.com/yzfly">
                             <span class="fa-stack fa-lg">
-                                <i class="iconfont icon-twitter"></i>
+                                <i class="iconfont icon-github"></i>
                             </span>
             </a>
         </li>
-        
-        
-
-        
-
-        
-
         
 
         
 
     </ul>
+    
     
 
     <p> 
@@ -344,15 +354,32 @@
         </span>
 
         Contact Author <a href="https://github.com/yzfly">Github</a>
-        
+
         <div class="theme-info">
 		  <div class="powered-by"></div>
 		  <span class="post-count">全站共{{ totalcount(site) }}字</span>
 		</div>
-</p></footer><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</p></footer>
 
 
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 
 <script>

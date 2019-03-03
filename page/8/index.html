@@ -39,7 +39,7 @@
 </div>
 
 <div class="index-about">
-    <i>  </i>
+    <i> null </i>
 </div>
 
 <div class="index-container">
@@ -108,7 +108,7 @@
     </div>
 </div>
         <div class="index-about-mobile">
-            <i>  </i>
+            <i> null </i>
         </div>
     </div>
     
@@ -118,39 +118,25 @@
 <div class="post-preview-container" style="min-height: 720px">
     
     <div class="post-preview">
+        <div class="post-time">2018-01-19</div>
+        <div class="post-info">
+            <a href="/2018/01/19/linux日常使用1/">
+                <h3>
+                    linux 命令
+                </h3>
+            </a>
+            <p>
+                
+            </p>
+        </div>
+    </div>
+    
+    <div class="post-preview">
         <div class="post-time">2018-01-07</div>
         <div class="post-info">
             <a href="/2018/01/07/Matlab-之神经网络初体验/">
                 <h3>
                     Matlab 之神经网络初体验
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
-    </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2017-06-05</div>
-        <div class="post-info">
-            <a href="/2017/06/05/anaconda3/">
-                <h3>
-                    anaconda3
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
-    </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2017-04-05</div>
-        <div class="post-info">
-            <a href="/2017/04/05/Centos7-use/">
-                <h3>
-                    Centos7 use
                 </h3>
             </a>
             <p>
@@ -187,6 +173,20 @@
         </div>
     </div>
     
+    <div class="post-preview">
+        <div class="post-time">2017-04-05</div>
+        <div class="post-info">
+            <a href="/2017/04/05/Centos7-use/">
+                <h3>
+                    Centos7 use
+                </h3>
+            </a>
+            <p>
+                
+            </p>
+        </div>
+    </div>
+    
 </div>
 <ul class="pager">
     
@@ -204,25 +204,26 @@
 <footer class="footer">
     <ul class="list-inline text-center">
         
+        
+
+        
+
+        
+
+        
         <li>
-            <a target="_blank" href="https://twitter.com/yzfly">
+            <a target="_blank" href="https://github.com/yzfly">
                             <span class="fa-stack fa-lg">
-                                <i class="iconfont icon-twitter"></i>
+                                <i class="iconfont icon-github"></i>
                             </span>
             </a>
         </li>
-        
-        
-
-        
-
-        
-
         
 
         
 
     </ul>
+    
     
 
     <p> 
@@ -244,15 +245,32 @@
         </span>
 
         Contact Author <a href="https://github.com/yzfly">Github</a>
-        
+
         <div class="theme-info">
 		  <div class="powered-by"></div>
 		  <span class="post-count">全站共{{ totalcount(site) }}字</span>
 		</div>
-</p></footer><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</p></footer>
 
 
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 
 <script>
