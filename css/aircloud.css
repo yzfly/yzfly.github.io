@@ -307,7 +307,8 @@ body {
     position: fixed;
     left: 0;
     top: 40px;
-   /* background-color: white; */
+    background-color: white;
+    opacity: 0.7;
     width: 100%;
     border-bottom: 1px solid #CCCCCC;
     border-top: 1px solid #CCCCCC;
@@ -741,7 +742,8 @@ body {
   margin: auto;
   display: flex;
   flex-direction: row;
-  /*background-color: white; */
+  background-color: white;
+  opacity: 0.7;
 }
 .index-container .index-left {
   width: 240px;
