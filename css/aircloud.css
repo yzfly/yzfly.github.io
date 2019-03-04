@@ -374,6 +374,7 @@ body {
   text-decoration: none;
 }
 .post-preview-container {
+  margin-top: 24px;        /* add */
   min-height: 420px;
 }
 .pager {
