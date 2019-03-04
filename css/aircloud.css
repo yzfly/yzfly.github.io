@@ -8,10 +8,12 @@ html {
   padding: 0;
 }
 body {
-  background-image: url(https://michaelgillettonlinecontent.azurewebsites.net/media/2135/frozenbeautyinharbin.jpg);
-  background-repeat: no-repeat;
+  /* edit */
+  background-image: url(https://michaelgillettonlinecontent.azurewebsites.net/media/1849/25-2.jpg);
+  background-repeat: repeat-y;
   background-attachment: scroll;
   background-position: center;
+
   margin-left: calc(100vw - 100%) !important;
   -webkit-text-size-adjust: none;
 }
