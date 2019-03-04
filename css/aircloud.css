@@ -12,7 +12,7 @@ body {
   background-image: url(https://michaelgillettonlinecontent.azurewebsites.net/media/2135/frozenbeautyinharbin.jpg);
   background-repeat: repeat-y;
   background-attachment: scroll;
-  background-position: center;
+  background-position: center top;
 
   margin-left: calc(100vw - 100%) !important;
   -webkit-text-size-adjust: none;
