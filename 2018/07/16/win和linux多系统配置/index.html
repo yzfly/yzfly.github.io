@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 
+@font-face {
+  font-family: 'iconfont';  /* project id 1070110 */
+  src: url('//at.alicdn.com/t/font_1070110_e8yax1vgogi.eot');
+  src: url('//at.alicdn.com/t/font_1070110_e8yax1vgogi.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1070110_e8yax1vgogi.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1070110_e8yax1vgogi.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1070110_e8yax1vgogi.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1070110_e8yax1vgogi.svg#iconfont') format('svg');
+}
+
 <head><meta name="generator" content="Hexo 3.8.0">
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -47,6 +57,7 @@
     
     <div class="index-left">
         
+
 <div class="nav" id="nav">
     <div class="avatar-name">
         <div class="avatar">
@@ -90,8 +101,35 @@
                 </a>
             </li>
             
+
+            </ul>
+
+            <!-- Contact -->
+
+        <ul class="list-inline text-center">
+            
+                <a target="_blank" href="https://github.com/yzfly">
+                    <span class="fa-stack fa-lg"><i class="iconfont">&#xe63a;</i></span>
+                </a>
+            
+
+            
+                <a target="_blank" href="mailto:yz.liu.me@gmail.com">
+                <span class="fa-stack fa-lg">
+                    <i class="iconfont">&#xe89f;</i>
+                </span>
+                </a>
+            
         </ul>
     </div>
+
+    <!-- NetEase Cloud Music -->
+
+    <div>
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="160" height="52" src="//music.163.com/outchain/player?type=0&id=2694444539&auto=1&height=32"></iframe>
+    </div>
+
+    <!-- Post Outline -->
     
         <div id="toc" class="toc-article">
     <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Linux-Config"><span class="toc-text">Linux Config</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#系统引导和Grub2"><span class="toc-text">系统引导和Grub2</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Manjaro"><span class="toc-text">Manjaro</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#manjaro引导"><span class="toc-text">manjaro引导</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#grub-rescue"><span class="toc-text">grub rescue</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#mint"><span class="toc-text">mint</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#kali"><span class="toc-text">kali</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ubuntu18-04配置"><span class="toc-text">Ubuntu18.04配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#字体"><span class="toc-text">字体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装java"><span class="toc-text">安装java</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#桌面图标"><span class="toc-text">桌面图标</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用zsh"><span class="toc-text">使用zsh</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装Anaconda"><span class="toc-text">安装Anaconda</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pip使用"><span class="toc-text">pip使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装hexo"><span class="toc-text">安装hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Internet"><span class="toc-text">Internet</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#DNS刷新"><span class="toc-text">DNS刷新</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#SSR"><span class="toc-text">SSR</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#proxy"><span class="toc-text">proxy</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#proxychain"><span class="toc-text">proxychain</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#privoxy"><span class="toc-text">privoxy</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#"><span class="toc-text"> </span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ubuntu软件安装"><span class="toc-text">Ubuntu软件安装</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#WPS"><span class="toc-text">WPS</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#sogou拼音"><span class="toc-text">sogou拼音</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Tim"><span class="toc-text">Tim</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#imusic"><span class="toc-text">imusic</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#ivdeo"><span class="toc-text">ivdeo</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#SPSS"><span class="toc-text">SPSS</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#lingo"><span class="toc-text">lingo</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#sublime-text3配置"><span class="toc-text">sublime text3配置</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#VS-code无法启动"><span class="toc-text">VS code无法启动</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#typora-修改字体"><span class="toc-text">typora 修改字体</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#remarkable-修改字体"><span class="toc-text">remarkable 修改字体</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#proxyee-down"><span class="toc-text">proxyee-down</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#gnome美化"><span class="toc-text">gnome美化</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#修改gdm"><span class="toc-text">修改gdm</span></a></li></ol></li></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#lockDialogGroup"><span class="toc-text">lockDialogGroup {</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#开机动画-plymouth-theme"><span class="toc-text">开机动画(plymouth theme)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#grub美化"><span class="toc-text">grub美化</span></a></li></ol></li>

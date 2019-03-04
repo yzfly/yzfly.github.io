@@ -1,4 +1,16 @@
 /*varibles*/
+
+/*  edit icons*/
+@font-face {
+  font-family: 'iconfont';  /* project id 1070110 */
+  src: url('//at.alicdn.com/t/font_1070110_z2qh5s4hkms.eot');
+  src: url('//at.alicdn.com/t/font_1070110_z2qh5s4hkms.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1070110_z2qh5s4hkms.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1070110_z2qh5s4hkms.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1070110_z2qh5s4hkms.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1070110_z2qh5s4hkms.svg#iconfont') format('svg');
+}
+
 * {
   font-family: "italic", Helvetica, Arial, "Heiti SC", "Microsoft YaHei";
 }
@@ -768,7 +780,7 @@ body {
     flex-direction: row;
   }
   .index-container .index-left {
-    width: 180px;
+    width: 380px;   /* edit */
   }
   .index-container .index-middle {
     flex: 1;
