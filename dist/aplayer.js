@@ -27,6 +27,12 @@ const ap = new APlayer({
         cover: '/musics/pics/不过是爱情.jpg',
       },
       {
+        name: "说谎",
+        artist: '林宥嘉',
+        url: '/musics/林宥嘉-说谎.mp3',
+        cover: '/musics/pics/林宥嘉-说谎.jpg',
+      },
+      {
         name: '听妈妈的话',
         artist: '周杰伦',
         url: 'http://www.ytmp3.cn/down/51577.mp3',
