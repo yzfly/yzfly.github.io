@@ -8,6 +8,8 @@ html {
   padding: 0;
 }
 body {
+  background-image: url(https://michaelgillettonlinecontent.azurewebsites.net/media/2304/blocks.jpg);
+  background-position: center;
   margin-left: calc(100vw - 100%) !important;
   -webkit-text-size-adjust: none;
 }
