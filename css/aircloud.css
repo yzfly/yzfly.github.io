@@ -10,6 +10,7 @@ html {
 body {
   /* edit */
   background-image: url(https://michaelgillettonlinecontent.azurewebsites.net/media/2135/frozenbeautyinharbin.jpg);
+  background-color: #00CCFF;
   background-repeat: repeat-y;
   background-attachment: scroll;
   background-position: center top;
