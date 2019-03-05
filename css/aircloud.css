@@ -1251,6 +1251,6 @@ pre .javascript .function {
     padding: 0.5em 1em;
     border-left: 3px solid #ff1700;
     background-color: #f9f9f9;
-    opacity: 0.75;
+    opacity: 1;
     list-style: none;
 }
