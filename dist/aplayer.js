@@ -21,9 +21,21 @@ const ap = new APlayer({
         cover: '/musics/pics/青春纪念册.jpg',
       },
       {
+        name: "淘汰",
+        artist: '陈奕迅',
+        url: 'http://www.ytmp3.cn/down/49842.mp3',
+        cover: '/musics/pics/不过是爱情.jpg',
+      },
+      {
         name: "不过是爱情",
         artist: '刘惜君',
         url: '/musics/不过是爱情_刘惜君.mp3',
+        cover: '/musics/pics/不过是爱情.jpg',
+      },
+      {
+        name: "风吹麦浪",
+        artist: '李健',
+        url: 'http://www.ytmp3.cn/down/7274.mp3',
         cover: '/musics/pics/不过是爱情.jpg',
       },
       {
