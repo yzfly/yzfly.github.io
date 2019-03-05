@@ -1,7 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
+<!-- edit 雪花特效 -->
+<script type="text/javascript" src="//libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript">
+  var windowWidth = $(window).width();
+  if (windowWidth > 480) {
+    document.write('<script type="text/javascript" src="/js/src/snow.js"><\/script>');
+  }
+</script>
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
@@ -33,6 +40,7 @@
 </head>
 
 <body>
+
 
 <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="site-nav-toggle" id="site-nav-toggle">
     <button>
@@ -299,19 +307,20 @@
          Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p> 
     	-->
 
-    	<span id="busuanzi_container_site_pv">
-            总访问量<span id="busuanzi_value_site_pv"></span>次
+    	<span id="busuanzi_container_site_pv" style="color:black">
+            总访问量<span id="busuanzi_value_site_pv" style="color:black"></span>次
         </span>
-        <span id="busuanzi_container_site_uv">
-            访客数<span id="busuanzi_value_site_uv"></span>人  
+        <span id="busuanzi_container_site_uv" style="color:black">
+            访客数<span id="busuanzi_value_site_uv" style="color:black"></span>人  
         </span>
-
-        Contact Author <a href="https://github.com/yzfly">Github</a>
+        <span class="post-count" style="color:black">全站共 {{ totalcount(site) }} 字</span>
 
         <!-- 
+        Contact Author <a href="https://github.com/yzfly">Github</a>
+        
         <div class="theme-info">
 		  <div class="powered-by"></div>
-		  <span class="post-count">全站共{{ totalcount(site) }}字</span>
+		  <span class="post-count" style="color:black">全站共{{ totalcount(site) }}字</span>
 		</div>
 		-->
 	</p>

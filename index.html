@@ -1,7 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
+<!-- edit 雪花特效 -->
+<script type="text/javascript" src="//libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript">
+  var windowWidth = $(window).width();
+  if (windowWidth > 480) {
+    document.write('<script type="text/javascript" src="/js/src/snow.js"><\/script>');
+  }
+</script>
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
@@ -33,6 +40,7 @@
 </head>
 
 <body>
+
 
 <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="site-nav-toggle" id="site-nav-toggle">
     <button>
@@ -221,79 +229,79 @@
     <div class="post-preview">
         <div class="post-time">2018-07-26</div>
         <div class="post-info">
+            <a href="/2018/07/26/elementary-os-5/">
+                <h3>
+                    elementary os
+                </h3>
+            </a>
+            <p>
+                
+            </p>
+        </div>
+    </div>
+    
+    <div class="post-preview">
+        <div class="post-time">2018-07-26</div>
+        <div class="post-info">
+            <a href="/2018/07/26/ENVI-file-format/">
+                <h3>
+                    ENVI 图像文件的标准格式
+                </h3>
+            </a>
+            <p>
+                
+            </p>
+        </div>
+    </div>
+    
+    <div class="post-preview">
+        <div class="post-time">2018-07-26</div>
+        <div class="post-info">
+            <a href="/2018/07/26/lingo/">
+                <h3>
+                    lingo
+                </h3>
+            </a>
+            <p>
+                
+            </p>
+        </div>
+    </div>
+    
+    <div class="post-preview">
+        <div class="post-time">2018-07-26</div>
+        <div class="post-info">
+            <a href="/2018/07/26/ubuntu服务器设置定时重启/">
+                <h3>
+                    Ubuntu18.04 server设置定时重启
+                </h3>
+            </a>
+            <p>
+                
+            </p>
+        </div>
+    </div>
+    
+    <div class="post-preview">
+        <div class="post-time">2018-07-26</div>
+        <div class="post-info">
+            <a href="/2018/07/26/linux-DNS设置/">
+                <h3>
+                    Ubuntu18.04下设置DNS
+                </h3>
+            </a>
+            <p>
+                
+            </p>
+        </div>
+    </div>
+    
+    <div class="post-preview">
+        <div class="post-time">2018-07-26</div>
+        <div class="post-info">
             <a href="/2018/07/26/ubuntu下字体大小问题/">
                 <h3>
                     Ubuntu18.04下字体大小问题
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
-    </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-07-26</div>
-        <div class="post-info">
-            <a href="/2018/07/26/Ubuntu18.04 下MATLAB字体问题/">
-                <h3>
-                    Ubuntu18.04下MATLAB字体问题
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
-    </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-07-26</div>
-        <div class="post-info">
-            <a href="/2018/07/26/python3进阶之selenium/">
-                <h3>
-                    python3进阶之selenium
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
-    </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-07-26</div>
-        <div class="post-info">
-            <a href="/2018/07/26/python3进阶之print/">
-                <h3>
-                    python3进阶之print打印和输出
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
-    </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-07-26</div>
-        <div class="post-info">
-            <a href="/2018/07/26/complie/">
-                <h3>
-                    汇编语言学习笔记
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
-    </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-07-26</div>
-        <div class="post-info">
-            <a href="/2018/07/26/linux-power-management/">
-                <h3>
-                    linux下的电源管理
                 </h3>
             </a>
             <p>
@@ -360,19 +368,20 @@
          Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p> 
     	-->
 
-    	<span id="busuanzi_container_site_pv">
-            总访问量<span id="busuanzi_value_site_pv"></span>次
+    	<span id="busuanzi_container_site_pv" style="color:black">
+            总访问量<span id="busuanzi_value_site_pv" style="color:black"></span>次
         </span>
-        <span id="busuanzi_container_site_uv">
-            访客数<span id="busuanzi_value_site_uv"></span>人  
+        <span id="busuanzi_container_site_uv" style="color:black">
+            访客数<span id="busuanzi_value_site_uv" style="color:black"></span>人  
         </span>
-
-        Contact Author <a href="https://github.com/yzfly">Github</a>
+        <span class="post-count" style="color:black">全站共 {{ totalcount(site) }} 字</span>
 
         <!-- 
+        Contact Author <a href="https://github.com/yzfly">Github</a>
+        
         <div class="theme-info">
 		  <div class="powered-by"></div>
-		  <span class="post-count">全站共{{ totalcount(site) }}字</span>
+		  <span class="post-count" style="color:black">全站共{{ totalcount(site) }}字</span>
 		</div>
 		-->
 	</p>
