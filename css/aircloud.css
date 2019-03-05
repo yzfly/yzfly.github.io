@@ -1249,8 +1249,8 @@ pre .javascript .function {
 .post-copyright {
     margin: 1em 0 0;
     padding: 0.5em 1em;
-    border-left: 3px solid #ff1700;
-    background-color: #f9f9f9;
+    border-left: 2px solid #ff1700;
+    background-color: #84AF9B;
     opacity: 1;
     list-style: none;
 }
