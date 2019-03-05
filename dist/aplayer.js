@@ -18,7 +18,7 @@ const ap = new APlayer({
         name: "追光者",
         artist: 'fade',
         url: "http://tx.stream.kg.qq.com/shkge-btfs/41cefe9bf0bfa1f5b1550f0a0c43e76fd287634b?ftnrkey=3d3d4b69de7b311b7c56e6534ac14b51b654f91e0f9e1c42a36a7e0d476fcd7f1eea05c7dfeb46423829d4660d07650ea3d03641c7beb418be0edad5d87cc534&vkey=DA98618A6201982EA91A483B3AF928CD5C7C140E31A69A2389D85D829746A6EC63771A850CF104C1EC48DFE47A0A3A4E079E1A9CE742CD54BE3F7A027BC7B611558B7F1AE746E81180527D8CC9F2B730B1F306C2D1958A0A&fname=1021_f62dd9ec7caee2af547e47ef83f984fc7081e9ad.0.m4a",
-        cover: "http://shp.qlogo.cn/ttsing/350597993/350597993/100",
+        cover: "http://y.gtimg.cn/music/photo_new/T002R300x300M000001qHmKU29WX7K.jpg",
       },
       {
         name: "青春纪念册",
