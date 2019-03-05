@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- edit 雪花特效 -->
+<script type="text/javascript" src="https://libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
+
+
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="流觞君的小窝">
+    <meta name="keyword" content>
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <!-- edit yzfly -->
+    <a href="https://github.com/yzfly" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#70B7FD; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+    
+
+
+    <title>
+        
+        Hexo博客搭建+AirCloud主题配置-1 - 流觞君的小窝
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/aircloud.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+
+<body>
+
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><script type="text/javascript">
+  var windowWidth = $(window).width();
+  if (windowWidth > 480) {
+    document.write('<script type="text/javascript" src="/js/snow.js"><\/script>');
+  }
+</script>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i> Life is an adventure ~ </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar">
+            <img src="/img/avatar.jpg">
+        </div>
+        <div class="name">
+            <i>流觞君</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li>
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>主页</span>
+                </a>
+            </li>
+            <li>
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>存档</span>
+                </a>
+            </li>
+            <li>
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>关于</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>搜索</span>
+                </a>
+            </li>
+            
+
+        </ul>
+
+            <!-- Contact -->
+
+        <ul class="list-inline text-center">
+            
+                <a target="_blank" href="https://github.com/yzfly">
+                    <span class="fa-stack fa-lg"><i class="iconfont">&#xe63a;</i></span>
+                </a>
+            
+
+            
+                <a target="_blank" href="mailto:yz.liu.me@gmail.com">
+                <span class="fa-stack fa-lg">
+                    <i class="iconfont">&#xe89f;</i>
+                </span>
+                </a>
+            
+        </ul>
+    </div>
+
+    
+    <!-- Music -->
+
+    
+    
+    
+    <div>
+    <link rel="stylesheet" href="/dist/APlayer.min.css">
+    <div id="aplayer"></div>
+    <script type="text/javascript" src="/dist/APlayer.min.js"></script>
+    <script type="text/javascript" src="/dist/aplayer.js"></script>
+    </div>
+
+    
+
+
+    <!-- Post Outline -->
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#AirCloud-Hexo静态博客搭建-1"><span class="toc-text">AirCloud Hexo静态博客搭建-1</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装准备"><span class="toc-text">安装准备</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo-安装"><span class="toc-text">Hexo 安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Hexo-的简单使用"><span class="toc-text">Hexo 的简单使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#git-的简单使用"><span class="toc-text">git 的简单使用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#AirCloud-主题安装"><span class="toc-text">AirCloud 主题安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#AirCloud-主题下载"><span class="toc-text">AirCloud 主题下载</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#yuque"><span class="toc-text">yuque</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#搜索功能"><span class="toc-text">搜索功能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#字数统计"><span class="toc-text">字数统计</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装-hexo-wordcount"><span class="toc-text">安装 hexo-wordcount</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#编辑配置文件"><span class="toc-text">编辑配置文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#编辑主题文件"><span class="toc-text">编辑主题文件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#全站文字统计"><span class="toc-text">全站文字统计</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#文章字数统计"><span class="toc-text">文章字数统计</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文章置顶"><span class="toc-text">文章置顶</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#博文播放音乐"><span class="toc-text">博文播放音乐</span></a></li></ol></li></ol>
+</div>
+    
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input">
+            <span id="begin-search">搜索</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+
+
+        <div class="index-about-mobile">
+            <i> Life is an adventure ~ </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        Hexo博客搭建+AirCloud主题配置-1
+    </div>
+
+    <div class="post-meta">
+
+        <span class="attr">发布于：<span>2019-03-05 09:39:40</span></span>
+        
+        <span>/</span>
+        
+          <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">1.9k字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">8分</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+    </span>
+
+</span></div>
+          
+        
+        
+    <span></span>
+
+    </div>
+        <div class="post-content ">
+        <h1 id="AirCloud-Hexo静态博客搭建-1"><a href="#AirCloud-Hexo静态博客搭建-1" class="headerlink" title="AirCloud Hexo静态博客搭建-1"></a>AirCloud Hexo静态博客搭建-1</h1><p>使用github 提供的静态页面功能，结合优秀的hexo框架，搭建属于自己的静态博客。对于习惯语雀进行写作和文档管理的同学，搭配 hexo-yuque 插件，同步语雀内容至博客。</p>
+<p>若只需搭建个人博客，无需语雀同步功能，则涉及语雀部分均忽略即可。</p>
+<h2 id="安装准备"><a href="#安装准备" class="headerlink" title="安装准备"></a>安装准备</h2><ul>
+<li>node 已安装并且为最新版</li>
+<li>github 注册账号一个 </li>
+<li>git 已安装并已经配置 github 访问</li>
+<li>注册语雀并建立知识库</li>
+</ul>
+<h2 id="Hexo-安装"><a href="#Hexo-安装" class="headerlink" title="Hexo 安装"></a>Hexo 安装</h2><ul>
+<li><p>安装node</p>
+</li>
+<li><p>安装hexo 脚手架</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建博客文件夹并进行初始化</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mkdir blog</span><br><span class="line">hexo init blog</span><br><span class="line">cd blog</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi _config.yml</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>修改部署部分，<strong>注意冒号后需要有空格！！！这是语法</strong></p>
+<blockquote>
+<p>deploy:</p>
+<p> type: git</p>
+<p> repo: git@github.com:yzfly/yzfly.github.io.git</p>
+<p> branch: master</p>
+</blockquote>
+<h3 id="Hexo-的简单使用"><a href="#Hexo-的简单使用" class="headerlink" title="Hexo 的简单使用"></a>Hexo 的简单使用</h3><ul>
+<li><p>本地运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>清理缓存</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>生成 html 内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>部署到 Github</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="git-的简单使用"><a href="#git-的简单使用" class="headerlink" title="git 的简单使用"></a>git 的简单使用</h3><p>初始化项目文件夹，添加远程库，并将本地修改提交到远程库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m &quot;commit&quot;</span><br><span class="line">git remote add origin git@github.com:yzfly/test.git</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+<p>将远程库内容拉取到本地并合并</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull origin master</span><br></pre></td></tr></table></figure>
+<h2 id="AirCloud-主题安装"><a href="#AirCloud-主题安装" class="headerlink" title="AirCloud 主题安装"></a>AirCloud 主题安装</h2><p>Github 项目地址：<a href="https://github.com/aircloud/hexo-theme-aircloud" target="_blank" rel="noopener">Hexo-Theme-AirCloud</a></p>
+<p>Github 博客演示地址：<a href="https://github.com/aircloud/hexo-aircloud-blog" target="_blank" rel="noopener">AirCloud</a></p>
+<p>AirCloud 是一个简洁轻量的 hexo 博客主题，接下来为Hexo 安装该主题，并进行配置。</p>
+<h3 id="AirCloud-主题下载"><a href="#AirCloud-主题下载" class="headerlink" title="AirCloud 主题下载"></a>AirCloud 主题下载</h3><p>进入Hexo 博客文件夹，进入 themes 文件夹，将 AirCloud 主题文件下载到该文件夹并解压，重命名为 Aircloud</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget https://github.com/aircloud/hexo-theme-aircloud/archive/master.zip  # 下载代码文件</span><br><span class="line">unzip master.zip  # 解压代码文件</span><br><span class="line">mv hexo-theme-aircloud-master/ Aircloud  # 文件夹重命名</span><br></pre></td></tr></table></figure>
+<p>修改配置文件，启用 Aircloud 主题</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi _config.yml</span><br></pre></td></tr></table></figure>
+<p>找到 theme 字段所在行，修改为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: Aircloud    # 这里的主题名是主题所在的文件夹名</span><br></pre></td></tr></table></figure>
+<p><strong>注意配置文件中的冒号后面一定要有一个空格！！！</strong> 否则配置无效。</p>
+<p><strong>配置网站名称</strong> </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SEOTitle: website-title</span><br></pre></td></tr></table></figure>
+<p>更详细的配置需要参考官方提供的 demo，官方提供的参考配置文件如下：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Hexo Configuration</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/configuration.html</span></span><br><span class="line"><span class="comment">## Source: https://github.com/hexojs/hexo/</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Site</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">AirCloud</span> <span class="string">Blog</span></span><br><span class="line"><span class="attr">subtitle:</span> <span class="string">sometimes</span> <span class="string">code，</span> <span class="string">sometimes</span> <span class="string">design</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">Xiaotao</span> <span class="string">Nie</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">zh</span></span><br><span class="line"><span class="attr">timezone:</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># URL</span></span><br><span class="line"><span class="comment">## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'</span></span><br><span class="line"><span class="attr">url:</span> <span class="attr">http://niexiaotao.cn/</span></span><br><span class="line"><span class="attr">root:</span> <span class="string">/</span></span><br><span class="line"><span class="attr">permalink:</span> <span class="string">:year/:month/:day/:title/</span></span><br><span class="line"><span class="attr">permalink_defaults:</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#Custom Setting Start</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Site settings</span></span><br><span class="line"><span class="comment"># 网站综合内容设置：</span></span><br><span class="line"><span class="attr">SEOTitle:</span> <span class="string">AirCloud的博客</span> <span class="string">| AirCloud's Blog</span></span><br><span class="line"><span class="string"></span><span class="attr">email:</span> <span class="string">onlythen@yeah.net</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">"聂小涛的博客"</span></span><br><span class="line"><span class="attr">keyword:</span> <span class="string">"腾讯"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># SNS settings</span></span><br><span class="line"><span class="comment"># 一些社交平台地址，支持以下几种：</span></span><br><span class="line"><span class="attr">weibo_username:</span>     <span class="number">3286578617</span></span><br><span class="line"><span class="attr">zhihu_username:</span>     <span class="string">ai-er-lan-xue-da</span></span><br><span class="line"><span class="attr">github_username:</span>    <span class="string">AirCloud</span></span><br><span class="line"><span class="attr">twitter_username:</span>   <span class="string">iconie_alloy</span></span><br><span class="line"><span class="attr">facebook_username:</span>  <span class="string">xiaotao.nie.5</span></span><br><span class="line"><span class="attr">linkedin_username:</span>  <span class="string">小涛-聂-80964aba</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Build settings</span></span><br><span class="line"><span class="attr">anchorjs:</span> <span class="literal">true</span>                          <span class="comment"># if you want to customize anchor. check out line:181 of `post.html`</span></span><br><span class="line"></span><br><span class="line"><span class="attr">sidebar-avatar:</span> <span class="string">img/avatar.jpg</span>      <span class="comment"># use absolute URL, seeing it's used in both `/` and `/about/`</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Friends</span></span><br><span class="line"><span class="comment"># 友情链接</span></span><br><span class="line"><span class="attr">friends:</span> <span class="string">[</span></span><br><span class="line">    <span class="string">&#123;</span></span><br><span class="line"><span class="attr">        title:</span> <span class="string">"10000H"</span><span class="string">,</span></span><br><span class="line"><span class="attr">        href:</span> <span class="string">"https://www.10000h.top"</span></span><br><span class="line">    <span class="string">&#125;,&#123;</span></span><br><span class="line"><span class="attr">        title:</span> <span class="string">"Xiaotao's Page"</span><span class="string">,</span></span><br><span class="line"><span class="attr">        href:</span> <span class="string">"https://niexiaotao.com"</span></span><br><span class="line">    <span class="string">&#125;,&#123;</span></span><br><span class="line"><span class="attr">        title:</span> <span class="string">"It helps SEO"</span><span class="string">,</span></span><br><span class="line"><span class="attr">        href:</span> <span class="string">"#"</span></span><br><span class="line">    <span class="string">&#125;</span></span><br><span class="line"><span class="string">]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#comment:</span></span><br><span class="line"><span class="comment">#  type: gitment</span></span><br><span class="line"><span class="comment">#  id: your-id-created-by-https://github.com/settings/applications/new</span></span><br><span class="line"><span class="comment">#  secret: your-secret-created-by-https://github.com/settings/applications/new</span></span><br><span class="line"><span class="comment">#  owner: aircloud</span></span><br><span class="line"><span class="comment">#  repo: hexo-aircloud-blog</span></span><br><span class="line"></span><br><span class="line"><span class="attr">comment:</span></span><br><span class="line"><span class="attr">   type:</span> <span class="string">disqus</span></span><br><span class="line"><span class="attr">   script:</span> <span class="string">'https://airclouds-blog.disqus.com/embed.js'</span></span><br><span class="line"></span><br><span class="line"><span class="attr">donate:</span></span><br><span class="line"><span class="attr">  img:</span> <span class="string">img/donate.jpg</span></span><br><span class="line"><span class="attr">  content:</span> <span class="string">感谢鼓励</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># The following content is not recommended to modify</span></span><br><span class="line"><span class="comment"># 搜索数据文件路径设置，不建议改动：</span></span><br><span class="line"><span class="attr">search:</span></span><br><span class="line"><span class="attr">  path:</span> <span class="string">search.json</span></span><br><span class="line"><span class="attr">  field:</span> <span class="string">post</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 文章样式(是否首行缩进)：</span></span><br><span class="line"><span class="attr">post_style:</span></span><br><span class="line"><span class="attr">  indent:</span> <span class="string">default</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Custom Setting End</span></span><br><span class="line"><span class="comment"># Directory</span></span><br><span class="line"><span class="attr">source_dir:</span> <span class="string">source</span></span><br><span class="line"><span class="attr">public_dir:</span> <span class="string">public</span></span><br><span class="line"><span class="attr">tag_dir:</span> <span class="string">tags</span></span><br><span class="line"><span class="attr">archive_dir:</span> <span class="string">archive</span></span><br><span class="line"><span class="attr">category_dir:</span> <span class="string">categories</span></span><br><span class="line"><span class="attr">code_dir:</span> <span class="string">downloads/code</span></span><br><span class="line"><span class="attr">i18n_dir:</span> <span class="string">:lang</span></span><br><span class="line"><span class="attr">skip_render:</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Writing</span></span><br><span class="line"><span class="attr">new_post_name:</span> <span class="string">:title.md</span> <span class="comment"># File name of new posts</span></span><br><span class="line"><span class="attr">default_layout:</span> <span class="string">post</span></span><br><span class="line"><span class="attr">titlecase:</span> <span class="literal">false</span> <span class="comment"># Transform title into titlecase</span></span><br><span class="line"><span class="attr">external_link:</span> <span class="literal">true</span> <span class="comment"># Open external links in new tab</span></span><br><span class="line"><span class="attr">filename_case:</span> <span class="number">0</span></span><br><span class="line"><span class="attr">render_drafts:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">post_asset_folder:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">relative_link:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">future:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">highlight:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  line_number:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  auto_detect:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  tab_replace:</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Category &amp; Tag</span></span><br><span class="line"><span class="attr">default_category:</span> <span class="string">uncategorized</span></span><br><span class="line"><span class="attr">category_map:</span></span><br><span class="line"><span class="attr">tag_map:</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Date / Time format</span></span><br><span class="line"><span class="comment">## Hexo uses Moment.js to parse and display date</span></span><br><span class="line"><span class="comment">## You can customize the date format as defined in</span></span><br><span class="line"><span class="comment">## http://momentjs.com/docs/#/displaying/format/</span></span><br><span class="line"><span class="attr">date_format:</span> <span class="string">YYYY-MM-DD</span></span><br><span class="line"><span class="attr">time_format:</span> <span class="attr">HH:mm:ss</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Pagination</span></span><br><span class="line"><span class="comment">## Set per_page to 0 to disable pagination</span></span><br><span class="line"><span class="attr">per_page:</span> <span class="number">8</span></span><br><span class="line"><span class="attr">pagination_dir:</span> <span class="string">page</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Extensions</span></span><br><span class="line"><span class="comment">## Plugins: https://hexo.io/plugins/</span></span><br><span class="line"><span class="comment">## Themes: https://hexo.io/themes/</span></span><br><span class="line"><span class="attr">theme:</span> <span class="string">aircloud</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/deployment.html</span></span><br><span class="line"><span class="comment">#deploy:</span></span><br><span class="line"><span class="comment">#  type: git</span></span><br><span class="line"><span class="comment">#  repo: your repo url</span></span><br><span class="line"><span class="comment">#  branch: master</span></span><br></pre></td></tr></table></figure>
+<h2 id="yuque"><a href="#yuque" class="headerlink" title="yuque"></a>yuque</h2><p>参考教程：<a href="https://www.yuque.com/page/luan.ma/yuque2blog" target="_blank" rel="noopener">静态博客使用语雀编辑器 （2019更新）</a></p>
+<p><a href="https://github.com/x-cold/yuque-hexo/" target="_blank" rel="noopener">yuque-hexo</a> 阿里巴巴大神开发的一款同步语雀文章到hexo的插件，使用该插件后可以使用yuque编辑博文，然后同步到hexo博客上。</p>
+<ul>
+<li>安装 yuque-hexo</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i -g yuque-hexo</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>注册语雀，创建知识库，获得你的个人路径和知识库的名字，比如我的博客的知识库是 <a href="https://www.yuque.com/explorer/blog" target="_blank" rel="noopener">https://www.yuque.com/explorer/blog</a></p>
+</li>
+<li><p>在 Hexo 博客的目录下面的 package.json 中，进行下面的配置</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&quot;yuqueConfig&quot;: &#123;</span><br><span class="line">&quot;baseUrl&quot;: &quot;https://www.yuque.com/api/v2&quot;,</span><br><span class="line">&quot;login&quot;: &quot;explorer&quot;,</span><br><span class="line">&quot;repo&quot;: &quot;blog&quot;,</span><br><span class="line">&quot;mdNameFormat&quot;: &quot;slug&quot;,</span><br><span class="line">&quot;postPath&quot;: &quot;source/_posts/yuque&quot;  //可自定义下载文件保存路径</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>从语雀同步文章</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yuque-hexo sync</span><br></pre></td></tr></table></figure>
+<p>PS: yuque-hexo 插件支持 Front-matter，在语雀写文章的时候直接写在前面，然后插入一条分割线即可，不写也没问题：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tags: [Hexo]</span><br><span class="line">categories: hexo</span><br><span class="line">date: 2019-2-05 10:43:50</span><br></pre></td></tr></table></figure>
+<h2 id="搜索功能"><a href="#搜索功能" class="headerlink" title="搜索功能"></a>搜索功能</h2><p>为了使用搜索功能，首先需要安装下列插件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i hexo-generator-search --save</span><br></pre></td></tr></table></figure>
+<p>然后在 _config.yml 中进行配置，可以参考如下配置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">search:</span><br><span class="line">  path: search.json</span><br><span class="line">  field: post</span><br></pre></td></tr></table></figure>
+<h2 id="字数统计"><a href="#字数统计" class="headerlink" title="字数统计"></a>字数统计</h2><p>官方文档 <a href="https://www.npmjs.com/package/hexo-wordcount" target="_blank" rel="noopener">hexo-wordcount </a></p>
+<h3 id="安装-hexo-wordcount"><a href="#安装-hexo-wordcount" class="headerlink" title="安装 hexo-wordcount"></a>安装 hexo-wordcount</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-wordcount --save</span><br></pre></td></tr></table></figure>
+<h3 id="编辑配置文件"><a href="#编辑配置文件" class="headerlink" title="编辑配置文件"></a>编辑配置文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi _config.yml</span><br></pre></td></tr></table></figure>
+<p>添加下面的内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">word_count: True</span><br><span class="line"></span><br><span class="line">post_wordcount:</span><br><span class="line">  item_text: true</span><br><span class="line">  wordcount: true         # 单篇 字数统计</span><br><span class="line">  min2read: true          # 单篇 阅读时长</span><br><span class="line">  totalcount: true       # 网站 字数统计</span><br><span class="line">  separated_meta: true</span><br></pre></td></tr></table></figure>
+<h3 id="编辑主题文件"><a href="#编辑主题文件" class="headerlink" title="编辑主题文件"></a>编辑主题文件</h3><h4 id="全站文字统计"><a href="#全站文字统计" class="headerlink" title="全站文字统计"></a>全站文字统计</h4><p>编辑 Aircloud/layout/_partial/footer.ejs 文件</p>
+<p>在  footer 标签末尾添加下面的内容，也可在自己想要的位置添加内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;span class=&quot;post-count&quot; style=&quot;color:black&quot;&gt;全站共 &lt;%= totalcount(site) %&gt; 字&lt;/span&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="文章字数统计"><a href="#文章字数统计" class="headerlink" title="文章字数统计"></a>文章字数统计</h4><ol>
+<li>在 themes/Aircloud/layout/ 中添加 word.ejs 文件，写入下面的内容：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;div style=&quot;margin-top:10px;&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;post-time&quot;&gt;</span><br><span class="line">      &lt;span class=&quot;post-meta-item-icon&quot;&gt;</span><br><span class="line">        &lt;i class=&quot;fa fa-keyboard-o&quot;&gt;&lt;/i&gt;</span><br><span class="line">        &lt;span class=&quot;post-meta-item-text&quot;&gt;  字数统计: &lt;/span&gt;</span><br><span class="line">        &lt;span class=&quot;post-count&quot;&gt;&lt;%= wordcount(page.content) %&gt;字&lt;/span&gt;</span><br><span class="line">      &lt;/span&gt;</span><br><span class="line">    &lt;/span&gt;</span><br><span class="line"></span><br><span class="line">    &lt;span class=&quot;post-time&quot;&gt;</span><br><span class="line">      &amp;nbsp; | &amp;nbsp;</span><br><span class="line">      &lt;span class=&quot;post-meta-item-icon&quot;&gt;</span><br><span class="line">        &lt;i class=&quot;fa fa-hourglass-half&quot;&gt;&lt;/i&gt;</span><br><span class="line">        &lt;span class=&quot;post-meta-item-text&quot;&gt;  阅读时长: &lt;/span&gt;</span><br><span class="line">        &lt;span class=&quot;post-count&quot;&gt;&lt;%= min2read(page.content) %&gt;分&lt;/span&gt;</span><br><span class="line">      &lt;/span&gt;</span><br><span class="line">    &lt;/span&gt;</span><br><span class="line"></span><br><span class="line">    &lt;span class=&quot;post-time&quot;&gt;</span><br><span class="line">      &amp;nbsp; | &amp;nbsp;</span><br><span class="line">      &lt;span class=&quot;attr&quot;&gt;&lt;%= __(&apos;post.visit&apos;) %&gt;：&lt;span id=&quot;busuanzi_value_page_pv&quot;&gt;&lt;/span&gt;</span><br><span class="line">    &lt;/span&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>找到在post.ejs 中找到下面标签</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;post-meta&quot;&gt;</span><br></pre></td></tr></table></figure>
+<p>在标签内添加下面的内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;% if(config.word_count &amp;&amp; !page.no_word_count)&#123;%&gt;</span><br><span class="line">&lt;%- partial(&apos;word&apos;) %&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br><span class="line">&lt;/span&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="文章置顶"><a href="#文章置顶" class="headerlink" title="文章置顶"></a>文章置顶</h2><p>首先卸载原插件，安装支持置顶功能插件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall hexo-generator-index --save</span><br><span class="line">npm install hexo-generator-index-pin-top --save</span><br></pre></td></tr></table></figure>
+<p>在需要置顶的文章的标题栏中加上<code>top: true</code>即可，如下所示</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">title: ML1</span><br><span class="line">date: 2018-07-16 09:39:40</span><br><span class="line">tags: ML</span><br><span class="line">top: true</span><br></pre></td></tr></table></figure>
+<h2 id="博文播放音乐"><a href="#博文播放音乐" class="headerlink" title="博文播放音乐"></a>博文播放音乐</h2><p>在博客文章中实现播放音乐。</p>
+<ol>
+<li><strong>安装 <a href="https://github.com/MoePlayer/hexo-tag-aplayer/blob/master/docs/README-zh_cn.md" target="_blank" rel="noopener">hexo-tag-aplayer</a> 插件</strong></li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-tag-aplayer</span><br></pre></td></tr></table></figure>
+<ol>
+<li><strong>使用</strong></li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% aplayer title author url [picture_url, narrow, autoplay, width:xxx, lrc:xxx] %&#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li><strong>标签参数</strong></li>
+</ol>
+<ul>
+<li><code>title</code> : 曲目标题</li>
+<li><code>author</code>: 曲目作者</li>
+<li><code>url</code>: 音乐文件 URL 地址</li>
+<li><code>picture_url</code>: (可选) 音乐对应的图片地址</li>
+<li><code>narrow</code>: （可选）播放器袖珍风格</li>
+<li><code>autoplay</code>: (可选) 自动播放，移动端浏览器暂时不支持此功能</li>
+<li><code>width:xxx</code>: (可选) 播放器宽度 (默认: 100%)</li>
+<li><code>lrc:xxx</code>: （可选）歌词文件 URL 地址</li>
+</ul>
+
+
+        
+        <ul class="post-copyright">
+
+            <li class="post-copyright-author">
+                <strong>作者: </strong>
+                <a href="http://yzfly.github.iou">流觞君</a></li>
+
+            <li class="post-copyright-Article">
+                <strong>文章: </strong>
+                <a href="http://yzfly.github.io/2019/03/05/Hexo博客搭建+AirCloud主题配置-1/">Hexo博客搭建+AirCloud主题配置-1</a> </li>
+
+            <li class="post-copyright-link">
+                <strong>链接: </strong>
+                <a href="http://yzfly.github.io/2019/03/05/Hexo博客搭建+AirCloud主题配置-1/" title="Hexo博客搭建+AirCloud主题配置-1">http://yzfly.github.io/2019/03/05/Hexo博客搭建+AirCloud主题配置-1/</a> </li>
+
+            <li class="post-copyright-license">
+                <strong>版权: </strong>
+                本站文章均采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0 CN</a> 许可协议，请勿用于商业，转载注明出处！
+            </li>
+
+        </ul>
+        
+
+        
+        <br>
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+
+    <div class="index-rigit">
+        <!-- 网易云外链播放器功能 -->
+        <!--
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=110 src="//music.163.com/outchain/player?type=0&id=2694444539&auto=1&height=90"></iframe> -->
+        <!-- <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=450 src="//music.163.com/outchain/player?type=0&id=2694444539&auto=1&height=430"></iframe> -->
+    </div>
+
+</div>
+
+
+<footer class="footer">
+
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+        <li>
+            <a target="_blank" href="https://github.com/yzfly">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-github"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+
+    </ul>
+
+    
+
+    <p> 
+    	<!-- 
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+         Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p> 
+    	-->
+
+    	<span id="busuanzi_container_site_pv" style="color:black">
+            总访问量<span id="busuanzi_value_site_pv" style="color:black"></span>次
+        </span>
+        <span id="busuanzi_container_site_uv" style="color:black">
+            访客数<span id="busuanzi_value_site_uv" style="color:black"></span>人  
+        </span>
+        
+        <!-- 
+        Contact Author <a href="https://github.com/yzfly">Github</a>
+        
+        <div class="theme-info">
+		  <div class="powered-by"></div>
+		  <span class="post-count" style="color:black">全站共45.3k字</span>
+		</div>
+		-->
+	</p>
+    <span class="post-count" style="color:black">全站共 45.3k 字</span>
+
+</footer>
+
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+    <script type="text/javascript">
+       (function() {
+           if (typeof LivereTower === 'function') { return; }
+
+           var j, d = document.getElementById('lv-container');
+
+           d.setAttribute('data-id','city');
+           d.setAttribute('data-uid' , 'MTAyMC80Mjk3MS8xOTUxNw==');
+
+           j = document.createElement('script');
+           j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+           j.async = true;
+
+           d.appendChild(j);
+       })();
+    </script>
+    <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+    </div>
+
+
+
+    <script type="text/javascript" src="/js/love.js"></script>
+
+
+</html>

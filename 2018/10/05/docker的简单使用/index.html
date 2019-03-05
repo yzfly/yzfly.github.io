@@ -21,7 +21,7 @@
 
     <title>
         
-        linux下的login shell - 流觞君的小窝
+        docker的简单使用 - 流觞君的小窝
         
     </title>
 
@@ -144,7 +144,7 @@
     <!-- Post Outline -->
     
         <div id="toc" class="toc-article">
-    
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#docker的简单使用"><span class="toc-text">docker的简单使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装docker"><span class="toc-text">安装docker</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用阿里云docker加速器"><span class="toc-text">使用阿里云docker加速器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#docker-的简单使用"><span class="toc-text">docker 的简单使用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装R"><span class="toc-text">安装R</span></a></li></ol>
 </div>
     
     
@@ -177,12 +177,12 @@
 
 <div class="post-container">
     <div class="post-title">
-        linux下的login shell
+        docker的简单使用
     </div>
 
     <div class="post-meta">
 
-        <span class="attr">发布于：<span>2018-07-26 23:09:57</span></span>
+        <span class="attr">发布于：<span>2018-10-05 09:36:40</span></span>
         
         <span>/</span>
         
@@ -191,7 +191,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">244字</span>
+        <span class="post-count">622字</span>
       </span>
     </span>
 
@@ -200,7 +200,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">1分</span>
+        <span class="post-count">2分</span>
       </span>
     </span>
 
@@ -217,26 +217,33 @@
 
     </div>
         <div class="post-content ">
-        <p>在Linux下使用 terminal,可能常常会遇到这样的选项：</p>
-<p>run command as a login shell</p>
-<p>这是什么意思呢，login 之后的区别又是什么？</p>
-<a id="more"></a>
-<p>对此问题原先一直不解，使用搜索引擎搜索后得知了答案。</p>
-<p>原来在我们打开 linux终端后，terminal需要读取配置文件，login和 no login的区别是读取的配置文件不同。</p>
+        <h2 id="docker的简单使用"><a href="#docker的简单使用" class="headerlink" title="docker的简单使用"></a>docker的简单使用</h2><h3 id="安装docker"><a href="#安装docker" class="headerlink" title="安装docker"></a>安装docker</h3><p>这里直接使用系统包管理器安装docker，也可选择按照官网教程手动编译docker</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install docker.io</span><br></pre></td></tr></table></figure>
+<p>将当前用户加入docker组：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo gpasswd -a $&#123;USER&#125; docker</span><br><span class="line">systemctl restart docker</span><br></pre></td></tr></table></figure>
+<p>然后注销本次登录方能生效</p>
+<h3 id="使用阿里云docker加速器"><a href="#使用阿里云docker加速器" class="headerlink" title="使用阿里云docker加速器"></a>使用阿里云docker加速器</h3><p>国内访问docker网站，拉取镜像的速度很慢，这里使用阿里云的加速器加速。</p>
+<p><strong>1. 安装／升级Docker客户端</strong><br>推荐安装1.10.0以上版本的Docker客户端，参考文档 docker-ce</p>
+<p><strong>2. 配置镜像加速器</strong><br>针对Docker客户端版本大于 1.10.0 的用户</p>
+<p>您可以通过修改daemon配置文件/etc/docker/daemon.json来使用加速器</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir -p /etc/docker</span><br><span class="line">sudo tee /etc/docker/daemon.json &lt;&lt;-&apos;EOF&apos;</span><br><span class="line">&#123;</span><br><span class="line">  &quot;registry-mirrors&quot;: [&quot;https://xbagkcb9.mirror.aliyuncs.com&quot;]</span><br><span class="line">&#125;</span><br><span class="line">EOF</span><br><span class="line">sudo systemctl daemon-reload</span><br><span class="line">sudo systemctl restart docker</span><br></pre></td></tr></table></figure>
+<h3 id="docker-的简单使用"><a href="#docker-的简单使用" class="headerlink" title="docker 的简单使用"></a>docker 的简单使用</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">docker ps # 查看当前运行的容器</span><br><span class="line"># docker容器操作</span><br><span class="line">docker container ls -a # 查看所有容器</span><br><span class="line">docker container prune # 删除所有处于终止状态的容器</span><br><span class="line">docker container rm container_name # 删除某容器</span><br><span class="line">docker container stop cd7565   # 停止容器</span><br><span class="line"># docker images 操作</span><br><span class="line">docker images # 查看当前所有镜像</span><br><span class="line">docker rmi  im_id      # 删除某镜像</span><br></pre></td></tr></table></figure>
+<h2 id="安装R"><a href="#安装R" class="headerlink" title="安装R"></a>安装R</h2><p>这里使用 docker 安装R，同时配置Rstudio server来通过浏览器访问。使用docker的方式可以避免污染本机环境，在不需要时只需删除对应的容器和镜像即可。</p>
+<p>参考链接： <a href="https://ropenscilabs.github.io/r-docker-tutorial/03-install-packages.html" target="_blank" rel="noopener">Installing R Packages</a> </p>
+<p>下面的命令会在当前系统安装 docker rstudio镜像，如果已安装，则会启动该环境，若未安装，则会从服务器拉取该镜像到本地</p>
 <ul>
-<li>login shell 在启动时读取~/.bash_profile文件，如果该文件不存在，则读取 ~/.profile 文件</li>
-<li>non-login shell 一般读取的是 ～/.bashrc文件</li>
+<li>password 选项是设置 rstudio server 的浏览器登录密码。默认用户为 rstudio ,登录密码为下面所设置的。</li>
 </ul>
-<p>不同文件内容不同，也拥有不同的配置。</p>
-<p>以下是摘自 askubuntu.com的原文</p>
-<blockquote>
-<p>Assuming that your shell is Bash (the default in Ubuntu), these are the differences:</p>
-<ul>
-<li>When running as a <strong>login</strong> shell, Bash will read <code>~/.bash_profile</code> (or, if that doesn’t exist, <code>~/.profile</code>) on startup. In some cases, this file reads <code>~/.bashrc</code> as well.</li>
-<li>When running as a <strong>non-login</strong> shell, Bash will read <code>~/.bashrc</code>.</li>
-</ul>
-<p>So, why do you see different behaviors when running as a login/non-login shell? Because your <code>.bash_profile</code>/<code>.profile</code> is doing different things than your <code>.bashrc</code>.</p>
-</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -e PASSWORD=rstudio2018 --rm -p 8787:8787 -v /home/liu/Documents/code/r:/home/rstudio rocker/verse</span><br></pre></td></tr></table></figure>
+<p>注意冒号前的目录最好使用普通用户创建，如果该目录为 root 用户所有，则在后续步骤会报错。若本机只有root用户，可新建一普通用户。</p>
+<p>假如你已经按上一节中提到的那样安装好了docker中的 R 容器，可以通过浏览器访问 <a href="http://127.0.0.1:8787" target="_blank" rel="noopener">http://127.0.0.1:8787</a> 来进入Rstudio的图形界面。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># install R packages</span><br><span class="line">install.packages(&apos;gapminder&apos;)</span><br><span class="line"># load library</span><br><span class="line">library(gapminder)</span><br></pre></td></tr></table></figure>
+<p>查看 docker中容器的哈希值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker ps</span><br></pre></td></tr></table></figure>
+<p>保存最新版本镜像</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker commit -m &quot;verse + gapminder&quot; 4a6a528b35da verse_gapminder</span><br></pre></td></tr></table></figure>
+<p>查看所有镜像</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker images</span><br></pre></td></tr></table></figure>
 
 
         
@@ -248,11 +255,11 @@
 
             <li class="post-copyright-Article">
                 <strong>文章: </strong>
-                <a href="http://yzfly.github.io/2018/07/26/linux下的 login_shell/">linux下的login shell</a> </li>
+                <a href="http://yzfly.github.io/2018/10/05/docker的简单使用/">docker的简单使用</a> </li>
 
             <li class="post-copyright-link">
                 <strong>链接: </strong>
-                <a href="http://yzfly.github.io/2018/07/26/linux下的 login_shell/" title="linux下的login shell">http://yzfly.github.io/2018/07/26/linux下的 login_shell/</a> </li>
+                <a href="http://yzfly.github.io/2018/10/05/docker的简单使用/" title="docker的简单使用">http://yzfly.github.io/2018/10/05/docker的简单使用/</a> </li>
 
             <li class="post-copyright-license">
                 <strong>版权: </strong>
