@@ -45,6 +45,18 @@ const ap = new APlayer({
         cover: '/musics/pics/林宥嘉-说谎.jpg',
       },
       {
+        name: "成全",
+        artist: 'Boss',
+        url: 'http://tx.stream.kg.qq.com/szkge-btfs/7d42bdf06c90d552d5234854cf16e46928be812c?ftnrkey=9078b90520d45853d4bd80c708ad16fbae34c070180590bcc269af338da1fa2817d45f05691e55ae27984ca859692df97c4e82af69f993ed9a6b798b06ea5cbf&vkey=396FEE2607AA44DE016C4AD0E6202ED7819529414489B86A866B08A9FEAC6A647413B06CA88279B00FA86540F64B53C011BD7EA15261420A26939AF1C848A98E541FD19CE5115A7A9A3B8853AF21BFD64DD2F324854FD7DF&fname=1021_e48e9bee7caf2ebb547e47ef80f985fc6f8109ae.0.m4a',
+        cover: 'http://shp.qpic.cn/ttkg/0/8e889bee7caf2ebb047e47ef83f9fafc598134ad/200?j=PiajxSqBRaEIf0bHhsJQ0QVoFSjos8ibuwib8icMibSGWGru7aj84uAW826V84GUk58dtqf27eKC51gRtLapYyjVa47icRlMXGW5PapPk9nc7T8iaS4vnpvzTG8SB8pk98oL23Zhic3rkJl8xSQ',
+      },
+      {
+        name: "年少有为",
+        artist: 'Boss',
+        url: 'http://dl.stream.kg.qq.com/szkge/6368fc15f3b5f879c840aad1de24ca75e19470f7?ftnrkey=ca6387f4035ca90c0fd47364fd1bce7a2465390bc6ba8517b9ca734f505794b3ba551756c2c89a9e9bcc9571e4de26fe72223b512c9c08a65dd2b2307e7d3141&vkey=F83B524F52B75BF28F66F22E34DF7849940DFD2BFEEA8DCFB73AB6EFEC986DC9DB3C3A931D9DA607F882D337F5695122D34A6EB75B294EF974F673CA1D4B533D7A5C5FB08A3C353E4CD497E8DDF0062E1F454FA6D9D01111&fname=1021_52cef0e97caf2ebb547e47ef80f9fafc5981ddaf.96.m4a',
+        cover: 'http://shp.qpic.cn/ttkg/0/aac8f0e97caf2ebb047e47ef83f9fafc598164af/200?j=PiajxSqBRaEIf0bHhsJQ0QVoFSjos8ibuwib8icMibSGWGru7aj84uAW826V84GUk58dtqf27eKC51gRtLapYyjVa45JUzF5fDdYO70AIgjgdQXkpdLe5fga9a92Y1GWiaHx8qJP6lyGPmDO0',
+      },
+      {
         name: '听妈妈的话',
         artist: '周杰伦',
         url: 'http://www.ytmp3.cn/down/51577.mp3',
