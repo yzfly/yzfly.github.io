@@ -1250,7 +1250,7 @@ pre .javascript .function {
     margin: 1em 0 0;
     padding: 0.5em 1em;
     border-left: 2px solid #ff1700;
-    background-color: #00CCFF;
+    background-color: white;
     opacity: 0.7;
     list-style: none;
 }
