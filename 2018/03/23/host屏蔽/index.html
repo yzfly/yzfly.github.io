@@ -213,10 +213,10 @@
           
         
         
-
+    <span></span>
 
     </div>
-    <div class="post-content ">
+        <div class="post-content ">
         <h1 id="hosts屏蔽"><a href="#hosts屏蔽" class="headerlink" title="hosts屏蔽"></a>hosts屏蔽</h1><p>在自己电脑上安装了一些破解软件，需要使用本机host文件屏蔽软件联网激活，然而挂酸酸乳时候，如果选择了全局模式，会使得本地的DNS解析被直接绕过，导致软件激活失败，或者激活成功后又失败。在此记录下一些常用破解软件需要的屏蔽的host.</p>
 <p>在修改host前建议先备份host文件</p>
 <h3 id="一、hosts文件位置"><a href="#一、hosts文件位置" class="headerlink" title="一、hosts文件位置"></a>一、hosts文件位置</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Windows | C:\Windows\System32\drivers\etc\hosts</span><br><span class="line">Mac | /Private/etc/hosts</span><br><span class="line">Linux | /etc/hosts</span><br></pre></td></tr></table></figure>
@@ -224,6 +224,30 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1	localhost</span><br><span class="line">127.0.1.1	lyz-PC</span><br><span class="line"></span><br><span class="line"># The following lines are desirable for IPv6 capable hosts</span><br><span class="line">::1     ip6-localhost ip6-loopback</span><br><span class="line">fe00::0 ip6-localnet</span><br><span class="line">ff00::0 ip6-mcastprefix</span><br><span class="line">ff02::1 ip6-allnodes</span><br><span class="line">ff02::2 ip6-allrouters</span><br></pre></td></tr></table></figure>
 <h3 id="二、破解软件hosts"><a href="#二、破解软件hosts" class="headerlink" title="二、破解软件hosts"></a>二、破解软件hosts</h3><p>在这里记下一些常用软件破解需要的hosts记录，在vps上一并写入进行屏蔽,保证即使不小心使用了全局代理也不会使得软件联网。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># sublime_text3_3176_build</span><br><span class="line">127.0.0.1       www.sublimetext.com</span><br><span class="line">127.0.0.1       license.sublimehq.com</span><br><span class="line">127.0.0.1 sublimetext.com</span><br><span class="line">127.0.0.1 sublimehq.com</span><br></pre></td></tr></table></figure>
+
+
+        
+        <ul class="post-copyright">
+
+            <li class="post-copyright-author">
+                <strong>作者: </strong>
+                <a href="https://yzfly.github.io">流觞君</a></li>
+
+            <li class="post-copyright-Article">
+                <strong>文章: </strong>
+                <a href="http://yzfly.github.io/2018/03/23/host屏蔽/">hosts屏蔽</a> </li>
+
+            <li class="post-copyright-link">
+                <strong>链接: </strong>
+                <a href="http://yzfly.github.io/2018/03/23/host屏蔽/" title="hosts屏蔽">http://yzfly.github.io/2018/03/23/host屏蔽/</a> </li>
+
+            <li class="post-copyright-license">
+                <strong>版权: </strong>
+                本站文章均采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0 CN</a> 许可协议，请勿用于商业，转载注明出处！
+            </li>
+
+        </ul>
+        
 
         
         <br>
@@ -250,6 +274,7 @@
 
 
 <footer class="footer">
+
     <ul class="list-inline text-center">
         
         
@@ -291,8 +316,7 @@
         <span id="busuanzi_container_site_uv" style="color:black">
             访客数<span id="busuanzi_value_site_uv" style="color:black"></span>人  
         </span>
-        <span class="post-count" style="color:black">全站共  字</span>
-
+        
         <!-- 
         Contact Author <a href="https://github.com/yzfly">Github</a>
         
@@ -302,6 +326,8 @@
 		</div>
 		-->
 	</p>
+    <span class="post-count" style="color:black">全站共 44.7k 字</span>
+
 </footer>
 
 

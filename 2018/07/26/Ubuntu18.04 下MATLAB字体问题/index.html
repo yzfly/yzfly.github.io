@@ -213,10 +213,10 @@
           
         
         
-
+    <span></span>
 
     </div>
-    <div class="post-content ">
+        <div class="post-content ">
         <p>在 Ubuntu18.04 下安装了 MATLAB R2016b，打开后字体十分难看，还有锯齿，在这里记录下自己的解决办法</p>
 <a id="more"></a>
 <p>因为在 linux下 MATLAB使用的是自带的 java环境中的字体，由于自带字体在 linux下显示不佳，这里我们选择一款适合编程的等宽字体 YaHei.Consolas.ttf 替换 MATLAB自带字体，开启 MATLAB 的防锯齿功能，实现MATLAB 字体的美化。</p>
@@ -229,6 +229,30 @@
 <h2 id="三、MATLAB-个人配置文件无法访问"><a href="#三、MATLAB-个人配置文件无法访问" class="headerlink" title="三、MATLAB 个人配置文件无法访问"></a>三、MATLAB 个人配置文件无法访问</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chown -R $&#123;USER&#125;:$&#123;USER&#125; ~/.matlab</span><br></pre></td></tr></table></figure>
 <h2 id="四、配置MATLAB启动图标"><a href="#四、配置MATLAB启动图标" class="headerlink" title="四、配置MATLAB启动图标"></a>四、配置MATLAB启动图标</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">cd ~/App/icons/</span><br><span class="line">wget http://upload.wikimedia.org/wikipedia/commons/2/21/Matlab_Logo.png #从维基百科上下载图标</span><br><span class="line">sudo gedit /usr/share/applications/matlab.desktop #填写下面的内容</span><br><span class="line"></span><br><span class="line">#!/usr/bin/env xdg-open</span><br><span class="line"> </span><br><span class="line">[Desktop Entry]</span><br><span class="line">Type=Application</span><br><span class="line">Terminal=false</span><br><span class="line">Exec=/usr/local/MATLAB/R2018a/bin/matlab %U    </span><br><span class="line">Name=MATLAB_R2018a</span><br><span class="line">Icon=～/Apps/icons/Matlab_Logo.png</span><br><span class="line">Comment=Matlab:The Language of Technical Computing</span><br><span class="line">Categories=Development;Matlab;</span><br></pre></td></tr></table></figure>
 <p>至此，一个舒适的matlab编程环境就已经打造完成，enjoy～</p>
+
+
+        
+        <ul class="post-copyright">
+
+            <li class="post-copyright-author">
+                <strong>作者: </strong>
+                <a href="https://yzfly.github.io">流觞君</a></li>
+
+            <li class="post-copyright-Article">
+                <strong>文章: </strong>
+                <a href="http://yzfly.github.io/2018/07/26/Ubuntu18.04 下MATLAB字体问题/">Ubuntu18.04下MATLAB字体问题</a> </li>
+
+            <li class="post-copyright-link">
+                <strong>链接: </strong>
+                <a href="http://yzfly.github.io/2018/07/26/Ubuntu18.04 下MATLAB字体问题/" title="Ubuntu18.04下MATLAB字体问题">http://yzfly.github.io/2018/07/26/Ubuntu18.04 下MATLAB字体问题/</a> </li>
+
+            <li class="post-copyright-license">
+                <strong>版权: </strong>
+                本站文章均采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0 CN</a> 许可协议，请勿用于商业，转载注明出处！
+            </li>
+
+        </ul>
+        
 
         
         <br>
@@ -255,6 +279,7 @@
 
 
 <footer class="footer">
+
     <ul class="list-inline text-center">
         
         
@@ -296,8 +321,7 @@
         <span id="busuanzi_container_site_uv" style="color:black">
             访客数<span id="busuanzi_value_site_uv" style="color:black"></span>人  
         </span>
-        <span class="post-count" style="color:black">全站共  字</span>
-
+        
         <!-- 
         Contact Author <a href="https://github.com/yzfly">Github</a>
         
@@ -307,6 +331,8 @@
 		</div>
 		-->
 	</p>
+    <span class="post-count" style="color:black">全站共 44.7k 字</span>
+
 </footer>
 
 

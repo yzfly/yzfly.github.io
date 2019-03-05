@@ -213,10 +213,10 @@
           
         
         
-
+    <span></span>
 
     </div>
-    <div class="post-content ">
+        <div class="post-content ">
         <p>自己电脑安装的是 win10 和 Ubuntu18.04 双系统，在ubuntu系统的使用过程中，遇到不少 linux下文件系统的问题，在此记录下解决办法。</p>
 <a id="more"></a>
 <h2 id="一、linux-挂载-NTFS-分区-可读不可写问题"><a href="#一、linux-挂载-NTFS-分区-可读不可写问题" class="headerlink" title="一、linux 挂载 NTFS 分区 可读不可写问题"></a>一、linux 挂载 NTFS 分区 可读不可写问题</h2><p>linux文件系统是 ext4， win10的文件系统是 NTFS，linux可以对 NTFS系统进行读写操作，为像我这样的双系统使用者带来了方便，我 win系统和linux 系统的文档都习惯放在同一个分区， D:(doc)，但是实际使用过程中，linux系统常常无法将文件写入该分区，解决办法：</p>
@@ -225,6 +225,30 @@
 <p>2、关闭 win10 快速启动，在 设置-&gt;电源-&gt;更多电源选项 中配置，具体配置步骤请百度</p>
 <h2 id="二、常用文件夹没有读写权限问题"><a href="#二、常用文件夹没有读写权限问题" class="headerlink" title="二、常用文件夹没有读写权限问题"></a>二、常用文件夹没有读写权限问题</h2><p>ubuntu默认是以普通用户登入系统的，对一些文件夹常常没有写权限，获取临时写权限可使用sudo命令，但对于常用的文件夹，还有一些软件保存文件的时候，会很不方便，此时可对文件夹权限进行设置：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chmod 777 -Rf /dir #4 2 1 读 写 执行</span><br></pre></td></tr></table></figure>
+
+
+        
+        <ul class="post-copyright">
+
+            <li class="post-copyright-author">
+                <strong>作者: </strong>
+                <a href="https://yzfly.github.io">流觞君</a></li>
+
+            <li class="post-copyright-Article">
+                <strong>文章: </strong>
+                <a href="http://yzfly.github.io/2018/07/26/Ubuntu18.04 下文件系统/">Ubuntu18.04下文件系统问题</a> </li>
+
+            <li class="post-copyright-link">
+                <strong>链接: </strong>
+                <a href="http://yzfly.github.io/2018/07/26/Ubuntu18.04 下文件系统/" title="Ubuntu18.04下文件系统问题">http://yzfly.github.io/2018/07/26/Ubuntu18.04 下文件系统/</a> </li>
+
+            <li class="post-copyright-license">
+                <strong>版权: </strong>
+                本站文章均采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0 CN</a> 许可协议，请勿用于商业，转载注明出处！
+            </li>
+
+        </ul>
+        
 
         
         <br>
@@ -251,6 +275,7 @@
 
 
 <footer class="footer">
+
     <ul class="list-inline text-center">
         
         
@@ -292,8 +317,7 @@
         <span id="busuanzi_container_site_uv" style="color:black">
             访客数<span id="busuanzi_value_site_uv" style="color:black"></span>人  
         </span>
-        <span class="post-count" style="color:black">全站共  字</span>
-
+        
         <!-- 
         Contact Author <a href="https://github.com/yzfly">Github</a>
         
@@ -303,6 +327,8 @@
 		</div>
 		-->
 	</p>
+    <span class="post-count" style="color:black">全站共 44.7k 字</span>
+
 </footer>
 
 

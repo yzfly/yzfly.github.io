@@ -213,10 +213,10 @@
           
         
         
-
+    <span></span>
 
     </div>
-    <div class="post-content ">
+        <div class="post-content ">
         <p>在Ubuntu下，可以使用debian的包管理器apt-get来管理系统软件，然而常常遭遇命令运行失败问题，在此记录解决方案。</p>
 <p>&lt;— more !—&gt;</p>
 <h2 id="sudo-apt-get-upgrade-命令报错"><a href="#sudo-apt-get-upgrade-命令报错" class="headerlink" title="sudo apt-get upgrade 命令报错"></a>sudo apt-get upgrade 命令报错</h2><p>报错信息如下</p>
@@ -229,6 +229,30 @@
 <p>这有助于运行中的 apt-get 或者 apt 进程能够避免被其它需要使用相同文件的用户或者系统进程所打断。当该进程执行完毕后，锁定文件将会删除。</p>
 <p><strong>重要提醒：</strong>万一你在没有看到 apt-get 或者 apt 进程的情况下在上面两个不同的文件夹中看到了锁定文件，这是因为进程由于某个原因被杀掉了，因此你需要删除锁定文件来避免该错误。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo rm /var/lib/dpkg/lock</span><br><span class="line">sudo rm /var/lib/apt/lists/lock</span><br><span class="line">sudo rm /var/cache/apt/archives/lock</span><br><span class="line">sudo dpkg --configure -a</span><br><span class="line">sudo apt-get update -y</span><br></pre></td></tr></table></figure>
+
+
+        
+        <ul class="post-copyright">
+
+            <li class="post-copyright-author">
+                <strong>作者: </strong>
+                <a href="https://yzfly.github.io">流觞君</a></li>
+
+            <li class="post-copyright-Article">
+                <strong>文章: </strong>
+                <a href="http://yzfly.github.io/2018/07/26/apt升级命令失败问题/">sudo apt upgrade命令失败</a> </li>
+
+            <li class="post-copyright-link">
+                <strong>链接: </strong>
+                <a href="http://yzfly.github.io/2018/07/26/apt升级命令失败问题/" title="sudo apt upgrade命令失败">http://yzfly.github.io/2018/07/26/apt升级命令失败问题/</a> </li>
+
+            <li class="post-copyright-license">
+                <strong>版权: </strong>
+                本站文章均采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0 CN</a> 许可协议，请勿用于商业，转载注明出处！
+            </li>
+
+        </ul>
+        
 
         
         <br>
@@ -255,6 +279,7 @@
 
 
 <footer class="footer">
+
     <ul class="list-inline text-center">
         
         
@@ -296,8 +321,7 @@
         <span id="busuanzi_container_site_uv" style="color:black">
             访客数<span id="busuanzi_value_site_uv" style="color:black"></span>人  
         </span>
-        <span class="post-count" style="color:black">全站共  字</span>
-
+        
         <!-- 
         Contact Author <a href="https://github.com/yzfly">Github</a>
         
@@ -307,6 +331,8 @@
 		</div>
 		-->
 	</p>
+    <span class="post-count" style="color:black">全站共 44.7k 字</span>
+
 </footer>
 
 

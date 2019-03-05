@@ -213,10 +213,10 @@
           
         
         
-
+    <span></span>
 
     </div>
-    <div class="post-content ">
+        <div class="post-content ">
         <p>Matlab中内置了rice.png图片用于图像处理，今天希望编程实现自动获取图片中大米的个数<br><a id="more"></a></p>
 <h1 id="算法思想"><a href="#算法思想" class="headerlink" title="算法思想"></a>算法思想</h1><p>  首先提取大米的边界，然后利用提取的边界对闭合边界进行填充，对图像进行开运算，将图片四周不完整的大米去除，<br>之后进行二值化，大米像素值赋值为255，其他区域值为0。并利用for循环遍历所有像素点，若找到大米像素点，则计数器加一，并调用子函数M_search函数通过递归遍历大米的全部像素点，将其标记为另一值，避免对同一大米重复计数。</p>
 <h1 id="下面为主程序Matlab代码"><a href="#下面为主程序Matlab代码" class="headerlink" title="下面为主程序Matlab代码"></a>下面为主程序Matlab代码</h1><pre><code>% Count the rices number in the rice picture
@@ -267,6 +267,30 @@ end
 <h1 id="结果分析"><a href="#结果分析" class="headerlink" title="结果分析"></a>结果分析</h1><p>对大米图像进行手工计数后发现大米的真实数量为70，但是由于大米之间有两处粘连，粘连处会使算法将两粒大米识别为一粒，因此少算了两粒，后期考虑采用剥皮法对大米进行处理，以减少大米之间的粘连，提高结果的准确度</p>
 <h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p>CSDN江南烟雨的博客，原文地址如下：<br><a href="https://blog.csdn.net/xiajun07061225/article/details/6909591" target="_blank" rel="noopener">https://blog.csdn.net/xiajun07061225/article/details/6909591</a></p>
 
+
+        
+        <ul class="post-copyright">
+
+            <li class="post-copyright-author">
+                <strong>作者: </strong>
+                <a href="https://yzfly.github.io">流觞君</a></li>
+
+            <li class="post-copyright-Article">
+                <strong>文章: </strong>
+                <a href="http://yzfly.github.io/2018/03/30/Matlab图像处理之大米计数/">Matlab图像处理之大米计数</a> </li>
+
+            <li class="post-copyright-link">
+                <strong>链接: </strong>
+                <a href="http://yzfly.github.io/2018/03/30/Matlab图像处理之大米计数/" title="Matlab图像处理之大米计数">http://yzfly.github.io/2018/03/30/Matlab图像处理之大米计数/</a> </li>
+
+            <li class="post-copyright-license">
+                <strong>版权: </strong>
+                本站文章均采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0 CN</a> 许可协议，请勿用于商业，转载注明出处！
+            </li>
+
+        </ul>
+        
+
         
         <br>
         <div id="comment-container">
@@ -292,6 +316,7 @@ end
 
 
 <footer class="footer">
+
     <ul class="list-inline text-center">
         
         
@@ -333,8 +358,7 @@ end
         <span id="busuanzi_container_site_uv" style="color:black">
             访客数<span id="busuanzi_value_site_uv" style="color:black"></span>人  
         </span>
-        <span class="post-count" style="color:black">全站共  字</span>
-
+        
         <!-- 
         Contact Author <a href="https://github.com/yzfly">Github</a>
         
@@ -344,6 +368,8 @@ end
 		</div>
 		-->
 	</p>
+    <span class="post-count" style="color:black">全站共 44.7k 字</span>
+
 </footer>
 
 

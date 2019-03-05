@@ -1245,3 +1245,12 @@ pre .javascript .function {
 .gitment-comment p {
   text-indent: 0;
 }
+
+.post-copyright {
+    margin: 1em 0 0;
+    padding: 0.5em 1em;
+    border-left: 3px solid #ff1700;
+    background-color: #f9f9f9;
+    opacity: 0.75;
+    list-style: none;
+}
