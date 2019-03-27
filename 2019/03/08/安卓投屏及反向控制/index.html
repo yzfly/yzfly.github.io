@@ -21,7 +21,7 @@
 
     <title>
         
-        R on ubuntu16.04 - 流觞君的小窝
+        Andorid 投屏PC及反向控制 - 流觞君的小窝
         
     </title>
 
@@ -144,7 +144,7 @@
     <!-- Post Outline -->
     
         <div id="toc" class="toc-article">
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#安装R"><span class="toc-text">安装R</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#移除原来的R"><span class="toc-text">移除原来的R</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加最快的镜像"><span class="toc-text">添加最快的镜像</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装R-1"><span class="toc-text">安装R</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#如果报错，尝试运行如下命令"><span class="toc-text">如果报错，尝试运行如下命令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#检查安装"><span class="toc-text">检查安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装R包"><span class="toc-text">安装R包</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#安装Rstudio-server版"><span class="toc-text">安装Rstudio server版</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#下面是官方使用教程"><span class="toc-text">下面是官方使用教程</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Andorid-投屏PC及反向控制"><span class="toc-text">Andorid 投屏PC及反向控制</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Vysor"><span class="toc-text">Vysor</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ApowerMirror"><span class="toc-text">ApowerMirror</span></a></li></ol></li></ol>
 </div>
     
     
@@ -177,12 +177,12 @@
 
 <div class="post-container">
     <div class="post-title">
-        R on ubuntu16.04
+        Andorid 投屏PC及反向控制
     </div>
 
     <div class="post-meta">
 
-        <span class="attr">发布于：<span>2018-04-01 16:47:15</span></span>
+        <span class="attr">发布于：<span>2019-03-08 20:09:57</span></span>
         
         <span>/</span>
         
@@ -191,7 +191,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">378字</span>
+        <span class="post-count">339字</span>
       </span>
     </span>
 
@@ -217,37 +217,27 @@
 
     </div>
         <div class="post-content ">
-        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>系统环境： ubuntu server 16.04 64 bit<br>在windows上安装R和Rstudio较容易，下面谈谈如何在ubuntu16.04上安装R和Rstudio server<br><a id="more"></a></p>
-<h1 id="安装R"><a href="#安装R" class="headerlink" title="安装R"></a>安装R</h1><p>可以直接使用如下命令安装R，但是软件源中的R版本较老，为了使用最新版R，我们自己添加R镜像源以获取最新版R</p>
-<blockquote>
-<p>apt-get install r-base 或者 apt-get install r-base-core</p>
-</blockquote>
-<h2 id="移除原来的R"><a href="#移除原来的R" class="headerlink" title="移除原来的R"></a>移除原来的R</h2><pre><code>apt-get remove r-base    #删除r-base软件包
-apt-get autoremove r-base*
-</code></pre><h2 id="添加最快的镜像"><a href="#添加最快的镜像" class="headerlink" title="添加最快的镜像"></a>添加最快的镜像</h2><p>在R官网上找到离自己最快的镜像源，此处选择中科大的镜像<br><a href="https://mirrors.ustc.edu.cn/CRAN/" target="_blank" rel="noopener">https://mirrors.ustc.edu.cn/CRAN/</a></p>
-<blockquote>
-<p>vi /etc/apt/sources.list   #编辑该文件，将下面镜像源添加到该文件<br>deb <a href="https://mirrors.ustc.edu.cn/CRAN/bin/linux/ubuntu" target="_blank" rel="noopener">https://mirrors.ustc.edu.cn/CRAN/bin/linux/ubuntu</a> xenial/</p>
-</blockquote>
-<h2 id="安装R-1"><a href="#安装R-1" class="headerlink" title="安装R"></a>安装R</h2><blockquote>
-<p>apt-get update -y<br>apt-get install r-base -y</p>
-<h3 id="如果报错，尝试运行如下命令"><a href="#如果报错，尝试运行如下命令" class="headerlink" title="如果报错，尝试运行如下命令"></a>如果报错，尝试运行如下命令</h3><p>apt-get install r-base-core -y</p>
-</blockquote>
-<h2 id="检查安装"><a href="#检查安装" class="headerlink" title="检查安装"></a>检查安装</h2><blockquote>
-<p> R —version  # 查看R的版本<br>R     #启动R,进入R的交互式shell</p>
-<h2 id="安装R包"><a href="#安装R包" class="headerlink" title="安装R包"></a>安装R包</h2><p>R #进入R<br>install.packages(‘txtplot’)  #安装txtplot包</p>
-</blockquote>
-<h1 id="安装Rstudio-server版"><a href="#安装Rstudio-server版" class="headerlink" title="安装Rstudio server版"></a>安装Rstudio server版</h1><p>下面贴出官网教程、</p>
-<blockquote>
-<p><a href="https://www.rstudio.com/products/rstudio/download-server/" target="_blank" rel="noopener">https://www.rstudio.com/products/rstudio/download-server/</a></p>
-<p>apt-get install gdebi-core -y<br>wget <a href="https://download2.rstudio.org/rstudio-server-1.1.442-amd64.deb" target="_blank" rel="noopener">https://download2.rstudio.org/rstudio-server-1.1.442-amd64.deb</a><br>如果网速过慢可以下载到本机再上传到服务器<br>gdebi rstudio-server-1.1.442-amd64.deb   #若报错可能是安装包损坏，请重新下载该文件</p>
-</blockquote>
-<h2 id="下面是官方使用教程"><a href="#下面是官方使用教程" class="headerlink" title="下面是官方使用教程"></a>下面是官方使用教程</h2><blockquote>
-<p><a href="https://support.rstudio.com/hc/en-us/articles/200552306-Getting-Started" target="_blank" rel="noopener">https://support.rstudio.com/hc/en-us/articles/200552306-Getting-Started</a></p>
-</blockquote>
-<p>使用Rstudio server,浏览器访问下面的地址</p>
-<blockquote>
-<p><a href="http://server-ip:8787" target="_blank" rel="noopener">http://server-ip:8787</a></p>
-</blockquote>
+        <p>有时候我们需要将手机屏幕投屏到电脑上，或者使用电脑操作手机，这时就需要一款带有手机投屏和反向控制的软件了，在此推荐两款优秀的软件 Vysor 和 ApowerMirror。</p>
+<a id="more"></a>
+<h1 id="Andorid-投屏PC及反向控制"><a href="#Andorid-投屏PC及反向控制" class="headerlink" title="Andorid 投屏PC及反向控制"></a>Andorid 投屏PC及反向控制</h1><p>软件官网：</p>
+<ul>
+<li><a href="https://www.vysor.io/" target="_blank" rel="noopener">Vysor</a></li>
+<li><a href="https://www.apowersoft.com/phone-mirror" target="_blank" rel="noopener">ApowerMirror</a> </li>
+</ul>
+<h2 id="Vysor"><a href="#Vysor" class="headerlink" title="Vysor"></a>Vysor</h2><p>Vysor 支持 Windows、Mac和Linux系统，也可以在Chrome 商店作为Chrome拓展下载获取。</p>
+<p>若 Vysor 软件真的给你带来了很大的帮助，请支持软件作者.</p>
+<p><a href="https://www.vysor.io/" target="_blank" rel="noopener">Vysor官网</a> </p>
+<p>如果偶尔用用，纯粹出于像我一样的强迫症，可参照<a href="http://blog.zhaisoul.com/?p=121" target="_blank" rel="noopener">宅魂Kill</a>的教程破解：</p>
+<p><a href="http://blog.zhaisoul.com/?p=121" target="_blank" rel="noopener">宅魂Kill的小屋</a> </p>
+<p>宅魂kill 对Vysor2.1.4 进行了汉化操作，解压密码是: www.zhaisoul.com 实测其提供的破解文件无法成功破解。需要自己修改uglify.js 文件.</p>
+<p>找到下面的代码段</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">window.Googl = p, g = !1, b = !1, k = &quot;Account Management&quot;, N.prototype.refresh = function (n, e)</span><br></pre></td></tr></table></figure>
+<p>将 g = !1, b = !1 修改为 g = 1, b = 1 即可成功破解</p>
+<h2 id="ApowerMirror"><a href="#ApowerMirror" class="headerlink" title="ApowerMirror"></a>ApowerMirror</h2><p>ApowerMirror 支持 Windows、Mac 系统。</p>
+<p>若有能力请支持开发者： <a href="https://www.apowersoft.com/phone-mirror" target="_blank" rel="noopener">ApowerMirror</a> </p>
+<p>ApowerMirror 1.3.7 破解版：</p>
+<p><a href="https://pan.baidu.com/s/1a97hZ6WLGAqclASoveU2wQ" target="_blank" rel="noopener">百度网盘：</a><br>提取码：8n7s </p>
+<p>实际体验两款软件后，Vysor的反向控制速度更快，更为流畅，免费用户画质较低。ApowerMirror 的反向控制速度较慢，但界面更为美观清晰。</p>
 
 
         
@@ -259,11 +249,11 @@ apt-get autoremove r-base*
 
             <li class="post-copyright-Article">
                 <strong>文章: </strong>
-                <a href="http://yzfly.github.io/2018/04/01/R-on-ubuntu16-04/">R on ubuntu16.04</a> </li>
+                <a href="http://yzfly.github.io/2019/03/08/安卓投屏及反向控制/">Andorid 投屏PC及反向控制</a> </li>
 
             <li class="post-copyright-link">
                 <strong>链接: </strong>
-                <a href="http://yzfly.github.io/2018/04/01/R-on-ubuntu16-04/" title="R on ubuntu16.04">http://yzfly.github.io/2018/04/01/R-on-ubuntu16-04/</a> </li>
+                <a href="http://yzfly.github.io/2019/03/08/安卓投屏及反向控制/" title="Andorid 投屏PC及反向控制">http://yzfly.github.io/2019/03/08/安卓投屏及反向控制/</a> </li>
 
             <li class="post-copyright-license">
                 <strong>版权: </strong>
