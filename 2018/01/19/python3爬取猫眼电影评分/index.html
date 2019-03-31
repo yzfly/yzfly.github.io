@@ -196,6 +196,11 @@
 
         <span class="attr">发布于：<span>2018-01-19 23:09:32</span></span>
         
+        <span class="attr">标签：/
+        
+        <a class="tag" href="/tags/#python" title="python">python</a>
+        
+        
         <span>/</span>
         
           <div style="margin-top:10px;">
@@ -203,7 +208,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">538字</span>
+        <span class="post-count">527字</span>
       </span>
     </span>
 
@@ -223,7 +228,7 @@
 
 </span></div>
           
-        
+        </span>
         
     <span></span>
 
@@ -242,24 +247,10 @@ import json  # 导入json库
 from multiprocessing import Pool  # 导入python内置的多线程
 import requests  # 导入request库获取网页信息
 from requests.exceptions import RequestException
-
-
-headers = {&quot;User-agent&quot;: &quot;Mozilla/5.0&quot;}  # 浏览器头部信息
-
-
-def get_one_page(url):    # 获取一个页面
-    try:
-        res = requests.get(url, headers=headers)
-        if res.status_code == 200:
-            return res.text
-        return None
-    except RequestException:
-        return None
-
-
-def parse_one_page(html):  # 解析一个页面
-
-    pattern = re.compile(&#39;&lt;dd&gt;.*?board-index.*?&gt;(\d+)&lt;/i&gt;.*?data-src=&quot;(.*?)&quot;.*?name&quot;&gt;&lt;a&#39; +
+</code></pre><p>​<br>    headers = {“User-agent”: “Mozilla/5.0”}  # 浏览器头部信息</p>
+<p>​<br>    def get_one_page(url):    # 获取一个页面<br>        try:<br>            res = requests.get(url, headers=headers)<br>            if res.status_code == 200:<br>                return res.text<br>            return None<br>        except RequestException:<br>            return None</p>
+<p>​<br>    def parse_one_page(html):  # 解析一个页面</p>
+<pre><code>    pattern = re.compile(&#39;&lt;dd&gt;.*?board-index.*?&gt;(\d+)&lt;/i&gt;.*?data-src=&quot;(.*?)&quot;.*?name&quot;&gt;&lt;a&#39; +
                          &#39;.*?&gt;(.*?)&lt;/a&gt;.*?star&quot;&gt;(.*?)&lt;/p&gt;.*?releasetime&quot;&gt;(.*?)&lt;/p&gt;&#39; + &#39;.*?integer&quot;&gt;(.*?)&lt;/i&gt;.*?fraction&quot;&gt;(.*?)&lt;/i&gt;.*?&lt;/dd&gt;&#39;, re.S)
     # 正则表达式匹配
     items = re.findall(pattern, html)   # 正则表达式处理字符串，找到所有上一步中匹配的记录
@@ -272,19 +263,12 @@ def parse_one_page(html):  # 解析一个页面
             &#39;time&#39;: item[4].strip()[5:],
             &#39;score&#39;: item[5]+item[6]
         }
-
-
-def write_to_file(content):             # 将解析器获取到的信息写入文件之中
-    with open(&#39;result.txt&#39;, &#39;a&#39;, encoding=&#39;utf-8&#39;) as f:
-        # 有中文字符，关闭ascii编码，加上换行符
+</code></pre><p>​<br>    def write_to_file(content):             # 将解析器获取到的信息写入文件之中<br>        with open(‘result.txt’, ‘a’, encoding=’utf-8’) as f:</p>
+<pre><code>        # 有中文字符，关闭ascii编码，加上换行符
         f.write(json.dumps(content, ensure_ascii=False)+&#39;\n&#39;)
         f.close()    # 关闭
-
-
-def main(offset):
-    url = &#39;http://maoyan.com/board/4?offset=&#39;+str(offset)   # 构造榜单页面url
-
-    html = get_one_page(url)    # 获取html页面
+</code></pre><p>​<br>    def main(offset):<br>        url = ‘<a href="http://maoyan.com/board/4?offset=&#39;+str(offset" target="_blank" rel="noopener">http://maoyan.com/board/4?offset=&#39;+str(offset</a>)   # 构造榜单页面url</p>
+<pre><code>    html = get_one_page(url)    # 获取html页面
     for item in parse_one_page(html):  # 解析html页面的信息
         print(item)                    # 输出解析信息
         write_to_file(item)               # 信息写入文件
@@ -394,11 +378,11 @@ for i in range(10):
         
         <div class="theme-info">
 		  <div class="powered-by"></div>
-		  <span class="post-count" style="color:black">全站共45.7k字</span>
+		  <span class="post-count" style="color:black">全站共45.6k字</span>
 		</div>
 		-->
 	</p>
-    <span class="post-count" style="color:black">全站共 45.7k 字</span>
+    <span class="post-count" style="color:black">全站共 45.6k 字</span>
 
 </footer>
 
