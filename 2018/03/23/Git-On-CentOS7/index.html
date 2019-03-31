@@ -21,7 +21,7 @@
 
     <title>
         
-        Install LMD - 流觞君的小窝
+        Install Git On CentOS7 - 流觞君的小窝
         
     </title>
 
@@ -156,7 +156,7 @@
     <!-- Post Outline -->
     
         <div id="toc" class="toc-article">
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#从官网下载最新源码包"><span class="toc-text">从官网下载最新源码包</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#编译安装"><span class="toc-text">编译安装</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#安装预编译环境"><span class="toc-text">安装预编译环境</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#下载源码包并解压"><span class="toc-text">下载源码包并解压</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#开始编译安装"><span class="toc-text">开始编译安装</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#报错"><span class="toc-text">报错</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解决"><span class="toc-text">解决</span></a></li></ol></li></ol>
 </div>
     
     
@@ -189,16 +189,16 @@
 
 <div class="post-container">
     <div class="post-title">
-        Install LMD
+        Install Git On CentOS7
     </div>
 
     <div class="post-meta">
 
-        <span class="attr">发布于：<span>2018-03-27 23:30:49</span></span>
+        <span class="attr">发布于：<span>2018-03-23 16:25:22</span></span>
         
         <span class="attr">标签：/
         
-        <a class="tag" href="/tags/#linux" title="linux">linux</a>
+        <a class="tag" href="/tags/#git" title="git">git</a>
         
         
         <span>/</span>
@@ -208,7 +208,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">183字</span>
+        <span class="post-count">222字</span>
       </span>
     </span>
 
@@ -234,15 +234,23 @@
 
     </div>
         <div class="post-content ">
-        <p>在Ubuntu16.04 64bit上安装LMD软件<br>LMD软件包名maldetect，是R-fx Networks研发的一款流行且复杂的Linux Marware Detect（Linux上的恶意软件包查杀工具），安装该软件包能减少linux遭受的恶意软件的威胁，下面记录一下如何源码编译安装LMD软件包<br><a id="more"></a></p>
-<h1 id="从官网下载最新源码包"><a href="#从官网下载最新源码包" class="headerlink" title="从官网下载最新源码包"></a>从官网下载最新源码包</h1><p>使用搜索引擎搜索官网，然后找到下载地址下载</p>
+        <p>虽然CentOS提供了yum安装git的方式，然而为了能够使用最新版git我们最好下载源码在本地进行编译安装<br><a id="more"></a></p>
+<h1 id="安装预编译环境"><a href="#安装预编译环境" class="headerlink" title="安装预编译环境"></a>安装预编译环境</h1><blockquote>
+<p>yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel -y</p>
+</blockquote>
+<h1 id="下载源码包并解压"><a href="#下载源码包并解压" class="headerlink" title="下载源码包并解压"></a>下载源码包并解压</h1><blockquote>
+<p>cd ~<br>wget git下载链接  #下载源码包<br>tar -zxvf  git.tar.gz    #解压源码包，将解压对象替换成对应包名<br>cd git       #查看解压后生成的文件夹并进入</p>
+</blockquote>
+<h1 id="开始编译安装"><a href="#开始编译安装" class="headerlink" title="开始编译安装"></a>开始编译安装</h1><blockquote>
+<p>cd git   #进入解压缩后的文件夹<br>make prefix=/usr/local all<br>make prefix=/usr/local install</p>
+</blockquote>
+<h2 id="报错"><a href="#报错" class="headerlink" title="报错"></a>报错</h2><blockquote>
+<p>/usr/bin/perl Makefile.PL PREFIX=’/usr/local’ INSTALL_BASE=’’ —localedir=’/usr/local/share/locale’<br>BEGIN failed—compilation aborted at Makefile.PL line 3.<br>　　make[1]: <strong><em> [perl.mak] Error 2<br>　　make: </em></strong> [perl/perl.mak] Error 2</p>
+</blockquote>
+<h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><p>安装相应的perl包</p>
 <blockquote>
-<p>wget <a href="http://www.rfxn.com/downloads/maldetect-current.tar.gz" target="_blank" rel="noopener">http://www.rfxn.com/downloads/maldetect-current.tar.gz</a> -O lmd.tar.gz   # 下载源码包并重命名为lmd.tar.gz</p>
+<p>yum install perl-ExtUtils-MakeMaker package -y<br>make prefix=/usr/local all &amp;&amp; make prefix=/usr/local install  #重新编译安装<br>git —version     #查看git版本</p>
 </blockquote>
-<h1 id="编译安装"><a href="#编译安装" class="headerlink" title="编译安装"></a>编译安装</h1><blockquote>
-<p>tar -zxvf lmd.tar.gz -C /usr/local/<br>cd /usr/local/<br>cd maldetect*          #进入软件源码目录<br>bash ./install.sh      #开始安装</p>
-</blockquote>
-<p>没有报错且提示安装成功即完成~</p>
 
 
         
@@ -254,11 +262,11 @@
 
             <li class="post-copyright-Article">
                 <strong>文章: </strong>
-                <a href="http://yzfly.github.io/2018/03/27/Install-LMD/">Install LMD</a> </li>
+                <a href="http://yzfly.github.io/2018/03/23/Git-On-CentOS7/">Install Git On CentOS7</a> </li>
 
             <li class="post-copyright-link">
                 <strong>链接: </strong>
-                <a href="http://yzfly.github.io/2018/03/27/Install-LMD/" title="Install LMD">http://yzfly.github.io/2018/03/27/Install-LMD/</a> </li>
+                <a href="http://yzfly.github.io/2018/03/23/Git-On-CentOS7/" title="Install Git On CentOS7">http://yzfly.github.io/2018/03/23/Git-On-CentOS7/</a> </li>
 
             <li class="post-copyright-license">
                 <strong>版权: </strong>

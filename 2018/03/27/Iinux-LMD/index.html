@@ -21,7 +21,7 @@
 
     <title>
         
-        在win10上安装并激活MathType - 流觞君的小窝
+        linux-LMD - 流觞君的小窝
         
     </title>
 
@@ -156,7 +156,7 @@
     <!-- Post Outline -->
     
         <div id="toc" class="toc-article">
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一、软件下载安装"><span class="toc-text">一、软件下载安装</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#官网下载："><span class="toc-text">官网下载：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#百度云下载"><span class="toc-text">百度云下载</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#软件激活"><span class="toc-text">软件激活</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#从官网下载最新源码包"><span class="toc-text">从官网下载最新源码包</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#编译安装"><span class="toc-text">编译安装</span></a></li></ol>
 </div>
     
     
@@ -189,16 +189,16 @@
 
 <div class="post-container">
     <div class="post-title">
-        在win10上安装并激活MathType
+        linux-LMD
     </div>
 
     <div class="post-meta">
 
-        <span class="attr">发布于：<span>2018-03-15 10:00:11</span></span>
+        <span class="attr">发布于：<span>2018-03-27 23:30:49</span></span>
         
         <span class="attr">标签：/
         
-        <a class="tag" href="/tags/#windows" title="windows">windows</a>
+        <a class="tag" href="/tags/#linux" title="linux">linux</a>
         
         
         <span>/</span>
@@ -208,7 +208,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">273字</span>
+        <span class="post-count">183字</span>
       </span>
     </span>
 
@@ -234,30 +234,15 @@
 
     </div>
         <div class="post-content ">
-        <p>MathType是知名的为office办公套件提供公式编辑的软件，但是其为收费软件</p>
-<p>在此记录下MathType的安装过程，个人偏爱较为纯净的英文原版软件，需中文版软件请绕道~</p>
-<p>软件： MathType-win-en-6.9d（英文原版软件）<br>博主测试系统： Windows 10 专业版 （64bit）</p>
-<p>其他系统应该也能装~自己试试吧~</p>
-<a id="more"></a>  
-<h1 id="一、软件下载安装"><a href="#一、软件下载安装" class="headerlink" title="一、软件下载安装"></a>一、软件下载安装</h1><p>以下下载方式选择其一即可，如不放心百度云资源请选择官网下载</p>
-<h2 id="官网下载："><a href="#官网下载：" class="headerlink" title="官网下载："></a>官网下载：</h2><blockquote>
-<p><a href="http://www.dessci.com/en/products/mathtype/" target="_blank" rel="noopener">http://www.dessci.com/en/products/mathtype/</a></p>
-</blockquote>
-<h2 id="百度云下载"><a href="#百度云下载" class="headerlink" title="百度云下载"></a>百度云下载</h2><blockquote>
-<p>链接：<a href="https://pan.baidu.com/s/1UxORrtNuhZVGU_f5dqVqWA" target="_blank" rel="noopener">https://pan.baidu.com/s/1UxORrtNuhZVGU_f5dqVqWA</a> 密码：lwdz</p>
-</blockquote>
-<p>下载完成后正常默认安装即可，提示激活时选择30天试用即可</p>
-<h1 id="软件激活"><a href="#软件激活" class="headerlink" title="软件激活"></a>软件激活</h1><p>在此直接使用注册码激活（无需注册机等，安全可靠）</p>
-<p>安装完成后打开MathType，在软件工具栏help中找到 Unlock/Register</p>
-<p>其他项随便填，product key一项填入下面激活码其中之一：</p>
+        <p>在Ubuntu16.04 64bit上安装LMD软件<br>LMD软件包名maldetect，是R-fx Networks研发的一款流行且复杂的Linux Marware Detect（Linux上的恶意软件包查杀工具），安装该软件包能减少linux遭受的恶意软件的威胁，下面记录一下如何源码编译安装LMD软件包<br><a id="more"></a></p>
+<h1 id="从官网下载最新源码包"><a href="#从官网下载最新源码包" class="headerlink" title="从官网下载最新源码包"></a>从官网下载最新源码包</h1><p>使用搜索引擎搜索官网，然后找到下载地址下载</p>
 <blockquote>
-<p>序列号：</p>
-<p>MTWE691-011016-c8xn5</p>
-<p>MTWE691-011772-stfe9</p>
-<p>MTWE691-011876-qf14d</p>
-<p>MTWE691-011704-e3fyr</p>
-<p>MTWE691-011152-33007</p>
+<p>wget <a href="http://www.rfxn.com/downloads/maldetect-current.tar.gz" target="_blank" rel="noopener">http://www.rfxn.com/downloads/maldetect-current.tar.gz</a> -O lmd.tar.gz   # 下载源码包并重命名为lmd.tar.gz</p>
 </blockquote>
+<h1 id="编译安装"><a href="#编译安装" class="headerlink" title="编译安装"></a>编译安装</h1><blockquote>
+<p>tar -zxvf lmd.tar.gz -C /usr/local/<br>cd /usr/local/<br>cd maldetect*          #进入软件源码目录<br>bash ./install.sh      #开始安装</p>
+</blockquote>
+<p>没有报错且提示安装成功即完成~</p>
 
 
         
@@ -269,11 +254,11 @@
 
             <li class="post-copyright-Article">
                 <strong>文章: </strong>
-                <a href="http://yzfly.github.io/2018/03/15/Install-MathType-On-Win10/">在win10上安装并激活MathType</a> </li>
+                <a href="http://yzfly.github.io/2018/03/27/Iinux-LMD/">linux-LMD</a> </li>
 
             <li class="post-copyright-link">
                 <strong>链接: </strong>
-                <a href="http://yzfly.github.io/2018/03/15/Install-MathType-On-Win10/" title="在win10上安装并激活MathType">http://yzfly.github.io/2018/03/15/Install-MathType-On-Win10/</a> </li>
+                <a href="http://yzfly.github.io/2018/03/27/Iinux-LMD/" title="linux-LMD">http://yzfly.github.io/2018/03/27/Iinux-LMD/</a> </li>
 
             <li class="post-copyright-license">
                 <strong>版权: </strong>

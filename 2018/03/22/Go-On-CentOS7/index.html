@@ -21,7 +21,7 @@
 
     <title>
         
-        Install Git On CentOS7 - 流觞君的小窝
+        Install Go On CentOS7 - 流觞君的小窝
         
     </title>
 
@@ -156,7 +156,7 @@
     <!-- Post Outline -->
     
         <div id="toc" class="toc-article">
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#安装预编译环境"><span class="toc-text">安装预编译环境</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#下载源码包并解压"><span class="toc-text">下载源码包并解压</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#开始编译安装"><span class="toc-text">开始编译安装</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#报错"><span class="toc-text">报错</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解决"><span class="toc-text">解决</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#下载Linux安装包"><span class="toc-text">下载Linux安装包</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#配置go安装路径"><span class="toc-text">配置go安装路径</span></a></li></ol>
 </div>
     
     
@@ -189,16 +189,16 @@
 
 <div class="post-container">
     <div class="post-title">
-        Install Git On CentOS7
+        Install Go On CentOS7
     </div>
 
     <div class="post-meta">
 
-        <span class="attr">发布于：<span>2018-03-23 16:25:22</span></span>
+        <span class="attr">发布于：<span>2018-03-22 12:48:55</span></span>
         
         <span class="attr">标签：/
         
-        <a class="tag" href="/tags/#git" title="git">git</a>
+        <a class="tag" href="/tags/#Go" title="Go">Go</a>
         
         
         <span>/</span>
@@ -208,7 +208,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">222字</span>
+        <span class="post-count">141字</span>
       </span>
     </span>
 
@@ -234,22 +234,14 @@
 
     </div>
         <div class="post-content ">
-        <p>虽然CentOS提供了yum安装git的方式，然而为了能够使用最新版git我们最好下载源码在本地进行编译安装<br><a id="more"></a></p>
-<h1 id="安装预编译环境"><a href="#安装预编译环境" class="headerlink" title="安装预编译环境"></a>安装预编译环境</h1><blockquote>
-<p>yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel -y</p>
-</blockquote>
-<h1 id="下载源码包并解压"><a href="#下载源码包并解压" class="headerlink" title="下载源码包并解压"></a>下载源码包并解压</h1><blockquote>
-<p>cd ~<br>wget git下载链接  #下载源码包<br>tar -zxvf  git.tar.gz    #解压源码包，将解压对象替换成对应包名<br>cd git       #查看解压后生成的文件夹并进入</p>
-</blockquote>
-<h1 id="开始编译安装"><a href="#开始编译安装" class="headerlink" title="开始编译安装"></a>开始编译安装</h1><blockquote>
-<p>cd git   #进入解压缩后的文件夹<br>make prefix=/usr/local all<br>make prefix=/usr/local install</p>
-</blockquote>
-<h2 id="报错"><a href="#报错" class="headerlink" title="报错"></a>报错</h2><blockquote>
-<p>/usr/bin/perl Makefile.PL PREFIX=’/usr/local’ INSTALL_BASE=’’ —localedir=’/usr/local/share/locale’<br>BEGIN failed—compilation aborted at Makefile.PL line 3.<br>　　make[1]: <strong><em> [perl.mak] Error 2<br>　　make: </em></strong> [perl/perl.mak] Error 2</p>
-</blockquote>
-<h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><p>安装相应的perl包</p>
+        <p>在CentOS7 64bit上安装golang,流程和安装JDK是一样的，下载安装包，解压到指定安装目录，配置安装路径即可</p>
+<a id="more"></a>
+<h1 id="下载Linux安装包"><a href="#下载Linux安装包" class="headerlink" title="下载Linux安装包"></a>下载Linux安装包</h1><p>访问 <a href="https://golang.org/dl/" target="_blank" rel="noopener">https://golang.org/dl/</a> 网站下载相应安装文件</p>
 <blockquote>
-<p>yum install perl-ExtUtils-MakeMaker package -y<br>make prefix=/usr/local all &amp;&amp; make prefix=/usr/local install  #重新编译安装<br>git —version     #查看git版本</p>
+<p>wget golang下载链接<br>tar -zxvf go.tar.gz  #解压安装包，具体文件名按实际而定<br>mv go /usr/local     #将解压后的文件放入 /usr/local/文件夹</p>
+</blockquote>
+<h1 id="配置go安装路径"><a href="#配置go安装路径" class="headerlink" title="配置go安装路径"></a>配置go安装路径</h1><blockquote>
+<p>export PATH=$PATH:/usr/local/go/bin   #配置path环境变量<br>source /etc/profile    #使配置立即生效<br>go version        # 查看go的版本</p>
 </blockquote>
 
 
@@ -262,11 +254,11 @@
 
             <li class="post-copyright-Article">
                 <strong>文章: </strong>
-                <a href="http://yzfly.github.io/2018/03/23/Install-Git-On-CentOS7/">Install Git On CentOS7</a> </li>
+                <a href="http://yzfly.github.io/2018/03/22/Go-On-CentOS7/">Install Go On CentOS7</a> </li>
 
             <li class="post-copyright-link">
                 <strong>链接: </strong>
-                <a href="http://yzfly.github.io/2018/03/23/Install-Git-On-CentOS7/" title="Install Git On CentOS7">http://yzfly.github.io/2018/03/23/Install-Git-On-CentOS7/</a> </li>
+                <a href="http://yzfly.github.io/2018/03/22/Go-On-CentOS7/" title="Install Go On CentOS7">http://yzfly.github.io/2018/03/22/Go-On-CentOS7/</a> </li>
 
             <li class="post-copyright-license">
                 <strong>版权: </strong>

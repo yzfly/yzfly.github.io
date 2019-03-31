@@ -21,7 +21,7 @@
 
     <title>
         
-        Install Go On CentOS7 - 流觞君的小窝
+        Install nodejs On CentOS7 - 流觞君的小窝
         
     </title>
 
@@ -156,7 +156,7 @@
     <!-- Post Outline -->
     
         <div id="toc" class="toc-article">
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#下载Linux安装包"><span class="toc-text">下载Linux安装包</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#配置go安装路径"><span class="toc-text">配置go安装路径</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#编译准备"><span class="toc-text">编译准备</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#从官网下载最新源码包"><span class="toc-text">从官网下载最新源码包</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#开始编译安装"><span class="toc-text">开始编译安装</span></a></li></ol>
 </div>
     
     
@@ -189,16 +189,16 @@
 
 <div class="post-container">
     <div class="post-title">
-        Install Go On CentOS7
+        Install nodejs On CentOS7
     </div>
 
     <div class="post-meta">
 
-        <span class="attr">发布于：<span>2018-03-22 12:48:55</span></span>
+        <span class="attr">发布于：<span>2018-03-22 18:53:58</span></span>
         
         <span class="attr">标签：/
         
-        <a class="tag" href="/tags/#Go" title="Go">Go</a>
+        <a class="tag" href="/tags/#nodejs" title="nodejs">nodejs</a>
         
         
         <span>/</span>
@@ -208,7 +208,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">141字</span>
+        <span class="post-count">113字</span>
       </span>
     </span>
 
@@ -234,14 +234,15 @@
 
     </div>
         <div class="post-content ">
-        <p>在CentOS7 64bit上安装golang,流程和安装JDK是一样的，下载安装包，解压到指定安装目录，配置安装路径即可</p>
-<a id="more"></a>
-<h1 id="下载Linux安装包"><a href="#下载Linux安装包" class="headerlink" title="下载Linux安装包"></a>下载Linux安装包</h1><p>访问 <a href="https://golang.org/dl/" target="_blank" rel="noopener">https://golang.org/dl/</a> 网站下载相应安装文件</p>
-<blockquote>
-<p>wget golang下载链接<br>tar -zxvf go.tar.gz  #解压安装包，具体文件名按实际而定<br>mv go /usr/local     #将解压后的文件放入 /usr/local/文件夹</p>
+        <p>系统环境： CentOS7 64bit<br>从官网下载最新源码包，然后编译安装<br><a id="more"></a></p>
+<h1 id="编译准备"><a href="#编译准备" class="headerlink" title="编译准备"></a>编译准备</h1><blockquote>
+<p>yum -y update<br>yum install gcc gcc-c++ -y  #安装编译器</p>
 </blockquote>
-<h1 id="配置go安装路径"><a href="#配置go安装路径" class="headerlink" title="配置go安装路径"></a>配置go安装路径</h1><blockquote>
-<p>export PATH=$PATH:/usr/local/go/bin   #配置path环境变量<br>source /etc/profile    #使配置立即生效<br>go version        # 查看go的版本</p>
+<h1 id="从官网下载最新源码包"><a href="#从官网下载最新源码包" class="headerlink" title="从官网下载最新源码包"></a>从官网下载最新源码包</h1><blockquote>
+<p><a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">https://nodejs.org/en/download/</a><br>wget nodejs下载链接   #下载源码包<br>tar -zxvf nodejs.tar.gz<br>mv nodejs文件夹  /usr/local/nodejs文件夹<br>cd /usr/local/nodejs文件夹</p>
+</blockquote>
+<h1 id="开始编译安装"><a href="#开始编译安装" class="headerlink" title="开始编译安装"></a>开始编译安装</h1><blockquote>
+<p>./configure  #注意切换到nodejs文件夹操作<br>make &amp;&amp; make install<br>node -v     #验证版本</p>
 </blockquote>
 
 
@@ -254,11 +255,11 @@
 
             <li class="post-copyright-Article">
                 <strong>文章: </strong>
-                <a href="http://yzfly.github.io/2018/03/22/Install-Go-On-CentOS7/">Install Go On CentOS7</a> </li>
+                <a href="http://yzfly.github.io/2018/03/22/nodejs-On-CentOS7/">Install nodejs On CentOS7</a> </li>
 
             <li class="post-copyright-link">
                 <strong>链接: </strong>
-                <a href="http://yzfly.github.io/2018/03/22/Install-Go-On-CentOS7/" title="Install Go On CentOS7">http://yzfly.github.io/2018/03/22/Install-Go-On-CentOS7/</a> </li>
+                <a href="http://yzfly.github.io/2018/03/22/nodejs-On-CentOS7/" title="Install nodejs On CentOS7">http://yzfly.github.io/2018/03/22/nodejs-On-CentOS7/</a> </li>
 
             <li class="post-copyright-license">
                 <strong>版权: </strong>
